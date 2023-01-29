@@ -1,0 +1,124 @@
+/*FOOTER*/
+
+footer{
+    background-color: #212529;
+    color: white;
+    margin-top: 20px;
+    min-height: 200px;
+}
+
+.container-footer {
+    min-height: 200px;
+    background-color: #212529;
+    border-color: #212529;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container-footer .redes-footer,  
+.container-footer .menu{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    flex-wrap: wrap;
+}
+
+.container-footer .redes-footer li,
+.container-footer .menu li {
+    list-style: none;
+}
+
+.container-footer .redes-footer li a {
+    font-size: 1.25rem;
+    color: #fff;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+}
+
+.container-footer .menu li a {
+    font-size: 0.938rem;
+    color: #fff;
+    margin: 0 10px;
+    display: inline-block;
+    text-decoration: none;
+    opacity: 0.75;
+}
+
+.container-footer .menu li a:hover {
+    opacity: 1;
+}
+
+.container-footer .redes-footer li a:hover {
+    transform: translateY(-10px);
+}
+
+.container-footer p {
+   color: #fff;
+   text-align: center;
+   margin-top: 20px;
+   margin-bottom: 10px;
+   font-size: 0.75rem; 
+}
+
+.footer-icon {
+    text-decoration: none;
+}
+
+.footer-icon .icon-facebook {
+    background: #212529;
+    border-radius: 0 0 0 0;
+}
+
+.footer-icon .icon-twitter {
+    background: #212529;
+    border-radius: 0 0 0 0;
+}
+
+.footer-icon .icon-github {
+    background: #212529;
+    border-radius: 0 0 0 0;
+}
+
+.footer-icon .icon-instagram {
+    background: #212529;
+    border-radius: 0 0 0 0;
+}
+
+/*to the top*/
+.to-top {
+    background: #24292f;
+    position: fixed;
+    bottom: 16px;
+    right: 32px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid rgb(176, 168, 185, .3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    color: white;
+    opacity: 0;
+    text-decoration: none;
+    pointer-events: none;
+    transition: all .4s;
+    padding-bottom: 4px;
+}
+
+.to-top.active {
+    bottom: 32px;
+    pointer-events: auto;
+    opacity: 1;
+}
+
+.to-top:hover {
+    color: white
+}
+

@@ -1,0 +1,46 @@
+
+.responsive-iframe {
+    margin: auto;
+    max-width: 400px;
+    max-height: 225px;
+    padding-top: 12px;
+    margin-bottom: 24px;
+}
+
+.iframe-wrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+}
+
+.iframe-wrapper iframe {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.box-shadow {
+    /* -webkit-box-shadow: 5px 5px 15px 5px #B0A8B9; 
+    box-shadow: 5px 5px 15px 5px #B0A8B9; */
+    -webkit-box-shadow: 5px 8px 20px 12px #CDB4C8; 
+    box-shadow: 5px 8px 20px 12px #CDB4C8;
+}
+
+.section-info .info-project::before {
+    display: inline-block;
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    content: "\f092"; /* ICONO DE LA LISTA */
+    /* margin-top: 1px; */
+    margin-right: 8px;
+    color: #4B4453; /* COLOR DEL ICONO */
+    font-size: 18px; /* TAMAÑO DEL ICONO DE LA LISTA */
+    margin-left: 16px; 
+}

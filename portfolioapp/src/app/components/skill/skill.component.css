@@ -1,0 +1,179 @@
+/*porcentajes circulares*/
+
+.skills-container {
+    /* margin: auto; */
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    min-height: 30vh;
+    /* background: #222; */
+    background-color: whitesmoke;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.progreso-container {
+    position: relative;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    flex-basis: 90%;
+    /* background-color: #fff7ec; */
+    /* background-color: #fffbf5; */
+    background-color: #f2ecf1;
+    /* border: 1px solid rgba(0, 0, 0, 0.125); */
+    border-radius: 0.5rem;
+    overflow: hidden;
+    padding: 50px 0;
+}
+
+.progreso-container .card {
+    position: relative;
+    width: 180px;
+    height: 180px;
+    /* background: #B0A8B9; */
+    background: #CDB4C8;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    border-radius: 0.5rem;
+}
+
+.progreso-container .card .progreso {
+    position: relative;
+    width: 150px;
+    height: 150px;    
+}
+
+.progreso-container .card .progreso svg {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    transform: rotate(270deg);
+}
+
+.progreso-container .card .progreso svg circle {
+    width: 100%;
+    height: 100%;
+    fill: transparent;
+    stroke-width: 2;
+    /* stroke: #212529; */
+    /* stroke: #4B4453; */
+    stroke: #7B7484;
+    transform: translate(5px,5px);
+}
+
+.progreso-container .card .progreso svg circle:nth-child(2) {
+    stroke: var(--clr);
+    stroke-dasharray: 440;
+    stroke-dashoffset: calc(440 - (440 * var(--num))/100);
+    opacity: 0;
+    /* animation: fadeIn 1s linear forwards; */
+    
+}
+
+.circulo.animame {
+    
+    animation: fadeIn 1s linear forwards;
+    animation-delay: 2.5s;
+}
+
+@keyframes fadeIn {
+    0%
+    {
+        opacity: 0;
+    }
+    100%
+    {
+        opacity: 1;
+    }
+}
+
+.puntito {
+    position: absolute;
+    inset: 5px;
+    z-index: 10;
+    /* animation: animarPunto 2s linear forwards; */
+}
+
+.puntito.animame {
+    animation: animarPunto 2s linear forwards;
+}
+
+
+@keyframes animarPunto {
+    0%
+    {
+        transform: rotate(0deg);
+    }
+    100%
+    {
+        transform: rotate(calc(3.6deg * var(--num)));
+    }
+}
+
+.puntito::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    /* border-color: #4B4453; */
+    background: var(--clr);
+    box-shadow: 0 0 10px var(--clr),
+    0 0 30px var(clr);
+}
+
+.valor-porcentual {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    /* animation: fadeIn 1s linear forwards; */
+}
+
+.valor-porcentual.animame {
+    animation: fadeIn 1s linear forwards;
+    animation-delay: 2.5s;
+}
+
+.valor-porcentual h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* color: #fff; */
+    /* color: #212529; */
+    color: #4B4453;
+    margin: 0;
+    font-weight: 700;
+    font-size: 2em;
+}
+
+.valor-porcentual h3 span {
+    font-weight: 150;
+    /* color: #fff; */
+    /* color: #212529; */
+    color: #4B4453;
+    font-size: 0.5em;
+}
+
+.valor-porcentual p {
+    font-weight: 200;
+    font-size: 0.8em;
+    line-height: 2px;
+    margin-top: 5px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    /* color: rgba(255,255,255,0.75); */
+    color: rgba(33,37,41,1);
+    /* color: rgba(75, 68, 83, 1); */
+    /* color: rgba(0, 88, 147, 1); */
+}

@@ -1,0 +1,15 @@
+.section-info .info-job::before {
+    display: inline-block;
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    content: "\f0b1"; /* ICONO DE LA LISTA */
+    margin-top: 2px;
+    margin-right: 8px;
+    color: #4B4453; /* COLOR DEL ICONO */
+    font-size: 14px; /* TAMAÑO DEL ICONO DE LA LISTA */
+    margin-left: 16px; 
+}
