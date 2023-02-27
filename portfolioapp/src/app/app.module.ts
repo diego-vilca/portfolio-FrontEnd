@@ -12,6 +12,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { SkillComponent } from './components/skill/skill.component';
 import { ProjectComponent } from './components/project/project.component';
 import { IndexComponent } from './components/index/index.component';
+import { Pagina404Component } from './components/pagina404/pagina404.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { IndexComponent } from './components/index/index.component';
     FooterComponent,
     SkillComponent,
     ProjectComponent,
-    IndexComponent
+    IndexComponent,
+    Pagina404Component
   ],
   imports: [
     BrowserModule,
