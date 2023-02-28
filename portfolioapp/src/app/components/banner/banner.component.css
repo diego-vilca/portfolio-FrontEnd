@@ -7,7 +7,7 @@
     overflow: hidden;
 }
 
-.layer__banner {    
+.layer__banner {
     position: absolute; left: 0; top: 0; width: 100%; height: 100%;
     background-image: linear-gradient(to right,
     rgba(33, 37, 41, 1) 10%,
@@ -60,6 +60,7 @@
 
 
 .profile__img {
+    position: relative;
     height: 20vh;
     width: fit-content;
     max-height: 50%;
@@ -69,6 +70,7 @@
     border-radius: 50%;
     background-color: #eaf5fa;
 }
+
 
 @media (max-width: 300px) {
     .profile__img {
@@ -82,6 +84,10 @@
     min-height: 70px;
     border-color: #212529;
     /* border-color: #B0A8B9; */
+}
+
+.profile__name {
+  display: inline-flex;
 }
 
 .profile__name h1{
@@ -141,3 +147,27 @@
     box-shadow: 0 0 .5rem rgba(0, 0, 0, 0.42);
     color: white;
 }
+
+.icono-claro {
+  font-size: 14px;
+  color: white;
+}
+
+.icono-oscuro {
+  font-size: 14px;
+  color: #4B4453;
+}
+
+#img-perfil-edit {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+#img-banner-edit {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+

@@ -26,7 +26,7 @@
     /* border: 1px solid rgba(0, 0, 0, 0.125); */
     border-radius: 0.5rem;
     overflow: hidden;
-    padding: 50px 0;
+    padding: 30px 0;
 }
 
 .progreso-container .card {
@@ -44,7 +44,7 @@
 .progreso-container .card .progreso {
     position: relative;
     width: 150px;
-    height: 150px;    
+    height: 150px;
 }
 
 .progreso-container .card .progreso svg {
@@ -71,11 +71,11 @@
     stroke-dashoffset: calc(440 - (440 * var(--num))/100);
     opacity: 0;
     /* animation: fadeIn 1s linear forwards; */
-    
+
 }
 
 .circulo.animame {
-    
+
     animation: fadeIn 1s linear forwards;
     animation-delay: 2.5s;
 }
@@ -176,4 +176,14 @@
     color: rgba(33,37,41,1);
     /* color: rgba(75, 68, 83, 1); */
     /* color: rgba(0, 88, 147, 1); */
+}
+
+.icono {
+  font-size: 14px;
+  color: #4B4453;
+}
+
+.icon-container {
+  display: flex;
+  justify-content: flex-end;
 }

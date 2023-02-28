@@ -1,0 +1,9 @@
+.icono {
+  font-size: 14px;
+  color: #4B4453;
+}
+
+.icon-container {
+  display: flex;
+  justify-content: flex-end;
+}

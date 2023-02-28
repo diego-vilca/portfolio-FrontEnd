@@ -23,9 +23,9 @@
 }
 
 .box-shadow {
-    /* -webkit-box-shadow: 5px 5px 15px 5px #B0A8B9; 
+    /* -webkit-box-shadow: 5px 5px 15px 5px #B0A8B9;
     box-shadow: 5px 5px 15px 5px #B0A8B9; */
-    -webkit-box-shadow: 5px 8px 20px 12px #CDB4C8; 
+    -webkit-box-shadow: 5px 8px 20px 12px #CDB4C8;
     box-shadow: 5px 8px 20px 12px #CDB4C8;
 }
 
@@ -42,5 +42,15 @@
     margin-right: 8px;
     color: #4B4453; /* COLOR DEL ICONO */
     font-size: 18px; /* TAMAÑO DEL ICONO DE LA LISTA */
-    margin-left: 16px; 
+    margin-left: 16px;
+}
+
+.icono {
+  font-size: 14px;
+  color: #4B4453;
+}
+
+.icon-container {
+  display: flex;
+  justify-content: flex-end;
 }

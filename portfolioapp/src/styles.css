@@ -1,12 +1,12 @@
 /*google fonts*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
-@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css');
+/* @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css'); */ */
 
 /*=====================================*/
 
 *, *::before, *::after{
     box-sizing: border-box;
-}     
+}
 
 html {
     scroll-behavior: smooth;
@@ -69,7 +69,7 @@ img {
     font-style: normal;
     font-display: block;
   }
-  
+
   [class^="icon-"], [class*=" icon-"] {
     /* use !important to prevent issues with browser extensions that change fonts */
     font-family: 'icomoon' !important;
@@ -79,12 +79,12 @@ img {
     font-variant: normal;
     text-transform: none;
     line-height: 1;
-  
+
     /* Better Font Rendering =========== */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
-  
+
   .icon-facebook:before {
     content: "\ea90";
   }
@@ -97,8 +97,8 @@ img {
   .icon-github:before {
     content: "\eab0";
   }
-  
-  
+
+
 /*SECTIONS*/
 
 .items-list {
@@ -131,7 +131,7 @@ img {
     border-bottom: 1.5px solid rgb(176, 168, 185, .2);
 }
 
-.section-info a { 
+.section-info a {
     text-decoration: none;
     color: inherit;
 }
