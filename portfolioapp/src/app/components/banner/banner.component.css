@@ -106,7 +106,7 @@
 .social-bar {
     position: absolute;
     right: 0;
-    /* margin-right: 16px; */
+    margin-right: 12px;
     top: 25%;
     font-size: .8rem;
     display: flex;
@@ -121,24 +121,6 @@
     padding: .5rem;
     display: flex;
     transition: all .5s;
-}
-
-.icon-facebook {
-    background: #2E406E;
-    /* border-radius: 1rem 0 0 0; */
-}
-
-.icon-twitter {
-    background: #339DC5;
-}
-
-.icon-github {
-    background: #24292f;
-}
-
-.icon-instagram {
-    background: #C13584;
-    /* border-radius: 0 0 0 1rem; */
 }
 
 .icon:hover {

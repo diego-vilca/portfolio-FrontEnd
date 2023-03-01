@@ -2,33 +2,33 @@
   "nombre" : "Diego Vilca",
   "apellido" : "Vilca",
   "edad" : 35,
-  "url_perfil_img" : "./images/profile.jpg",
-  "url_banner_img" : "./images/banner.png",
+  "url_perfil_img" : "../assets/images/profile.jpg",
+  "url_banner_img" : "../assets/images/banner.png",
   "acerca_de" : "Mi nombre es Diego Victor Vilca, tengo 35 años y soy Desarrollador Fullstack Developer Junior. Actualmente resido en Bs As y me considero un entusiasta de las nuevas tecnologías, en constante búsqueda de nuevos conocimientos. Soy una persona responsable que sabe tomar la iniciativa como asi también trabajar en equipo. Busco participar en proyectos importantes determinado a lograr metas que contribuyan a mi crecimiento personal como al empresarial.",
   "redes" : [
     {
       "id" : 1,
       "url_social" : "",
-      "icon" : "",
-      "icon_color" : ""
+      "icon" : "icon-facebook",
+      "icon_color" : "#2E406E"
     },
     {
       "id" : 2,
       "url_social" : "",
-      "icon" : "",
-      "icon_color" : ""
+      "icon" : "icon-github",
+      "icon_color" : "#24292f"
     },
     {
       "id" : 3,
       "url_social" : "",
-      "icon" : "",
-      "icon_color" : ""
+      "icon" : "icon-twitter",
+      "icon_color" : "#339DC5"
     },
     {
       "id" : 4,
       "url_social" : "",
-      "icon" : "",
-      "icon_color" : ""
+      "icon" : "icon-instagram",
+      "icon_color" : "#C13584"
     }
   ],
   "educacion" : [
@@ -36,141 +36,172 @@
       "id" : 1,
       "institucion" : "Instituto Mariano Moreno",
       "titulo" : "Bachiller en Ciencias Sociales",
-      "año_ingreso" : "1941",
-      "año_egreso" : "2004",
-      "url_imagen" : "",
-      "url_web" : "",
+      "año_ingreso" : "1993",
+      "año_egreso" : "2005",
+      "url_imagen" : "../assets/images/logos/mim-logo.jpg",
+      "url_web" : "https://mim.edu.ar/",
       "url_certificado" : ""
     },
     {
       "id" : 2,
-      "institucion" : "Instituto Mariano Moreno",
-      "titulo" : "Bachiller en Ciencias Sociales",
-      "año_ingreso" : "",
-      "año_egreso" : "",
-      "url_imagen" : "",
-      "url_web" : "",
-      "url_certificado" : ""
+      "institucion" : "Polotic",
+      "titulo" : "Curso de Desarrollo Web FullStack con Python y JavaScript",
+      "año_ingreso" : "2020",
+      "año_egreso" : "2021",
+      "url_imagen" : "../assets/images/logos/polo-logo.png",
+      "url_web" : "https://polotic.misiones.gob.ar/",
+      "url_certificado" : "https://blockchainmisiones.aerobotsmisiones.com/certcheck/index.php?numero=1454"
     },
     {
       "id" : 3,
-      "institucion" : "Instituto Mariano Moreno",
-      "titulo" : "Bachiller en Ciencias Sociales",
-      "año_ingreso" : "",
-      "año_egreso" : "",
-      "url_imagen" : "",
-      "url_web" : "",
-      "url_certificado" : ""
+      "institucion" : "Polotic",
+      "titulo" : "Curso de Programación Web PHP",
+      "año_ingreso" : "2020",
+      "año_egreso" : "2021",
+      "url_imagen" : "../assets/images/logos/polo-logo.png",
+      "url_web" : "https://polotic.misiones.gob.ar/",
+      "url_certificado" : "https://blockchainmisiones.aerobotsmisiones.com/certcheck/index.php?numero=289"
     },
     {
       "id" : 4,
-      "institucion" : "Instituto Mariano Moreno",
-      "titulo" : "Bachiller en Ciencias Sociales",
-      "año_ingreso" : "1941",
-      "año_egreso" : "2004",
-      "url_imagen" : "",
-      "url_web" : "",
-      "url_certificado" : ""
+      "institucion" : "Polotic",
+      "titulo" : "Curso de Inglés para Desarrollo de Software",
+      "año_ingreso" : "2020",
+      "año_egreso" : "2021",
+      "url_imagen" : "../assets/images/logos/polo-logo.png",
+      "url_web" : "ttps://polotic.misiones.gob.ar/",
+      "url_certificado" : "https://blockchainmisiones.aerobotsmisiones.com/certcheck/index.php?numero=1408"
     },
     {
       "id" : 5,
-      "institucion" : "Instituto Mariano Moreno",
-      "titulo" : "Bachiller en Ciencias Sociales",
-      "año_ingreso" : "",
-      "año_egreso" : "",
-      "url_imagen" : "",
-      "url_web" : "",
-      "url_certificado" : ""
+      "institucion" : "Silicon Misiones",
+      "titulo" : "Curso de Desarrollo Web Fullstack con Java",
+      "año_ingreso" : "2021",
+      "año_egreso" : "2022",
+      "url_imagen" : "../assets/images/logos/silicon-logo.png",
+      "url_web" : "https://siliconmisiones.gob.ar/",
+      "url_certificado" : "https://blockchainmisiones.aerobotsmisiones.com/certcheck/index.php?numero=3658"
     },
     {
       "id" : 6,
-      "institucion" : "Instituto Mariano Moreno",
-      "titulo" : "Bachiller en Ciencias Sociales",
-      "año_ingreso" : "",
-      "año_egreso" : "",
-      "url_imagen" : "",
-      "url_web" : "",
-      "url_certificado" : ""
+      "institucion" : "Universidad Nacional San Martin",
+      "titulo" : "Curso de Programación en Python",
+      "año_ingreso" : "2020",
+      "año_egreso" : "2021",
+      "url_imagen" : "../assets/images/logos/unsam-logo.png",
+      "url_web" : "https://www.unsam.edu.ar/",
+      "url_certificado" : "https://drive.google.com/file/d/1YpBpye02sLPe7xGBps7OIqa37jel1OnR/view?usp=share_link"
     },
     {
       "id" : 7,
-      "institucion" : "Instituto Mariano Moreno",
-      "titulo" : "Bachiller en Ciencias Sociales",
-      "año_ingreso" : "1941",
-      "año_egreso" : "2004",
-      "url_imagen" : "",
-      "url_web" : "",
-      "url_certificado" : ""
+      "institucion" : "Instituto Tecnológico de Buenos Aires",
+      "titulo" : "Curso de analisis de datos en Python",
+      "año_ingreso" : "2020",
+      "año_egreso" : "2021",
+      "url_imagen" : "../assets/images/logos/itba-logo.png",
+      "url_web" : "https://www.itba.edu.ar/",
+      "url_certificado" : "https://drive.google.com/file/d/1NPXe-HAF_hy580YFcP8ymBPyFROaMbdT/view?usp=share_link"
     },
     {
       "id" : 8,
-      "institucion" : "Instituto Mariano Moreno",
-      "titulo" : "Bachiller en Ciencias Sociales",
-      "año_ingreso" : "",
-      "año_egreso" : "",
-      "url_imagen" : "",
-      "url_web" : "",
-      "url_certificado" : ""
+      "institucion" : "Todo Code",
+      "titulo" : "Curso de Desarrollo de APIs en Java con SpringBoot",
+      "año_ingreso" : "2021",
+      "año_egreso" : "2022",
+      "url_imagen" : "../assets/images/logos/todocode-logo.png",
+      "url_web" : "https://todocodeacademy.com/",
+      "url_certificado" : "https://drive.google.com/file/d/1tT3gFTCu1Ji7kVmg-YWa2LxjYkwXp1U2/view?usp=share_link"
     },
     {
       "id" : 9,
       "institucion" : "Instituto Mariano Moreno",
       "titulo" : "Bachiller en Ciencias Sociales",
-      "año_ingreso" : "",
-      "año_egreso" : "",
-      "url_imagen" : "",
-      "url_web" : "",
-      "url_certificado" : ""
+      "año_ingreso" : "2019",
+      "año_egreso" : "actualidad",
+      "url_imagen" : "../assets/images/logos/utn-logo.png",
+      "url_web" : "https://www.fra.utn.edu.ar/",
+      "url_certificado" : "https://www.fra.utn.edu.ar/"
     }
   ],
   "experiencia_laboral" : [
     {
       "id" : 1,
-      "empresa" : "",
-      "tarea" : "",
-      "año_ingreso" : "",
-      "año_egreso" : "",
+      "empresa" : "Parquista",
+      "tarea" : "Mantenimiento de plantas y jardines en la zona de Pilar",
+      "año_ingreso" : "2018",
+      "año_egreso" : "2019",
       "url_empresa" : ""
     },
     {
       "id" : 2,
-      "empresa" : "",
-      "tarea" : "",
-      "año_ingreso" : "",
-      "año_egreso" : "",
+      "empresa" : "Reparador de PCs Freelance",
+      "tarea" : "Diagnóstico y reparación de equipos. Armado de pc, configuración de software, limpieza de virus y malware.",
+      "año_ingreso" : "2013",
+      "año_egreso" : "2016",
       "url_empresa" : ""
     },
     {
       "id" : 3,
-      "empresa" : "",
-      "tarea" : "",
-      "año_ingreso" : "",
-      "año_egreso" : "",
+      "empresa" : "Frigorifico El Mataco SRL",
+      "tarea" : "Cadete multifuncional en sector de Expedición",
+      "año_ingreso" : "2008",
+      "año_egreso" : "2012",
       "url_empresa" : ""
     }
   ],
   "proyectos" : [
     {
-      "nombre" : "",
-      "descripcion" : "",
-      "url_video" : "",
-      "url_repositorio" : "",
-      "url_img" : ""
+      "nombre" : "Agencia de viajes con Java",
+      "descripcion" : "Sitio web para la venta de paquetes y servicios turísticos de una agencia de viajes, mediante Java, utilizando JPA y Servlets.",
+      "url_video" : "https://www.youtube.com/embed/ovNFG_Npoz4?",
+      "url_repositorio" : "https://github.com/diego-vilca/TPFinal-java.git",
+      "url_img" : "../assets/images/logos/java-logo.png"
     },
     {
-      "nombre" : "",
-      "descripcion" : "",
-      "url_video" : "",
-      "url_repositorio" : "",
-      "url_img" : ""
+      "nombre" : "Cadena de electrodomésticos",
+      "descripcion" : "Sitio web para exponer productos de una empresa de electrodomésticos, integrando Python en la web mediante Django.",
+      "url_video" : "https://www.youtube.com/embed/xb6UG_VsJME",
+      "url_repositorio" : "https://github.com/diego-vilca/JAGUARETE-KAA-S.A.git",
+      "url_img" : "../assets/images/logos/django-logo.png"
     }
   ],
   "habilidades_digitales" : [
     {
-      "nombre" : "",
-      "porcentaje" : 45,
-      "tipo" : ""
-
+      "nombre" : "html",
+      "porcentaje" : 90
+    },
+    {
+      "nombre" : "css",
+      "porcentaje" : 75
+    },
+    {
+      "nombre" : "javascript",
+      "porcentaje" : 75
+    },
+    {
+      "nombre" : "typescript",
+      "porcentaje" : 65
+    },
+    {
+      "nombre" : "java",
+      "porcentaje" : 85
+    },
+    {
+      "nombre" : "angular",
+      "porcentaje" : 50
+    },
+    {
+      "nombre" : "springboot",
+      "porcentaje" : 55
+    },
+    {
+      "nombre" : "mysql",
+      "porcentaje" : 70
+    },
+    {
+      "nombre" : "ingles",
+      "porcentaje" : 85
     }
+
   ]
 }
