@@ -1,0 +1,176 @@
+{
+  "nombre" : "Diego Vilca",
+  "apellido" : "Vilca",
+  "edad" : 35,
+  "url_perfil_img" : "./images/profile.jpg",
+  "url_banner_img" : "./images/banner.png",
+  "acerca_de" : "Mi nombre es Diego Victor Vilca, tengo 35 años y soy Desarrollador Fullstack Developer Junior. Actualmente resido en Bs As y me considero un entusiasta de las nuevas tecnologías, en constante búsqueda de nuevos conocimientos. Soy una persona responsable que sabe tomar la iniciativa como asi también trabajar en equipo. Busco participar en proyectos importantes determinado a lograr metas que contribuyan a mi crecimiento personal como al empresarial.",
+  "redes" : [
+    {
+      "id" : 1,
+      "url_social" : "",
+      "icon" : "",
+      "icon_color" : ""
+    },
+    {
+      "id" : 2,
+      "url_social" : "",
+      "icon" : "",
+      "icon_color" : ""
+    },
+    {
+      "id" : 3,
+      "url_social" : "",
+      "icon" : "",
+      "icon_color" : ""
+    },
+    {
+      "id" : 4,
+      "url_social" : "",
+      "icon" : "",
+      "icon_color" : ""
+    }
+  ],
+  "educacion" : [
+    {
+      "id" : 1,
+      "institucion" : "Instituto Mariano Moreno",
+      "titulo" : "Bachiller en Ciencias Sociales",
+      "año_ingreso" : "1941",
+      "año_egreso" : "2004",
+      "url_imagen" : "",
+      "url_web" : "",
+      "url_certificado" : ""
+    },
+    {
+      "id" : 2,
+      "institucion" : "Instituto Mariano Moreno",
+      "titulo" : "Bachiller en Ciencias Sociales",
+      "año_ingreso" : "",
+      "año_egreso" : "",
+      "url_imagen" : "",
+      "url_web" : "",
+      "url_certificado" : ""
+    },
+    {
+      "id" : 3,
+      "institucion" : "Instituto Mariano Moreno",
+      "titulo" : "Bachiller en Ciencias Sociales",
+      "año_ingreso" : "",
+      "año_egreso" : "",
+      "url_imagen" : "",
+      "url_web" : "",
+      "url_certificado" : ""
+    },
+    {
+      "id" : 4,
+      "institucion" : "Instituto Mariano Moreno",
+      "titulo" : "Bachiller en Ciencias Sociales",
+      "año_ingreso" : "1941",
+      "año_egreso" : "2004",
+      "url_imagen" : "",
+      "url_web" : "",
+      "url_certificado" : ""
+    },
+    {
+      "id" : 5,
+      "institucion" : "Instituto Mariano Moreno",
+      "titulo" : "Bachiller en Ciencias Sociales",
+      "año_ingreso" : "",
+      "año_egreso" : "",
+      "url_imagen" : "",
+      "url_web" : "",
+      "url_certificado" : ""
+    },
+    {
+      "id" : 6,
+      "institucion" : "Instituto Mariano Moreno",
+      "titulo" : "Bachiller en Ciencias Sociales",
+      "año_ingreso" : "",
+      "año_egreso" : "",
+      "url_imagen" : "",
+      "url_web" : "",
+      "url_certificado" : ""
+    },
+    {
+      "id" : 7,
+      "institucion" : "Instituto Mariano Moreno",
+      "titulo" : "Bachiller en Ciencias Sociales",
+      "año_ingreso" : "1941",
+      "año_egreso" : "2004",
+      "url_imagen" : "",
+      "url_web" : "",
+      "url_certificado" : ""
+    },
+    {
+      "id" : 8,
+      "institucion" : "Instituto Mariano Moreno",
+      "titulo" : "Bachiller en Ciencias Sociales",
+      "año_ingreso" : "",
+      "año_egreso" : "",
+      "url_imagen" : "",
+      "url_web" : "",
+      "url_certificado" : ""
+    },
+    {
+      "id" : 9,
+      "institucion" : "Instituto Mariano Moreno",
+      "titulo" : "Bachiller en Ciencias Sociales",
+      "año_ingreso" : "",
+      "año_egreso" : "",
+      "url_imagen" : "",
+      "url_web" : "",
+      "url_certificado" : ""
+    }
+  ],
+  "experiencia_laboral" : [
+    {
+      "id" : 1,
+      "empresa" : "",
+      "tarea" : "",
+      "año_ingreso" : "",
+      "año_egreso" : "",
+      "url_empresa" : ""
+    },
+    {
+      "id" : 2,
+      "empresa" : "",
+      "tarea" : "",
+      "año_ingreso" : "",
+      "año_egreso" : "",
+      "url_empresa" : ""
+    },
+    {
+      "id" : 3,
+      "empresa" : "",
+      "tarea" : "",
+      "año_ingreso" : "",
+      "año_egreso" : "",
+      "url_empresa" : ""
+    }
+  ],
+  "proyectos" : [
+    {
+      "nombre" : "",
+      "descripcion" : "",
+      "url_video" : "",
+      "url_repositorio" : "",
+      "url_img" : ""
+    },
+    {
+      "nombre" : "",
+      "descripcion" : "",
+      "url_video" : "",
+      "url_repositorio" : "",
+      "url_img" : ""
+    }
+  ],
+  "habilidades_digitales" : [
+    {
+      "nombre" : "",
+      "porcentaje" : 45,
+      "tipo" : ""
+
+    }
+  ]
+}
