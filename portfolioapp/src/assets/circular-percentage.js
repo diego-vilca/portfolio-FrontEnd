@@ -1,5 +1,5 @@
 /*función que permite animar los circulos porcentuales */
-$(function () {
+$(window).on('load',function () {
     var element1 = $(".circulo");
     var element2 = $(".puntito");
     var element3 = $(".valor-porcentual");
@@ -14,8 +14,8 @@ $(function () {
         element2.removeClass("animame");
         element3.removeClass("animame");
       }
-      
+
     });
 
-    
+
   });

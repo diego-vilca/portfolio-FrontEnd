@@ -14,139 +14,28 @@
   <div class="skills-container">
     <div class="progreso-container">
 
-      <div>
+      <div *ngFor="let skill of habilidades">
         <div class="icon-container">
           <!-- icon -->
           <button class="p-0 m-1 btn btn-close-black" title="Editar"><i class="icono fas fa-pencil"></i></button>
           <button class="p-0 m-1 btn btn-close-black" title="Borrar"><i class="icono fa-solid fa-trash"></i></button>
         </div>
+
         <div class="card">
-          <div class="progreso" style="--clr:#04fc43;--num:75;">
+          <div class="progreso" [style.--num]="skill.porcentaje" [style.--clr]="skill.tipo == 'hard' ? '#ff00be' : '#6A94EC'">
             <div class="puntito"></div>
             <svg>
               <circle class="circulo" cx="70" cy="70" r="70"></circle>
               <circle class="circulo" cx="70" cy="70" r="70"></circle>
             </svg>
             <div class="valor-porcentual">
-              <h3>75<span>%</span></h3>
-              <p>html</p>
+              <h3>{{skill.porcentaje}}<span>%</span></h3>
+              <p>{{skill.nombre}}</p>
             </div>
           </div>
         </div>
       </div>
 
-
-      <div class="card">
-        <div class="progreso" style="--clr:#6A94EC;--num:95;">
-          <div class="puntito"></div>
-          <svg>
-            <circle class="circulo" cx="70" cy="70" r="70"></circle>
-            <circle class="circulo" cx="70" cy="70" r="70"></circle>
-          </svg>
-          <div class="valor-porcentual">
-            <h3>95<span>%</span></h3>
-            <p>css</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="progreso" style="--clr:#ff00be;--num:50;">
-          <div class="puntito"></div>
-          <svg>
-            <circle class="circulo" cx="70" cy="70" r="70"></circle>
-            <circle class="circulo" cx="70" cy="70" r="70"></circle>
-          </svg>
-          <div class="valor-porcentual">
-            <h3>50<span>%</span></h3>
-            <p>javascript</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="progreso" style="--clr:#fee800;--num:60;">
-          <div class="puntito"></div>
-          <svg>
-            <circle class="circulo" cx="70" cy="70" r="70"></circle>
-            <circle class="circulo" cx="70" cy="70" r="70"></circle>
-          </svg>
-          <div class="valor-porcentual">
-            <h3>60<span>%</span></h3>
-            <p>typescript</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="progreso" style="--clr:#04fc43;--num:90;">
-          <div class="puntito"></div>
-          <svg>
-            <circle class="circulo" cx="70" cy="70" r="70"></circle>
-            <circle class="circulo" cx="70" cy="70" r="70"></circle>
-          </svg>
-          <div class="valor-porcentual">
-            <h3>90<span>%</span></h3>
-            <p>java</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="progreso" style="--clr:#6A94EC;--num:50;">
-          <div class="puntito"></div>
-          <svg>
-            <circle class="circulo" cx="70" cy="70" r="70"></circle>
-            <circle class="circulo" cx="70" cy="70" r="70"></circle>
-          </svg>
-          <div class="valor-porcentual">
-            <h3>50<span>%</span></h3>
-            <p>angular</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="progreso" style="--clr:#ff00be;--num:60;">
-          <div class="puntito"></div>
-          <svg>
-            <circle class="circulo" cx="70" cy="70" r="70"></circle>
-            <circle class="circulo" cx="70" cy="70" r="70"></circle>
-          </svg>
-          <div class="valor-porcentual">
-            <h3>60<span>%</span></h3>
-            <p>springboot</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="progreso" style="--clr:#fee800;--num:60;">
-          <div class="puntito"></div>
-          <svg>
-            <circle class="circulo" cx="70" cy="70" r="70"></circle>
-            <circle class="circulo" cx="70" cy="70" r="70"></circle>
-          </svg>
-          <div class="valor-porcentual">
-            <h3>60<span>%</span></h3>
-            <p>mysql</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="progreso" style="--clr:#04fc43;--num:80;">
-          <div class="puntito"></div>
-          <svg>
-            <circle class="circulo" cx="70" cy="70" r="70"></circle>
-            <circle class="circulo" cx="70" cy="70" r="70"></circle>
-          </svg>
-          <div class="valor-porcentual">
-            <h3>80<span>%</span></h3>
-            <p>ingles</p>
-          </div>
-        </div>
-      </div>
 
     </div>
   </div>

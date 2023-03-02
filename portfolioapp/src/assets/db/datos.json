@@ -36,9 +36,9 @@
       "id" : 1,
       "institucion" : "Instituto Mariano Moreno",
       "titulo" : "Bachiller en Ciencias Sociales",
-      "año_ingreso" : "1993",
-      "año_egreso" : "2005",
-      "url_imagen" : "../assets/images/logos/mim-logo.jpg",
+      "ingreso" : "1993",
+      "egreso" : "2005",
+      "url_img" : "../assets/images/logos/mim-logo.jpg",
       "url_web" : "https://mim.edu.ar/",
       "url_certificado" : ""
     },
@@ -46,9 +46,9 @@
       "id" : 2,
       "institucion" : "Polotic",
       "titulo" : "Curso de Desarrollo Web FullStack con Python y JavaScript",
-      "año_ingreso" : "2020",
-      "año_egreso" : "2021",
-      "url_imagen" : "../assets/images/logos/polo-logo.png",
+      "ingreso" : "2020",
+      "egreso" : "2021",
+      "url_img" : "../assets/images/logos/polo-logo.png",
       "url_web" : "https://polotic.misiones.gob.ar/",
       "url_certificado" : "https://blockchainmisiones.aerobotsmisiones.com/certcheck/index.php?numero=1454"
     },
@@ -56,9 +56,9 @@
       "id" : 3,
       "institucion" : "Polotic",
       "titulo" : "Curso de Programación Web PHP",
-      "año_ingreso" : "2020",
-      "año_egreso" : "2021",
-      "url_imagen" : "../assets/images/logos/polo-logo.png",
+      "ingreso" : "2020",
+      "egreso" : "2021",
+      "url_img" : "../assets/images/logos/polo-logo.png",
       "url_web" : "https://polotic.misiones.gob.ar/",
       "url_certificado" : "https://blockchainmisiones.aerobotsmisiones.com/certcheck/index.php?numero=289"
     },
@@ -66,9 +66,9 @@
       "id" : 4,
       "institucion" : "Polotic",
       "titulo" : "Curso de Inglés para Desarrollo de Software",
-      "año_ingreso" : "2020",
-      "año_egreso" : "2021",
-      "url_imagen" : "../assets/images/logos/polo-logo.png",
+      "ingreso" : "2020",
+      "egreso" : "2021",
+      "url_img" : "../assets/images/logos/polo-logo.png",
       "url_web" : "ttps://polotic.misiones.gob.ar/",
       "url_certificado" : "https://blockchainmisiones.aerobotsmisiones.com/certcheck/index.php?numero=1408"
     },
@@ -76,9 +76,9 @@
       "id" : 5,
       "institucion" : "Silicon Misiones",
       "titulo" : "Curso de Desarrollo Web Fullstack con Java",
-      "año_ingreso" : "2021",
-      "año_egreso" : "2022",
-      "url_imagen" : "../assets/images/logos/silicon-logo.png",
+      "ingreso" : "2021",
+      "egreso" : "2022",
+      "url_img" : "../assets/images/logos/silicon-logo.png",
       "url_web" : "https://siliconmisiones.gob.ar/",
       "url_certificado" : "https://blockchainmisiones.aerobotsmisiones.com/certcheck/index.php?numero=3658"
     },
@@ -86,9 +86,9 @@
       "id" : 6,
       "institucion" : "Universidad Nacional San Martin",
       "titulo" : "Curso de Programación en Python",
-      "año_ingreso" : "2020",
-      "año_egreso" : "2021",
-      "url_imagen" : "../assets/images/logos/unsam-logo.png",
+      "ingreso" : "2020",
+      "egreso" : "2021",
+      "url_img" : "../assets/images/logos/unsam-logo.png",
       "url_web" : "https://www.unsam.edu.ar/",
       "url_certificado" : "https://drive.google.com/file/d/1YpBpye02sLPe7xGBps7OIqa37jel1OnR/view?usp=share_link"
     },
@@ -96,9 +96,9 @@
       "id" : 7,
       "institucion" : "Instituto Tecnológico de Buenos Aires",
       "titulo" : "Curso de analisis de datos en Python",
-      "año_ingreso" : "2020",
-      "año_egreso" : "2021",
-      "url_imagen" : "../assets/images/logos/itba-logo.png",
+      "ingreso" : "2020",
+      "egreso" : "2021",
+      "url_img" : "../assets/images/logos/itba-logo.png",
       "url_web" : "https://www.itba.edu.ar/",
       "url_certificado" : "https://drive.google.com/file/d/1NPXe-HAF_hy580YFcP8ymBPyFROaMbdT/view?usp=share_link"
     },
@@ -106,21 +106,93 @@
       "id" : 8,
       "institucion" : "Todo Code",
       "titulo" : "Curso de Desarrollo de APIs en Java con SpringBoot",
-      "año_ingreso" : "2021",
-      "año_egreso" : "2022",
-      "url_imagen" : "../assets/images/logos/todocode-logo.png",
+      "ingreso" : "2021",
+      "egreso" : "2022",
+      "url_img" : "../assets/images/logos/todocode-logo.png",
       "url_web" : "https://todocodeacademy.com/",
       "url_certificado" : "https://drive.google.com/file/d/1tT3gFTCu1Ji7kVmg-YWa2LxjYkwXp1U2/view?usp=share_link"
     },
     {
       "id" : 9,
-      "institucion" : "Instituto Mariano Moreno",
-      "titulo" : "Bachiller en Ciencias Sociales",
-      "año_ingreso" : "2019",
-      "año_egreso" : "actualidad",
-      "url_imagen" : "../assets/images/logos/utn-logo.png",
+      "institucion" : "UTN",
+      "titulo" : "Tecnicatura en Programación",
+      "ingreso" : "2019",
+      "egreso" : "actualidad",
+      "url_img" : "../assets/images/logos/utn-logo.png",
       "url_web" : "https://www.fra.utn.edu.ar/",
       "url_certificado" : "https://www.fra.utn.edu.ar/"
+    }
+  ],
+  "habilidades_digitales" : [
+    { "id" : 1,
+      "nombre" : "html",
+      "porcentaje" : "90",
+      "tipo" : "hard"
+    },
+    { "id" : 2,
+      "nombre" : "css",
+      "porcentaje" : "75",
+      "tipo" : "hard"
+    },
+    { "id" : 3,
+      "nombre" : "javascript",
+      "porcentaje" : "70",
+      "tipo" : "hard"
+    },
+    { "id" : 4,
+      "nombre" : "typescript",
+      "porcentaje" : "65",
+      "tipo" : "hard"
+    },
+    { "id" : 5,
+      "nombre" : "java",
+      "porcentaje" : "80",
+      "tipo" : "hard"
+    },
+    { "id" : 6,
+      "nombre" : "angular",
+      "porcentaje" : "40",
+      "tipo" : "hard"
+    },
+    { "id" : 7,
+      "nombre" : "springboot",
+      "porcentaje" : "55",
+      "tipo" : "hard"
+    },
+    { "id" : 8,
+      "nombre" : "mysql",
+      "porcentaje" : "70",
+      "tipo" : "hard"
+    },
+    { "id" : 9,
+      "nombre" : "inglés",
+      "porcentaje" : "85",
+      "tipo" : "hard"
+    },
+    { "id" : 10,
+      "nombre" : "trabajo en equipo",
+      "porcentaje" : "100",
+      "tipo" : "soft"
+    },
+    { "id" : 11,
+      "nombre" : "liderazgo",
+      "porcentaje" : "80",
+      "tipo" : "soft"
+    },
+    { "id" : 12,
+      "nombre" : "resol. de problemas",
+      "porcentaje" : "75",
+      "tipo" : "soft"
+    },
+    { "id" : 13,
+      "nombre" : "comunicación",
+      "porcentaje" : "90",
+      "tipo" : "soft"
+    },{
+      "id" : 14,
+      "nombre" : "iniciativa",
+      "porcentaje" : "75",
+      "tipo" : "soft"
     }
   ],
   "experiencia_laboral" : [
@@ -164,44 +236,6 @@
       "url_repositorio" : "https://github.com/diego-vilca/JAGUARETE-KAA-S.A.git",
       "url_img" : "../assets/images/logos/django-logo.png"
     }
-  ],
-  "habilidades_digitales" : [
-    {
-      "nombre" : "html",
-      "porcentaje" : 90
-    },
-    {
-      "nombre" : "css",
-      "porcentaje" : 75
-    },
-    {
-      "nombre" : "javascript",
-      "porcentaje" : 75
-    },
-    {
-      "nombre" : "typescript",
-      "porcentaje" : 65
-    },
-    {
-      "nombre" : "java",
-      "porcentaje" : 85
-    },
-    {
-      "nombre" : "angular",
-      "porcentaje" : 50
-    },
-    {
-      "nombre" : "springboot",
-      "porcentaje" : 55
-    },
-    {
-      "nombre" : "mysql",
-      "porcentaje" : 70
-    },
-    {
-      "nombre" : "ingles",
-      "porcentaje" : 85
-    }
-
   ]
+
 }
