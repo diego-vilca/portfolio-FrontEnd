@@ -11,63 +11,27 @@
       </p>
     </div>
   </div>
-    <ul class="items-list">
-      <li>
-        <div class="row">
-          <div class="section-info col-lg-11 col-md-11 col-sm-9 col-9">
-            <div class="info-job">
-              <a href="https://mim.edu.ar/" target="_blank" rel="noopener" title="Ir al certificado">
-                <h3>Reparador de PC</h3>
-                <p>Diagnostico y reparacion de pcs freelance</p>
-                <p><time>2005</time></p>
-              </a>
-            </div>
+  <ul class="items-list" *ngFor="let job of work_history">
+    <li>
+      <div class="row">
+        <div class="section-info col-lg-11 col-md-11 col-sm-9 col-9">
+          <div class="info-job">
+            <a href="{{job.url_empresa}}" target="_blank" rel="noopener" title="web">
+              <h3>{{job.empresa}}</h3>
+              <p>{{job.tarea}}</p>
+              <p><time>{{job.ingreso}}</time>-<time>{{job.egreso}}</time></p>
+            </a>
           </div>
-          <div class="col-lg-1 col-md-1 col-sm-2 col-2">
-            <p class="icon-container">
-              <!-- icon -->
-              <button class="p-0 m-1 btn btn-close-black" title="Editar"><i class="icono fas fa-pencil"></i></button>
-              <button class="p-0 m-1 btn btn-close-black" title="Borrar"><i class="icono fa-solid fa-trash"></i></button>
+        </div>
+        <div class="col-lg-1 col-md-1 col-sm-2 col-2">
+          <p class="icon-container">
+            <!-- icon -->
+            <button class="p-0 m-1 btn btn-close-black" title="Editar"><i class="icono fas fa-pencil"></i></button>
+            <button class="p-0 m-1 btn btn-close-black" title="Borrar"><i class="icono fa-solid fa-trash"></i></button>
 
-            </p>
-          </div>
+          </p>
         </div>
-      </li>
-      <li>
-        <div class="row">
-          <div class="section-info col-lg-10 col-md-10 col-sm-8 col-8">
-            <div class="info-job">
-              <a href="https://mim.edu.ar/" target="_blank" rel="noopener" title="Ir al certificado">
-                <h3>Reparador de PC</h3>
-                <p>Diagnostico y reparacion de pcs freelance</p>
-                <p><time>2005</time></p>
-              </a>
-            </div>
-          </div>
-          <div class="col-lg-1 col-md-1 col-sm-2 col-2">
-            <p>
-              <!-- icon -->
-            </p>
-          </div>
-        </div>
-      </li>
-      <li>
-        <div class="row">
-          <div class="section-info col-lg-10 col-md-10 col-sm-8 col-8">
-            <div class="info-job">
-              <a href="https://mim.edu.ar/" target="_blank" rel="noopener" title="Ir al certificado">
-                <h3>Reparador de PC</h3>
-                <p>Diagnostico y reparacion de pcs freelance</p>
-                <p><time>2005</time></p>
-              </a>
-            </div>
-          </div>
-          <div class="col-lg-1 col-md-1 col-sm-2 col-2">
-            <p>
-              <!-- icon -->
-            </p>
-          </div>
-        </div>
-      </li>
-    </ul>
-  </section>
+      </div>
+    </li>
+  </ul>
+</section>

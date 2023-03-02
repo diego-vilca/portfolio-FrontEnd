@@ -199,25 +199,25 @@
     {
       "id" : 1,
       "empresa" : "Parquista",
-      "tarea" : "Mantenimiento de plantas y jardines en la zona de Pilar",
-      "año_ingreso" : "2018",
-      "año_egreso" : "2019",
+      "tarea" : "Mantenimiento de plantas y jardines en la zona de Pilar.",
+      "ingreso" : "2018",
+      "egreso" : "2019",
       "url_empresa" : ""
     },
     {
       "id" : 2,
       "empresa" : "Reparador de PCs Freelance",
       "tarea" : "Diagnóstico y reparación de equipos. Armado de pc, configuración de software, limpieza de virus y malware.",
-      "año_ingreso" : "2013",
-      "año_egreso" : "2016",
+      "ingreso" : "2013",
+      "egreso" : "2016",
       "url_empresa" : ""
     },
     {
       "id" : 3,
       "empresa" : "Frigorifico El Mataco SRL",
-      "tarea" : "Cadete multifuncional en sector de Expedición",
-      "año_ingreso" : "2008",
-      "año_egreso" : "2012",
+      "tarea" : "Cadete multifuncional en sector de Expedición.",
+      "ingreso" : "2008",
+      "egreso" : "2012",
       "url_empresa" : ""
     }
   ],
