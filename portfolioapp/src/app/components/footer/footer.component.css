@@ -18,7 +18,7 @@ footer{
     flex-direction: column;
 }
 
-.container-footer .redes-footer,  
+
 .container-footer .menu{
     position: relative;
     display: flex;
@@ -28,17 +28,22 @@ footer{
     flex-wrap: wrap;
 }
 
-.container-footer .redes-footer li,
+.container-footer .redes-footer {
+  display: inline-flex;
+  flex-direction: row;
+}
+
 .container-footer .menu li {
     list-style: none;
 }
 
-.container-footer .redes-footer li a {
+.container-footer .redes-footer a{
     font-size: 1.25rem;
     color: #fff;
     margin: 0 10px;
     display: inline-block;
     transition: 0.5s;
+    opacity: 0.75;
 }
 
 .container-footer .menu li a {
@@ -47,14 +52,15 @@ footer{
     margin: 0 10px;
     display: inline-block;
     text-decoration: none;
-    opacity: 0.75;
+    opacity: 0.70;
 }
 
+.container-footer .redes-footer a:hover,
 .container-footer .menu li a:hover {
     opacity: 1;
 }
 
-.container-footer .redes-footer li a:hover {
+.container-footer .redes-footer a:hover {
     transform: translateY(-10px);
 }
 
@@ -63,31 +69,11 @@ footer{
    text-align: center;
    margin-top: 20px;
    margin-bottom: 10px;
-   font-size: 0.75rem; 
+   font-size: 0.75rem;
 }
 
 .footer-icon {
     text-decoration: none;
-}
-
-.footer-icon .icon-facebook {
-    background: #212529;
-    border-radius: 0 0 0 0;
-}
-
-.footer-icon .icon-twitter {
-    background: #212529;
-    border-radius: 0 0 0 0;
-}
-
-.footer-icon .icon-github {
-    background: #212529;
-    border-radius: 0 0 0 0;
-}
-
-.footer-icon .icon-instagram {
-    background: #212529;
-    border-radius: 0 0 0 0;
 }
 
 /*to the top*/

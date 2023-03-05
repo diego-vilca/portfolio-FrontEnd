@@ -1,10 +1,13 @@
+/* #banner {
+  transform: scale(1);
+} */
 
 .container__banner {
     padding: 0px;
     position: relative;
     height: 40vh;
     min-height: 40vh;
-    overflow: hidden;
+    overflow: visible;
 }
 
 .layer__banner {
@@ -115,10 +118,22 @@
     z-index: 100;
 }
 
+.social-custom {
+  position: absolute;
+  right: -30px;
+  top: 25%;
+  font-size: .8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  z-index: 100;
+}
+
 .icon {
+    width: 30px;
     color: white;
     text-decoration: none;
-    padding: .5rem;
+    padding: .5rem 0;
     display: flex;
     transition: all .5s;
 }
@@ -151,5 +166,4 @@
   top: 0;
   right: 0;
 }
-
 

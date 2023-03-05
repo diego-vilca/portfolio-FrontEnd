@@ -1,23 +1,16 @@
 <footer>
   <div class="container container-footer">
-    <ul class="redes-footer">
-      <li>
-        <a href="" class="footer-icon" target="_blank"><span class="icon-facebook"></span></a>
-      </li>
-      <li>
-        <a href="" class="footer-icon" target="_blank"><span class="icon-twitter"></span></a>
-      </li>
-      <li>
-        <a href="" class="footer-icon" target="_blank"><span class="icon-github"></span></a>
-      </li>
-      <li>
-        <a href="" class="footer-icon" target="_blank"><span class="icon-instagram"></span></a>
-      </li>
-    </ul>
+    <div class="redes-footer">
+      <div *ngFor="let social of redes">
+        <a href="" class="p-0" target="_blank">
+          <span [ngClass]="'footer-icon ' + social.icon" style="background: #212529; border-radius: 0 0 0 0;"></span>
+        </a>
+      </div>
+    </div>
     <ul class="menu">
       <li>
         <a href="#acerca_de">Acerca de</a>
-      </li>                  
+      </li>
       <li>
         <a href="#experiencia">Experiencia</a>
       </li>

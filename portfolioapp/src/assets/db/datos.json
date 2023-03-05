@@ -9,25 +9,25 @@
     {
       "id" : 1,
       "url_social" : "",
-      "icon" : "icon-facebook",
+      "icon" : "fa-brands fa-facebook-f",
       "icon_color" : "#2E406E"
     },
     {
       "id" : 2,
       "url_social" : "",
-      "icon" : "icon-github",
+      "icon" : "fa-brands fa-github",
       "icon_color" : "#24292f"
     },
     {
       "id" : 3,
       "url_social" : "",
-      "icon" : "icon-twitter",
+      "icon" : "fa-brands fa-twitter",
       "icon_color" : "#339DC5"
     },
     {
       "id" : 4,
       "url_social" : "",
-      "icon" : "icon-instagram",
+      "icon" : "fa-brands fa-instagram",
       "icon_color" : "#C13584"
     }
   ],

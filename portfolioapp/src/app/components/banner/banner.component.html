@@ -2,12 +2,22 @@
     <!--banner-->
     <div class="container container__banner" >
       <div class="layer__banner"></div>
+
       <!-- redes -->
       <div class="social-bar">
         <div class="row" *ngFor="let social of redes">
-          <a href="" [ngClass]="'icon ' + social.icon" [ngStyle]="{'background' : social.icon_color}" target="_blank"></a>
+          <a class="p-0" href={{social.url_social}} target="_blank"><span [ngClass]="'icon ' + social.icon" [ngStyle]="{'background' : social.icon_color}"></span></a>
         </div>
       </div>
+      <div class="social-custom">
+        <!-- icon -->
+        <button class="boton-icon p-0 m-1 btn btn-close-black" title="Agregar"><i class="icono-oscuro fa-solid fa-plus"></i></button>
+        <button class="boton-icon p-0 m-1 btn btn-close-black" title="Editar"><i class="icono-oscuro fas fa-pencil"></i></button>
+        <button class="boton-icon p-0 m-1 btn btn-close-black" title="Borrar"><i class="icono-oscuro fa-solid fa-trash"></i></button>
+      </div>
+
+
+
       <!-- imagen banner -->
       <img class="banner__img" [src]="img_banner" alt="banner">
 
@@ -16,7 +26,8 @@
           <div class="container profile__img">
             <img [src]="img_perfil" alt="img-profile">
             <div id="img-perfil-edit">
-              <button class="p-0 m-0 btn btn-close-black" title="Editar"><i class="icono-claro fas fa-pencil"></i></button>
+              <!-- icon -->
+              <button class="boton-icon p-0 m-0 btn btn-close-black" title="Editar"><i class="icono-claro fas fa-pencil"></i></button>
             </div>
           </div>
 
@@ -26,7 +37,7 @@
           <h1>{{nombre}} {{apellido}}</h1>
           <p>
             <!-- icon -->
-            <button class="p-0 m-2 btn btn-close-black" title="Editar"><i class="icono-claro fas fa-pencil"></i></button>
+            <button class="boton-icon p-0 m-2 btn btn-close-black" title="Editar"><i class="icono-claro fas fa-pencil"></i></button>
 
           </p>
         </div>
@@ -34,7 +45,8 @@
       </div>
 
       <div id="img-banner-edit">
-        <button class="p-0 me-2 btn btn-close-black" title="Editar"><i class="icono-oscuro fas fa-pencil"></i></button>
+        <!-- icon -->
+        <button class="boton-icon p-0 me-2 btn btn-close-black" title="Editar"><i class="icono-oscuro fas fa-pencil"></i></button>
       </div>
 
 
