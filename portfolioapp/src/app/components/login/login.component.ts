@@ -29,19 +29,28 @@ export class LoginComponent implements OnInit{
     return this.form.get("password");
   }
 
-  //Metodos
+
+  //Propiedades
   get PasswordInvalid(){
-    return this.Password?.touched && !this.Password
-    ?.valid;
+    return this.Password?.errors && this.Password?.touched;
+  }
+
+  get PasswordValid(){
+    return !this.Password?.errors && this.Password?.touched;
   }
 
   get EmailInvalid(){
-    return this.Email?.touched && !this.Email?.valid;
+    return this.Email?.errors && this.Email?.touched;
+  }
+
+  get EmailValid(){
+    return !this.Email?.errors && this.Email?.touched;
   }
 
   onEnviar(event: Event) {
     // console.log("me mande");
     event.preventDefault;
+
     if(this.form.valid){
       alert("TODO OK!");
     }else {

@@ -2,39 +2,39 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="loginLabel">Login</h1>
+        <h1 class="modal-title fs-5" id="loginLabel">Iniciar Sesión</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <form [formGroup]="form" (ngSubmit)="onEnviar($event)">
           <div class="modal-body">
-              <div>
+              <div class="mb-3">
                 <label for="email" class="form-label">Email:</label>
-                <input type="email" formControlName="email" [class.border-danger]="EmailInvalid">
+                <input type="email" class="form-control" formControlName="email" [ngClass]="{'is-invalid': EmailInvalid, 'is-valid': EmailValid}">
               </div>
               <div *ngIf="Email?.touched && Email?.errors">
-                <p *ngIf="Email?.hasError('required')" class="error">
+                <p *ngIf="Email?.hasError('required')" class="text-danger">
                   El email es requerido.
                 </p>
-                <p *ngIf="Email?.hasError('email')" class="error">
+                <p *ngIf="Email?.hasError('email')" class="text-danger">
                   El formato del email no es válido.
                 </p>
               </div>
               <br>
-              <div>
+              <div class="mb-3">
                 <label for="password" class="form-label">Password:</label>
-                <input type="password" formControlName="password" [class.border-danger]="PasswordInvalid">
+                <input type="password" class="form-control" formControlName="password" [ngClass]="{'is-invalid': PasswordInvalid, 'is-valid': PasswordValid}">
               </div>
               <div *ngIf="Password?.touched && Password?.errors">
-                <p *ngIf="Password?.hasError('required')" class="error">
+                <p *ngIf="Password?.hasError('required')" class="text-danger">
                   El password es requerido.
                 </p>
-                <p *ngIf="Password?.hasError('minlength')" class="error">
+                <p *ngIf="Password?.hasError('minlength')" class="text-danger">
                   El password debe ser de 8 o más carácteres.
                 </p>
               </div>
           </div>
           <div class="modal-footer">
-            <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
+            <button type="submit" class="btn btn-primary">Login</button>
           </div>
       </form>
     </div>
