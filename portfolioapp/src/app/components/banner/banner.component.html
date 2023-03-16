@@ -4,18 +4,20 @@
       <div class="layer__banner"></div>
 
       <!-- redes -->
+      <!-- icon -->
+      <button class="boton-icon p-0 m-1 btn btn-close-black social-custom social-plus" data-bs-toggle="modal" data-bs-target="#create-social" title="Agregar Red" ><i class="icono-oscuro fa-solid fa-plus"></i></button>
+      <app-create-social></app-create-social>
       <div class="social-bar">
         <div class="row" *ngFor="let social of redes">
+          <!-- icon -->
           <a class="p-0" href={{social.url_social}} target="_blank"><span [ngClass]="'icon ' + social.icon" [ngStyle]="{'background' : social.icon_color}"></span></a>
+          <button class="boton-icon p-0 me-4 btn btn-close-black social-custom" data-bs-toggle="modal" data-bs-target="#edit-social" title="Editar Red" ><i class="icono-oscuro fas fa-pencil"></i></button>
+          <app-edit-social></app-edit-social>
+          <button class="boton-icon p-0 btn btn-close-black social-custom" data-bs-toggle="modal" data-bs-target="#delete-social" title="Eliminar Red" ><i class="icono-oscuro fa-solid fa-trash"></i></button>
+          <app-delete-social></app-delete-social>
+
         </div>
       </div>
-      <div class="social-custom">
-        <!-- icon -->
-        <button class="boton-icon p-0 m-1 btn btn-close-black" title="Agregar"><i class="icono-oscuro fa-solid fa-plus"></i></button>
-        <button class="boton-icon p-0 m-1 btn btn-close-black" title="Editar"><i class="icono-oscuro fas fa-pencil"></i></button>
-        <button class="boton-icon p-0 m-1 btn btn-close-black" title="Borrar"><i class="icono-oscuro fa-solid fa-trash"></i></button>
-      </div>
-
 
 
       <!-- imagen banner -->
@@ -27,7 +29,7 @@
             <img [src]="img_perfil" alt="img-profile">
             <div id="img-perfil-edit">
               <!-- icon -->
-              <button class="boton-icon p-0 m-0 btn btn-close-black" data-bs-toggle="modal" data-bs-target="#edit-perfil" title="Editar"><i class="icono-claro fas fa-pencil"></i></button>
+              <button class="boton-icon p-0 m-0 btn btn-close-black" data-bs-toggle="modal" data-bs-target="#edit-perfil" title="Editar Imagen"><i class="icono-claro fas fa-pencil"></i></button>
               <app-edit-perfil></app-edit-perfil>
             </div>
           </div>
@@ -38,7 +40,7 @@
           <h1>{{nombre}} {{apellido}}</h1>
           <p>
             <!-- icon -->
-            <button class="boton-icon p-0 m-2 btn btn-close-black" data-bs-toggle="modal" data-bs-target="#edit-nombre" title="Editar"><i class="icono-claro fas fa-pencil"></i></button>
+            <button class="boton-icon p-0 m-2 btn btn-close-black" data-bs-toggle="modal" data-bs-target="#edit-nombre" title="Editar Nombre"><i class="icono-claro fas fa-pencil"></i></button>
             <app-edit-nombre></app-edit-nombre>
 
           </p>
@@ -48,7 +50,7 @@
 
       <div id="img-banner-edit">
         <!-- icon -->
-        <button class="boton-icon p-0 me-2 btn btn-close-black" data-bs-toggle="modal" data-bs-target="#edit-banner" title="Editar"><i class="icono-oscuro fas fa-pencil"></i></button>
+        <button class="boton-icon p-0 me-2 btn btn-close-black" data-bs-toggle="modal" data-bs-target="#edit-banner" title="Editar Imagen"><i class="icono-oscuro fas fa-pencil"></i></button>
         <app-edit-banner></app-edit-banner>
       </div>
 

@@ -108,26 +108,29 @@
 /* iconos redes */
 .social-bar {
     position: absolute;
-    right: 0;
-    margin-right: 12px;
+    right: -36px;
     top: 25%;
     font-size: .8rem;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    z-index: 100;
 }
 
 .social-custom {
   position: absolute;
-  right: -30px;
-  top: 25%;
+  margin-top: 8px;
+  right: -20px;
   font-size: .8rem;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  z-index: 100;
+  width: 30px;
 }
+
+
+.social-plus {
+  top: 14%;
+  right: -5.2%;
+}
+
+
 
 .icon {
     width: 30px;

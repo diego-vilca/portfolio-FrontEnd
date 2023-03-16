@@ -33,6 +33,9 @@ import { DeleteSkillComponent } from './modals/habilidad/delete-skill/delete-ski
 import { CreateProjectComponent } from './modals/proyecto/create-project/create-project.component';
 import { EditProjectComponent } from './modals/proyecto/edit-project/edit-project.component';
 import { DeleteProjectComponent } from './modals/proyecto/delete-project/delete-project.component';
+import { CreateSocialComponent } from './modals/social/create-social/create-social.component';
+import { EditSocialComponent } from './modals/social/edit-social/edit-social.component';
+import { DeleteSocialComponent } from './modals/social/delete-social/delete-social.component';
 
 @NgModule({
   declarations: [
@@ -64,7 +67,10 @@ import { DeleteProjectComponent } from './modals/proyecto/delete-project/delete-
     DeleteSkillComponent,
     CreateProjectComponent,
     EditProjectComponent,
-    DeleteProjectComponent
+    DeleteProjectComponent,
+    CreateSocialComponent,
+    EditSocialComponent,
+    DeleteSocialComponent
   ],
   imports: [
     BrowserModule,
