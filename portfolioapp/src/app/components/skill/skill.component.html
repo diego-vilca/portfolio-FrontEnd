@@ -6,7 +6,8 @@
     <div class="col-lg-1 col-md-1 col-sm-2 col-2">
       <p class="icon-container">
         <!-- icon -->
-        <button class="boton-icon p-0 m-1 btn btn-close-black" title="Agregar"><i class="icono fa-solid fa-plus"></i></button>
+        <button class="boton-icon p-0 m-1 btn btn-close-black" data-bs-toggle="modal" data-bs-target="#create-skill" title="Agregar"><i class="icono fa-solid fa-plus"></i></button>
+        <app-create-skill></app-create-skill>
 
       </p>
     </div>
@@ -17,8 +18,10 @@
       <div *ngFor="let skill of habilidades">
         <div class="icon-container">
           <!-- icon -->
-          <button class="boton-icon p-0 m-1 btn btn-close-black" title="Editar"><i class="icono fas fa-pencil"></i></button>
-          <button class="boton-icon p-0 m-1 btn btn-close-black" title="Borrar"><i class="icono fa-solid fa-trash"></i></button>
+          <button class="boton-icon p-0 m-1 btn btn-close-black" data-bs-toggle="modal" data-bs-target="#edit-skill" title="Editar"><i class="icono fas fa-pencil"></i></button>
+          <app-edit-skill></app-edit-skill>
+          <button class="boton-icon p-0 m-1 btn btn-close-black" data-bs-toggle="modal" data-bs-target="#delete-skill" title="Borrar"><i class="icono fa-solid fa-trash"></i></button>
+          <app-delete-skill></app-delete-skill>
         </div>
 
         <div class="card">

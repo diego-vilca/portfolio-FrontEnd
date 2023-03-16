@@ -224,7 +224,7 @@
   "proyectos" : [
     {
       "nombre" : "Agencia de viajes con Java",
-      "descripcion" : "Sitio web para la venta de paquetes y servicios turísticos de una agencia de viajes, mediante Java, utilizando JPA y Servlets.",
+      "descripcion" : "Sitio web para la venta de paquetes y servicios turísticos de una agencia de viajes, mediante Java, utilizando JSP, Servlets y JPA.",
       "url_video" : "https://www.youtube.com/embed/ovNFG_Npoz4?",
       "url_repositorio" : "https://github.com/diego-vilca/TPFinal-java.git",
       "url_img" : "../assets/images/logos/java-logo.png"

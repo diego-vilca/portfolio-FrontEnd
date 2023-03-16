@@ -27,7 +27,8 @@
             <img [src]="img_perfil" alt="img-profile">
             <div id="img-perfil-edit">
               <!-- icon -->
-              <button class="boton-icon p-0 m-0 btn btn-close-black" title="Editar"><i class="icono-claro fas fa-pencil"></i></button>
+              <button class="boton-icon p-0 m-0 btn btn-close-black" data-bs-toggle="modal" data-bs-target="#edit-perfil" title="Editar"><i class="icono-claro fas fa-pencil"></i></button>
+              <app-edit-perfil></app-edit-perfil>
             </div>
           </div>
 
@@ -37,7 +38,8 @@
           <h1>{{nombre}} {{apellido}}</h1>
           <p>
             <!-- icon -->
-            <button class="boton-icon p-0 m-2 btn btn-close-black" title="Editar"><i class="icono-claro fas fa-pencil"></i></button>
+            <button class="boton-icon p-0 m-2 btn btn-close-black" data-bs-toggle="modal" data-bs-target="#edit-nombre" title="Editar"><i class="icono-claro fas fa-pencil"></i></button>
+            <app-edit-nombre></app-edit-nombre>
 
           </p>
         </div>
@@ -46,7 +48,8 @@
 
       <div id="img-banner-edit">
         <!-- icon -->
-        <button class="boton-icon p-0 me-2 btn btn-close-black" title="Editar"><i class="icono-oscuro fas fa-pencil"></i></button>
+        <button class="boton-icon p-0 me-2 btn btn-close-black" data-bs-toggle="modal" data-bs-target="#edit-banner" title="Editar"><i class="icono-oscuro fas fa-pencil"></i></button>
+        <app-edit-banner></app-edit-banner>
       </div>
 
 

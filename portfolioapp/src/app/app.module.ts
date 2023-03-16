@@ -16,6 +16,23 @@ import { ProjectComponent } from './components/project/project.component';
 import { IndexComponent } from './components/index/index.component';
 import { Pagina404Component } from './components/pagina404/pagina404.component';
 import { LoginComponent } from './components/login/login.component';
+import { EditNombreComponent } from './modals/persona/edit-nombre/edit-nombre.component';
+import { EditPerfilComponent } from './modals/persona/edit-perfil/edit-perfil.component';
+import { EditBannerComponent } from './modals/persona/edit-banner/edit-banner.component';
+import { EditAboutComponent } from './modals/persona/edit-about/edit-about.component';
+import { DeleteAboutComponent } from './modals/persona/delete-about/delete-about.component';
+import { CreateEducationComponent } from './modals/educacion/create-education/create-education.component';
+import { EditEducationComponent } from './modals/educacion/edit-education/edit-education.component';
+import { DeleteEducationComponent } from './modals/educacion/delete-education/delete-education.component';
+import { CreateJobComponent } from './modals/experiencia/create-job/create-job.component';
+import { EditJobComponent } from './modals/experiencia/edit-job/edit-job.component';
+import { DeleteJobComponent } from './modals/experiencia/delete-job/delete-job.component';
+import { CreateSkillComponent } from './modals/habilidad/create-skill/create-skill.component';
+import { EditSkillComponent } from './modals/habilidad/edit-skill/edit-skill.component';
+import { DeleteSkillComponent } from './modals/habilidad/delete-skill/delete-skill.component';
+import { CreateProjectComponent } from './modals/proyecto/create-project/create-project.component';
+import { EditProjectComponent } from './modals/proyecto/edit-project/edit-project.component';
+import { DeleteProjectComponent } from './modals/proyecto/delete-project/delete-project.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +47,24 @@ import { LoginComponent } from './components/login/login.component';
     ProjectComponent,
     IndexComponent,
     Pagina404Component,
-    LoginComponent
+    LoginComponent,
+    EditNombreComponent,
+    EditPerfilComponent,
+    EditBannerComponent,
+    EditAboutComponent,
+    DeleteAboutComponent,
+    CreateEducationComponent,
+    EditEducationComponent,
+    DeleteEducationComponent,
+    CreateJobComponent,
+    EditJobComponent,
+    DeleteJobComponent,
+    CreateSkillComponent,
+    EditSkillComponent,
+    DeleteSkillComponent,
+    CreateProjectComponent,
+    EditProjectComponent,
+    DeleteProjectComponent
   ],
   imports: [
     BrowserModule,

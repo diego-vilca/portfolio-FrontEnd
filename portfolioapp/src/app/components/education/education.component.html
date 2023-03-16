@@ -6,8 +6,8 @@
     <div class="col-lg-1 col-md-1 col-sm-2 coabout l-2">
       <p class="icon-container">
         <!-- icon -->
-        <button class="boton-icon p-0 m-1 btn btn-close-black" title="Agregar"><i class="icono fa-solid fa-plus"></i></button>
-
+        <button class="boton-icon p-0 m-1 btn btn-close-black" data-bs-toggle="modal" data-bs-target="#create-education" title="Agregar"><i class="icono fa-solid fa-plus"></i></button>
+        <app-create-education></app-create-education>
       </p>
     </div>
   </div>
@@ -32,8 +32,10 @@
           <div class="col-lg-1 col-md-1 col-sm-2 col-2">
             <p class="icon-container">
               <!-- icon -->
-              <button class="boton-icon p-0 m-1 btn btn-close-black" title="Editar"><i class="icono fas fa-pencil"></i></button>
-              <button class="boton-icon p-0 m-1 btn btn-close-black" title="Borrar"><i class="icono fa-solid fa-trash"></i></button>
+              <button class="boton-icon p-0 m-1 btn btn-close-black" data-bs-toggle="modal" data-bs-target="#edit-education" title="Editar"><i class="icono fas fa-pencil"></i></button>
+              <app-edit-education></app-edit-education>
+              <button class="boton-icon p-0 m-1 btn btn-close-black" data-bs-toggle="modal" data-bs-target="#delete-education" title="Borrar"><i class="icono fa-solid fa-trash"></i></button>
+              <app-delete-education></app-delete-education>
             </p>
           </div>
         </div>
