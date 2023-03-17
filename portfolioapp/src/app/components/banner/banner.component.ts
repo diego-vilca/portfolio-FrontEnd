@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { DatosService } from 'src/app/services/datos.service';
+import { Social } from 'src/app/entities/social';
+import { PersonaService } from 'src/app/services/persona.service';
+import { SocialService } from 'src/app/services/social.service';
 
 @Component({
   selector: 'app-banner',
@@ -12,21 +14,31 @@ export class BannerComponent implements OnInit{
   apellido: string = "";
   img_perfil : string = "";
   img_banner : string = "";
-  redes : any = [];
+  redes : Social[] = [];
 
   constructor(
-    private datos : DatosService
+    private datosP : PersonaService,
+    private datosR : SocialService
   ){}
 
   ngOnInit(): void {
-    this.datos.getDatos().subscribe(data => {
+    this.cargarPersona();
+    this.cargarRedes();
+  }
+
+  cargarPersona(){
+    this.datosP.buscarPersona(1).subscribe(data => {
       this.nombre = data.nombre;
       this.apellido = data.apellido;
-      this.img_perfil = data.url_perfil_img;
-      this.img_banner = data.url_banner_img;
-      this.redes = data.redes;
+      this.img_perfil = data.urlPerfilImg;
+      this.img_banner = data.urlBannerImg;
     })
   }
 
+  cargarRedes(){
+    this.datosR.verRedes().subscribe( data => {
+      this.redes = data;
+    })
+  }
 
 }

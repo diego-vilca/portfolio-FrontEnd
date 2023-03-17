@@ -1,0 +1,19 @@
+.modal-header {
+  padding-left: 3rem;
+  padding-bottom: 2rem;
+}
+
+.modal-body, .modal-footer {
+  padding: 1rem 3rem;
+}
+
+input {
+  height: 2rem;
+  font-size: small;
+}
+
+select {
+  padding: 0 1em;
+  height: 1.5rem;
+  margin-left: 10px;
+}

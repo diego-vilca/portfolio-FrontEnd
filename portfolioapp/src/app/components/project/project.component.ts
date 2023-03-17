@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
-import { DatosService } from 'src/app/services/datos.service';
+import { Proyecto } from 'src/app/entities/proyecto';
+import { ProyectoService } from 'src/app/services/proyecto.service';
 
 @Component({
   selector: 'app-project',
@@ -9,17 +10,21 @@ import { DatosService } from 'src/app/services/datos.service';
 })
 export class ProjectComponent implements OnInit{
 
-  proyectos : any = [];
+  proyectos : Proyecto[] = [];
   iFrameUrl = this.sanitizer;
 
   constructor(
-    private datos : DatosService,
+    private datos : ProyectoService,
     private sanitizer : DomSanitizer
   ){}
 
   ngOnInit(): void {
-    this.datos.getDatos().subscribe(data => {
-      this.proyectos = data.proyectos;
+    this.cargarProyectos();
+  }
+
+  cargarProyectos(){
+    this.datos.verProyectos().subscribe( data => {
+      this.proyectos = data;
     })
   }
 

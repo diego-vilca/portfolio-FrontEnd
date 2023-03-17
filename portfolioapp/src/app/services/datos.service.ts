@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
-
+//servicio de prueba, levanta un json
 @Injectable({
   providedIn: 'root'
 })

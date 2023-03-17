@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DatosService } from 'src/app/services/datos.service';
+import { PersonaService } from 'src/app/services/persona.service';
 
 @Component({
   selector: 'app-about',
@@ -11,15 +11,17 @@ export class AboutComponent implements OnInit{
   about_me : string = "";
 
   constructor(
-    private datos : DatosService
+    private datos : PersonaService
   ){}
 
   ngOnInit(): void {
-    this.datos.getDatos().subscribe(
-      data => {
-        this.about_me = data.acerca_de;
-      }
-    )
+    this.cargarAboutMe();
+  }
+
+  cargarAboutMe(){
+    this.datos.buscarPersona(1).subscribe( data => {
+      this.about_me = data.acercaDe;
+    })
   }
 
 }

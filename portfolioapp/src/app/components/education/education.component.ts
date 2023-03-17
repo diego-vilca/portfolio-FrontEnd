@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { DatosService } from 'src/app/services/datos.service';
+import { Educacion } from 'src/app/entities/educacion';
+import { EducacionService } from 'src/app/services/educacion.service';
 
 @Component({
   selector: 'app-education',
@@ -8,16 +9,19 @@ import { DatosService } from 'src/app/services/datos.service';
 })
 export class EducationComponent implements OnInit{
 
-  educacion : any = [];
+  educacion : Educacion[] = [];
 
   constructor(
-    private datos : DatosService
-  ) {
-  }
+    private datos : EducacionService
+  ) {}
 
   ngOnInit(): void {
-    this.datos.getDatos().subscribe( data => {
-      this.educacion = data.educacion;
+    this.cargarEducacion();
+  }
+
+  cargarEducacion() : void {
+    this.datos.verEducacion().subscribe( data => {
+      this.educacion = data;
     })
   }
 

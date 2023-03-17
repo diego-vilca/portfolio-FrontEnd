@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { DatosService } from 'src/app/services/datos.service';
+import { Experiencia } from 'src/app/entities/experiencia';
+import { ExperienciaService } from 'src/app/services/experiencia.service';
 
 @Component({
   selector: 'app-work-history',
@@ -8,15 +9,19 @@ import { DatosService } from 'src/app/services/datos.service';
 })
 export class WorkHistoryComponent implements OnInit {
 
-  work_history : any = [];
+  work_history : Experiencia[] = [];
 
   constructor(
-    private datos : DatosService
+    private datos : ExperienciaService
   ){}
 
   ngOnInit(): void {
-    this.datos.getDatos().subscribe( data => {
-      this.work_history = data.experiencia_laboral;
+    this.cargarExperiencia();
+  }
+
+  cargarExperiencia(){
+    this.datos.verExperiencias().subscribe( data => {
+      this.work_history = data;
     })
   }
 

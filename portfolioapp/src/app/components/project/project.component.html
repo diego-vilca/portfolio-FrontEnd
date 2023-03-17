@@ -17,20 +17,20 @@
       <li>
         <div class="row">
           <div class="col-lg-1 col-md-1 col-sm-2 col-2 pe-0">
-            <a href="{{project.url_repositorio}}" target="_blank" rel="noopener" title="Ir al Repositorio">
-              <img class="logo" src="{{project.url_img}}" alt="java-logo">
+            <a href="{{project.urlRepositorio}}" target="_blank" rel="noopener" title="Ir al Repositorio">
+              <img class="logo" src="{{project.urlImg}}" alt="java-logo">
             </a>
           </div>
           <div class="section-info col-lg-10 col-md-10 col-sm-8 col-8">
             <div class="info-project">
-              <a href="{{project.url_repositorio}}" target="_blank" rel="noopener" title="Ir al Repositorio">
+              <a href="{{project.urlRepositorio}}" target="_blank" rel="noopener" title="Ir al Repositorio">
                 <h3>{{project.nombre}}</h3>
                 <p>{{project.descripcion}}</p>
               </a>
             </div>
             <div class="responsive-iframe">
               <div class="iframe-wrapper box-shadow">
-                <iframe [src]="iFrameUrl.bypassSecurityTrustResourceUrl(project.url_video)" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe [src]="iFrameUrl.bypassSecurityTrustResourceUrl(project.urlVideo)" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
               </div>
             </div>
           </div>

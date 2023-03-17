@@ -8,10 +8,10 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class LoginComponent implements OnInit{
 
-  form : FormGroup;
+  formulario : FormGroup;
 
   constructor( private formBuilder : FormBuilder ){
-    this.form = this.formBuilder.group({
+    this.formulario = this.formBuilder.group({
       email : ['',[Validators.required, Validators.email]],
       password : ['',[Validators.required, Validators.minLength(8)]]
     })
@@ -21,42 +21,47 @@ export class LoginComponent implements OnInit{
   }
 
   //Getters
-  get Email(){
-    return this.form.get("email");
+  get email(){
+    return this.formulario.get("email");
   }
 
-  get Password(){
-    return this.form.get("password");
+  get password(){
+    return this.formulario.get("password");
   }
 
 
   //Propiedades
-  get PasswordInvalid(){
-    return this.Password?.errors && this.Password?.touched;
+  get passwordInvalid(){
+    return this.password?.errors && this.password?.touched;
   }
 
-  get PasswordValid(){
-    return !this.Password?.errors && this.Password?.touched;
+  get passwordValid(){
+    return !this.password?.errors && this.password?.touched;
   }
 
-  get EmailInvalid(){
-    return this.Email?.errors && this.Email?.touched;
+  get emailInvalid(){
+    return this.email?.errors && this.email?.touched;
   }
 
-  get EmailValid(){
-    return !this.Email?.errors && this.Email?.touched;
+  get emailValid(){
+    return !this.email?.errors && this.email?.touched;
+  }
+
+  limpiarForm() : void{
+    this.formulario.reset();
   }
 
   onEnviar(event: Event) {
     // console.log("me mande");
     event.preventDefault;
 
-    if(this.form.valid){
+    if(this.formulario.valid){
       alert("TODO OK!");
     }else {
-      this.form.markAllAsTouched();
+      this.formulario.markAllAsTouched();
       alert("TODO MAAAAAAAAAAAL!");
     }
   }
+
 
 }

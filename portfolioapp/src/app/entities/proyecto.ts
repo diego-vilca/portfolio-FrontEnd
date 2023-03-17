@@ -9,10 +9,10 @@ export class Proyecto {
 
   constructor(nombre : string, descripcion : string, urlImg :
               string, urlVideo : string, urlRepositorio : string) {
-        this.nombre = nombre;
-        this.descripcion = descripcion;
-        this.urlImg = urlImg;
-        this.urlVideo = urlVideo;
-        this.urlRepositorio = urlRepositorio;
+    this.nombre = nombre;
+    this.descripcion = descripcion;
+    this.urlImg = urlImg;
+    this.urlVideo = urlVideo;
+    this.urlRepositorio = urlRepositorio;
   }
 }

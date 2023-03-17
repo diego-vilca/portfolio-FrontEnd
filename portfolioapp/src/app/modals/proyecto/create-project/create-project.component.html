@@ -1,17 +1,41 @@
-<div class="modal fade" id="create-project" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="create-project" tabindex="-1" aria-labelledby="loginLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <h1 class="modal-title fs-5" id="loginLabel">Agregar Proyecto</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" (click)="limpiarForm()" aria-label="Close"></button>
       </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
+      <form [formGroup]="formulario" (ngSubmit)="onEnviar($event)">
+          <div class="modal-body">
+              <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre:</label>
+                <input type="text" class="form-control" formControlName="nombre" >
+              </div>
+              <br>
+              <div class="mb-3">
+                <label for="descripcion" class="form-label">Descripción:</label>
+                <input type="text" class="form-control" formControlName="descripcion" >
+              </div>
+              <br>
+              <div class="mb-3">
+                <label for="urlImg" class="form-label">Url de la Imagen:</label>
+                <input type="text" class="form-control" formControlName="urlImg" >
+              </div>
+              <br>
+              <div class="mb-3">
+                <label for="urlVideo" class="form-label">Url Video:</label>
+                <input type="text" class="form-control" formControlName="urlVideo" >
+              </div>
+              <br>
+              <div class="mb-3">
+                <label for="urlRepositorio" class="form-label">Url del Repositorio:</label>
+                <input type="text" class="form-control" formControlName="urlRepositorio" >
+              </div>
+          </div>
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-primary">Enviar</button>
+          </div>
+      </form>
     </div>
   </div>
 </div>

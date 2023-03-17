@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { DatosService } from 'src/app/services/datos.service';
+import { Social } from 'src/app/entities/social';
+import { SocialService } from 'src/app/services/social.service';
 
 @Component({
   selector: 'app-footer',
@@ -9,15 +10,19 @@ import { DatosService } from 'src/app/services/datos.service';
 
 export class FooterComponent implements OnInit{
 
-  redes : any = [];
+  redes : Social[] = [];
 
   constructor(
-    private datos : DatosService
+    private datos : SocialService
   ){}
 
   ngOnInit(): void {
-    this.datos.getDatos().subscribe( data => {
-      this.redes = data.redes;
+    this.cargarRedes();
+  }
+
+  cargarRedes(){
+    this.datos.verRedes().subscribe( data => {
+      this.redes = data;
     })
   }
 
