@@ -1,5 +1,7 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input} from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Experiencia } from 'src/app/entities/experiencia';
 import { ExperienciaService } from 'src/app/services/experiencia.service';
 
 @Component({
@@ -7,28 +9,52 @@ import { ExperienciaService } from 'src/app/services/experiencia.service';
   templateUrl: './edit-job.component.html',
   styleUrls: ['./edit-job.component.css']
 })
-export class EditJobComponent implements OnInit{
+export class EditJobComponent{
+  //Uso el form solo para validar
+  formulario : FormGroup;
+  //traigo mi objeto a editar desde la clase padre
+  @Input() trabajo : Experiencia;
 
-  form : FormGroup;
-  //id del elemento a editar
-  @Input() idEditar ?: number;
+  constructor(private formBuilder : FormBuilder,
+              private datos : ExperienciaService,
+              private router : Router,
+              private route : ActivatedRoute ) {
 
-  constructor( private formBuilder : FormBuilder, datos : ExperienciaService ) {
-    this.form = this.formBuilder.group({
-      empresa : ['',[Validators.required]],
-      funcion : ['',[Validators.required]],
-      anioIngreso : ['',[Validators.required]],
+    this.formulario = this.formBuilder.group({
+      empresa : [''],
+      funcion : [''],
+      anioIngreso : [''],
       anioEgreso : [''],
-      urlEmpresa : ['',[Validators.required]],
+      urlEmpresa : [''],
     })
-  }
 
-  ngOnInit(): void {
+    this.trabajo  = Object();
   }
 
 
   onEnviar(event : Event){
+    event.preventDefault;
+    if (this.formulario.valid) {
+      this.agregarExperiencia();
+      alert("Experiencia laboral modificada exitosamente.");
+      window.location.reload();
+    } else {
+      alert("Error, la experiencia no pudo modificarse.");
+    }
+  }
 
+  agregarExperiencia() : void{
+    this.datos.agregarExperiencia(this.trabajo, 1).subscribe();
+  }
+
+  reloadPage(){
+    window.location.reload();
+  }
+
+  reloadCurrent(){
+    this.router.routeReuseStrategy.shouldReuseRoute = () => false;
+    this.router.onSameUrlNavigation = 'reload';
+    this.router.navigate(['./'], { relativeTo: this.route})
   }
 
 }

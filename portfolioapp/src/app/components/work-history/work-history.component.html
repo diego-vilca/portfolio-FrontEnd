@@ -27,10 +27,10 @@
         <div class="col-lg-1 col-md-1 col-sm-2 col-2">
           <p class="icon-container">
             <!-- icon -->
-            <button class="boton-icon p-0 m-1 btn btn-close-black" (click)="pasarId(job)" data-bs-toggle="modal" data-bs-target="#edit-job" title="Editar Trabajo"><i class="icono fas fa-pencil"></i></button>
-            <app-edit-job [idEditar]="idTrabajo"></app-edit-job>
-            <button class="boton-icon p-0 m-1 btn btn-close-black" (click)="pasarId(job)" data-bs-toggle="modal" data-bs-target="#delete-job" title="Eliminar Trabajo"><i class="icono fa-solid fa-trash"></i></button>
-            <app-delete-job [idEliminar]="idTrabajo"></app-delete-job>
+            <button class="boton-icon p-0 m-1 btn btn-close-black" (click)="pasarTrabajo(job)" data-bs-toggle="modal" data-bs-target="#edit-job" title="Editar Trabajo"><i class="icono fas fa-pencil"></i></button>
+            <app-edit-job [trabajo]="experiencia"></app-edit-job>
+            <button class="boton-icon p-0 m-1 btn btn-close-black" (click)="pasarTrabajo(job)" data-bs-toggle="modal" data-bs-target="#delete-job" title="Eliminar Trabajo"><i class="icono fa-solid fa-trash"></i></button>
+            <app-delete-job [trabajo]="experiencia"></app-delete-job>
 
           </p>
         </div>

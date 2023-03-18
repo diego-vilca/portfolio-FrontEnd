@@ -37,10 +37,10 @@
           <div class="col-lg-1 col-md-1 col-sm-2 col-2">
             <p class="icon-container">
               <!-- icon -->
-              <button class="boton-icon p-0 m-1 btn btn-close-black" (click)="pasarId(project)" data-bs-toggle="modal" data-bs-target="#edit-project" title="Editar Proyecto"><i class="icono fas fa-pencil"></i></button>
-              <app-edit-project [idEditar]="idProyecto"></app-edit-project>
-              <button class="boton-icon p-0 m-1 btn btn-close-black" (click)="pasarId(project)" data-bs-toggle="modal" data-bs-target="#delete-project" title="Eliminar Proyecto"><i class="icono fa-solid fa-trash"></i></button>
-              <app-delete-project [idEliminar]="idProyecto"></app-delete-project>
+              <button class="boton-icon p-0 m-1 btn btn-close-black" (click)="pasarProyecto(project)" data-bs-toggle="modal" data-bs-target="#edit-project" title="Editar Proyecto"><i class="icono fas fa-pencil"></i></button>
+              <app-edit-project [project]="proyecto"></app-edit-project>
+              <button class="boton-icon p-0 m-1 btn btn-close-black" (click)="pasarProyecto(project)" data-bs-toggle="modal" data-bs-target="#delete-project" title="Eliminar Proyecto"><i class="icono fa-solid fa-trash"></i></button>
+              <app-delete-project [project]="proyecto"></app-delete-project>
 
             </p>
           </div>

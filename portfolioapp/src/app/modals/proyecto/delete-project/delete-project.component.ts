@@ -7,15 +7,15 @@ import { ProyectoService } from 'src/app/services/proyecto.service';
   styleUrls: ['./delete-project.component.css']
 })
 export class DeleteProjectComponent {
-//id del elemento a eliminar
-@Input() idEliminar : any;
+//obtengo el elemento a eliminar
+@Input() project : any;
 
 constructor(
   private datos : ProyectoService
 ) {}
 
 eliminarProyecto() : void{
-  this.datos.borrarProyecto(this.idEliminar).subscribe();
+  this.datos.borrarProyecto(this.project.idProyect).subscribe();
   alert("Proyecto eliminado exitosamente.");
   window.location.reload();
 }

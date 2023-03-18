@@ -14,13 +14,11 @@ import { FooterComponent } from './components/footer/footer.component';
 import { SkillComponent } from './components/skill/skill.component';
 import { ProjectComponent } from './components/project/project.component';
 import { IndexComponent } from './components/index/index.component';
-import { Pagina404Component } from './components/pagina404/pagina404.component';
 import { LoginComponent } from './components/login/login.component';
 import { EditNombreComponent } from './modals/persona/edit-nombre/edit-nombre.component';
 import { EditPerfilComponent } from './modals/persona/edit-perfil/edit-perfil.component';
 import { EditBannerComponent } from './modals/persona/edit-banner/edit-banner.component';
 import { EditAboutComponent } from './modals/persona/edit-about/edit-about.component';
-import { DeleteAboutComponent } from './modals/persona/delete-about/delete-about.component';
 import { CreateEducationComponent } from './modals/educacion/create-education/create-education.component';
 import { EditEducationComponent } from './modals/educacion/edit-education/edit-education.component';
 import { DeleteEducationComponent } from './modals/educacion/delete-education/delete-education.component';
@@ -36,6 +34,7 @@ import { DeleteProjectComponent } from './modals/proyecto/delete-project/delete-
 import { CreateSocialComponent } from './modals/social/create-social/create-social.component';
 import { EditSocialComponent } from './modals/social/edit-social/edit-social.component';
 import { DeleteSocialComponent } from './modals/social/delete-social/delete-social.component';
+import { Page404Component } from './components/page404/page404.component';
 
 @NgModule({
   declarations: [
@@ -49,13 +48,11 @@ import { DeleteSocialComponent } from './modals/social/delete-social/delete-soci
     SkillComponent,
     ProjectComponent,
     IndexComponent,
-    Pagina404Component,
     LoginComponent,
     EditNombreComponent,
     EditPerfilComponent,
     EditBannerComponent,
     EditAboutComponent,
-    DeleteAboutComponent,
     CreateEducationComponent,
     EditEducationComponent,
     DeleteEducationComponent,
@@ -70,7 +67,8 @@ import { DeleteSocialComponent } from './modals/social/delete-social/delete-soci
     DeleteProjectComponent,
     CreateSocialComponent,
     EditSocialComponent,
-    DeleteSocialComponent
+    DeleteSocialComponent,
+    Page404Component
   ],
   imports: [
     BrowserModule,

@@ -15,7 +15,7 @@ export class BannerComponent implements OnInit{
   img_perfil : string = "";
   img_banner : string = "";
   redes : Social[] = [];
-  idRed ?: number;
+  red : Social = Object();
 
   constructor(
     private datosP : PersonaService,
@@ -42,8 +42,8 @@ export class BannerComponent implements OnInit{
     })
   }
 
-  pasarId(red : Social){
-    this.idRed= red.idRed;
+  pasarRed(red : Social){
+    this.red= red;
   }
 
 }

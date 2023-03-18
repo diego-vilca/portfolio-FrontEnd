@@ -10,7 +10,7 @@ import { EducacionService } from 'src/app/services/educacion.service';
 export class EducationComponent implements OnInit{
 
   educacion : Educacion[] = [];
-  idEducacion ?: number;
+  estudio : Educacion = Object();
 
   constructor(
     private datos : EducacionService
@@ -26,8 +26,9 @@ export class EducationComponent implements OnInit{
     })
   }
 
-  pasarId(educacion : Educacion){
-    this.idEducacion = educacion.idEducacion;
+  pasarEducacion(educacion : Educacion) : void{
+    this.estudio = educacion;
   }
+
 
 }

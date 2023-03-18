@@ -8,14 +8,14 @@ import { SocialService } from 'src/app/services/social.service';
 })
 export class DeleteSocialComponent {
 //id del elemento a eliminar
-@Input() idEliminar : any;
+@Input() red : any;
 
 constructor(
   private datos : SocialService
 ) {}
 
 eliminarRed() : void{
-  this.datos.borrarRed(this.idEliminar).subscribe();
+  this.datos.borrarRed(this.red.idRed).subscribe();
   alert("Red social eliminada exitosamente.");
   window.location.reload();
 }

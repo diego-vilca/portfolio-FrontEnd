@@ -1,4 +1,4 @@
-<div class="modal fade" id="create-project" tabindex="-1" aria-labelledby="loginLabel" aria-hidden="true">
+<div class="modal fade" id="create-project" data-bs-backdrop="static" tabindex="-1" aria-labelledby="loginLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -13,8 +13,9 @@
               </div>
               <br>
               <div class="mb-3">
-                <label for="descripcion" class="form-label">Descripción:</label>
-                <input type="text" class="form-control" formControlName="descripcion" >
+                <label for="descripcion" class="form-label">Descripción:</label><br>
+                <!-- <input type="text" class="form-control" formControlName="descripcion" > -->
+                <textarea formControlName="descripcion"  rows="5" cols="61"></textarea>
               </div>
               <br>
               <div class="mb-3">

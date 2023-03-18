@@ -7,15 +7,15 @@ import { HabilidadService } from 'src/app/services/habilidad.service';
   styleUrls: ['./delete-skill.component.css']
 })
 export class DeleteSkillComponent {
-//id del elemento a eliminar
-@Input() idEliminar : any;
+//traigo el elemento a eliminar
+@Input() habilidad : any;
 
 constructor(
   private datos : HabilidadService
 ) {}
 
 eliminarHabilidad() : void{
-  this.datos.borrarHabilidad(this.idEliminar).subscribe();
+  this.datos.borrarHabilidad(this.habilidad.idHabilidad).subscribe();
   alert("Habilidad digital eliminada exitosamente.");
   window.location.reload();
 }

@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DeleteAboutComponent } from './delete-about.component';
+import { Page404Component } from './page404.component';
 
-describe('DeleteAboutComponent', () => {
-  let component: DeleteAboutComponent;
-  let fixture: ComponentFixture<DeleteAboutComponent>;
+describe('Page404Component', () => {
+  let component: Page404Component;
+  let fixture: ComponentFixture<Page404Component>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ DeleteAboutComponent ]
+      declarations: [ Page404Component ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(DeleteAboutComponent);
+    fixture = TestBed.createComponent(Page404Component);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -41,7 +41,7 @@ export class CreateJobComponent {
     this.datos.agregarExperiencia(this.formulario.value, 1).subscribe();
   }
 
-  limpiarForm() : void{
+  resetForm() : void{
     this.formulario.reset();
   }
 }

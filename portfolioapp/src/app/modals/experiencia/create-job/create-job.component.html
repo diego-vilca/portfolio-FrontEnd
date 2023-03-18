@@ -1,9 +1,9 @@
-<div class="modal fade" id="create-job" tabindex="-1" aria-labelledby="loginLabel" aria-hidden="true">
+<div class="modal fade" id="create-job" data-bs-backdrop="static" tabindex="-1" aria-labelledby="loginLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
         <h1 class="modal-title fs-5" id="loginLabel">Agregar Experiencia Laboral</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" (click)="limpiarForm()" aria-label="Close"></button>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" (click)="resetForm()" aria-label="Close"></button>
       </div>
       <form [formGroup]="formulario" (ngSubmit)="onEnviar($event)">
           <div class="modal-body">

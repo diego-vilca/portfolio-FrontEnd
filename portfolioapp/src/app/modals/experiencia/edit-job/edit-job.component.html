@@ -1,35 +1,35 @@
-<div class="modal fade" id="login" tabindex="-1" aria-labelledby="loginLabel" aria-hidden="true">
+<div class="modal fade" id="edit-job" data-bs-backdrop="static" tabindex="-1" aria-labelledby="loginLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="loginLabel">Agregar Experiencia Laboral</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <h1 class="modal-title fs-5" id="loginLabel">Editar Experiencia Laboral</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="reloadPage()"></button>
       </div>
-      <form [formGroup]="form" (ngSubmit)="onEnviar($event)">
+      <form [formGroup]="formulario" (ngSubmit)="onEnviar($event)">
           <div class="modal-body">
               <div class="mb-3">
                 <label for="empresa" class="form-label">Empresa:</label>
-                <input type="text" class="form-control" formControlName="empresa" [ngClass]="{'is-invalid': false, 'is-valid': true}">
+                <input type="text" [(ngModel)]="trabajo.empresa" class="form-control" formControlName="empresa">
               </div>
               <br>
               <div class="mb-3">
                 <label for="funcion" class="form-label">Función:</label>
-                <input type="text" class="form-control" formControlName="funcion" [ngClass]="{'is-invalid': false, 'is-valid': true}">
+                <input type="text" [(ngModel)]="trabajo.funcion" class="form-control" formControlName="funcion">
               </div>
               <br>
               <div class="mb-3">
                 <label for="anioIngreso" class="form-label">Año Ingreso:</label>
-                <input type="text" class="form-control" formControlName="anioIngreso" [ngClass]="{'is-invalid': false, 'is-valid': true}">
+                <input type="text" [(ngModel)]="trabajo.anioIngreso" class="form-control" formControlName="anioIngreso">
               </div>
               <br>
               <div class="mb-3">
                 <label for="anioEgreso" class="form-label">Año Egreso:</label>
-                <input type="text" class="form-control" formControlName="anioEgreso" [ngClass]="{'is-invalid': false, 'is-valid': true}">
+                <input type="text" [(ngModel)]="trabajo.anioEgreso"  class="form-control" formControlName="anioEgreso">
               </div>
               <br>
               <div class="mb-3">
                 <label for="urlEmpresa" class="form-label">Web de la Empresa:</label>
-                <input type="text" class="form-control" formControlName="urlEmpresa" [ngClass]="{'is-invalid': false, 'is-valid': true}">
+                <input type="text" [(ngModel)]="trabajo.urlEmpresa" class="form-control" formControlName="urlEmpresa">
               </div>
           </div>
           <div class="modal-footer">

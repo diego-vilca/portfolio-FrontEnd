@@ -1,4 +1,4 @@
-<div class="modal fade" id="create-skill" tabindex="-1" aria-labelledby="loginLabel" aria-hidden="true">
+<div class="modal fade" id="create-skill" data-bs-backdrop="static" tabindex="-1" aria-labelledby="loginLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -8,18 +8,18 @@
       <form [formGroup]="formulario" (ngSubmit)="onEnviar($event)">
           <div class="modal-body">
               <div class="mb-3">
-                <label for="nombre" class="form-label">Nombre de la Habilidad:</label>
+                <label for="nombre" class="form-label">Habilidad Digital:</label>
                 <input type="text" class="form-control" formControlName="nombre" >
               </div>
               <br>
               <div class="mb-3">
-                <label for="porcentaje" class="form-label">Seleccione el grado de conocimiento:</label>
-                <select formControlName="porcentaje" id="" class="1-100"><option selected disabled></select>
+                <label for="porcentaje" class="form-label">Conocimiento (%):</label>
+                <select formControlName="porcentaje" class="1-100"></select>
               </div>
               <br>
               <div class="mb-3">
                 <label for="tipo" class="form-label">Tipo de Habilidad:</label>
-                <select formControlName="tipo" id="">
+                <select formControlName="tipo">
                   <option value="hard">hard</option>
                   <option value="soft">soft</option>
                 </select>

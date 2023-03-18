@@ -11,10 +11,10 @@
         <div class="row" *ngFor="let social of redes">
           <!-- icon -->
           <a class="p-0" href={{social.urlRed}} target="_blank"><span [ngClass]="'icon ' + social.iconoFA" [ngStyle]="{'background' : social.color}"></span></a>
-          <button class="boton-icon p-0 me-4 btn btn-close-black social-custom" (click)="pasarId(social)" data-bs-toggle="modal" data-bs-target="#edit-social" title="Editar Red" ><i class="icono-oscuro fas fa-pencil"></i></button>
-          <app-edit-social [idEditar]="idRed"></app-edit-social>
-          <button class="boton-icon p-0 btn btn-close-black social-custom" (click)="pasarId(social)" data-bs-toggle="modal" data-bs-target="#delete-social" title="Eliminar Red" ><i class="icono-oscuro fa-solid fa-trash"></i></button>
-          <app-delete-social [idEliminar]="idRed"></app-delete-social>
+          <button class="boton-icon p-0 me-4 btn btn-close-black social-custom" (click)="pasarRed(social)" data-bs-toggle="modal" data-bs-target="#edit-social" title="Editar Red" ><i class="icono-oscuro fas fa-pencil"></i></button>
+          <app-edit-social [red]="red"></app-edit-social>
+          <button class="boton-icon p-0 btn btn-close-black social-custom" (click)="pasarRed(social)" data-bs-toggle="modal" data-bs-target="#delete-social" title="Eliminar Red" ><i class="icono-oscuro fa-solid fa-trash"></i></button>
+          <app-delete-social [red]="red"></app-delete-social>
 
         </div>
       </div>
@@ -42,7 +42,6 @@
             <!-- icon -->
             <button class="boton-icon p-0 m-2 btn btn-close-black" data-bs-toggle="modal" data-bs-target="#edit-nombre" title="Editar Nombre"><i class="icono-claro fas fa-pencil"></i></button>
             <app-edit-nombre></app-edit-nombre>
-
           </p>
         </div>
 

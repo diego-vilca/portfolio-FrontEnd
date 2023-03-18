@@ -10,7 +10,7 @@ import { HabilidadService } from 'src/app/services/habilidad.service';
 export class SkillComponent implements OnInit {
 
   habilidades : Habilidad[] = [];
-  idHabilidad ?: number;
+  habilidad : Habilidad = Object();
 
   constructor(
     private datos : HabilidadService
@@ -27,7 +27,8 @@ export class SkillComponent implements OnInit {
     })
   }
 
-  pasarId(habilidad : Habilidad){
-    this.idHabilidad = habilidad.idHabilidad;
+  pasarHabilidad(habilidad : Habilidad) : void{
+    this.habilidad = habilidad;
   }
+
 }

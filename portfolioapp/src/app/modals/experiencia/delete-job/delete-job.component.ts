@@ -7,15 +7,15 @@ import { ExperienciaService } from 'src/app/services/experiencia.service';
   styleUrls: ['./delete-job.component.css']
 })
 export class DeleteJobComponent {
-  //id del elemento a eliminar
-  @Input() idEliminar : any;
+  //Obtengo el elemento a eliminar
+  @Input() trabajo : any;
 
   constructor(
     private datos : ExperienciaService
   ) {}
 
   eliminarTrabajo() : void{
-    this.datos.borrarExperiencia(this.idEliminar).subscribe();
+    this.datos.borrarExperiencia(this.trabajo.idExperiencia).subscribe();
     alert("Experiencia laboral eliminada exitosamente.");
     window.location.reload();
   }

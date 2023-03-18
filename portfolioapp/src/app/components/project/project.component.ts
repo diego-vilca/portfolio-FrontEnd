@@ -12,7 +12,7 @@ export class ProjectComponent implements OnInit{
 
   proyectos : Proyecto[] = [];
   iFrameUrl = this.sanitizer;
-  idProyecto ?: number;
+  proyecto : Proyecto = Object();
 
   constructor(
     private datos : ProyectoService,
@@ -29,8 +29,9 @@ export class ProjectComponent implements OnInit{
     })
   }
 
-  pasarId(proyecto : Proyecto){
-    this.idProyecto= proyecto.idProyecto;
+  pasarProyecto(proyecto : Proyecto){
+    this.proyecto= proyecto;
   }
+
 
 }
