@@ -1,5 +1,5 @@
 export class Experiencia {
-  id ?: number;
+  idExperiencia ?: number;
   empresa : string;
   funcion : string;
   anioIngreso : string;

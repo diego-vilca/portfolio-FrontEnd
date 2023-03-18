@@ -1,5 +1,5 @@
 export class Social {
-  id ?: number;
+  idRed ?: number;
   iconoFA : string;
   color : string;
   urlRed : string;

@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { ProyectoService } from 'src/app/services/proyecto.service';
 
 @Component({
   selector: 'app-delete-project',
@@ -6,5 +7,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./delete-project.component.css']
 })
 export class DeleteProjectComponent {
+//id del elemento a eliminar
+@Input() idEliminar : any;
 
+constructor(
+  private datos : ProyectoService
+) {}
+
+eliminarProyecto() : void{
+  this.datos.borrarProyecto(this.idEliminar).subscribe();
+  alert("Proyecto eliminado exitosamente.");
+  window.location.reload();
+}
 }

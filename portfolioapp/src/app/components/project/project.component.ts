@@ -12,6 +12,7 @@ export class ProjectComponent implements OnInit{
 
   proyectos : Proyecto[] = [];
   iFrameUrl = this.sanitizer;
+  idProyecto ?: number;
 
   constructor(
     private datos : ProyectoService,
@@ -26,6 +27,10 @@ export class ProjectComponent implements OnInit{
     this.datos.verProyectos().subscribe( data => {
       this.proyectos = data;
     })
+  }
+
+  pasarId(proyecto : Proyecto){
+    this.idProyecto= proyecto.idProyecto;
   }
 
 }

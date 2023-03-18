@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ExperienciaService } from 'src/app/services/experiencia.service';
 
@@ -10,6 +10,8 @@ import { ExperienciaService } from 'src/app/services/experiencia.service';
 export class EditJobComponent implements OnInit{
 
   form : FormGroup;
+  //id del elemento a editar
+  @Input() idEditar ?: number;
 
   constructor( private formBuilder : FormBuilder, datos : ExperienciaService ) {
     this.form = this.formBuilder.group({

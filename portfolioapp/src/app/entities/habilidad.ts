@@ -1,5 +1,5 @@
 export class Habilidad {
-  id ?: number;
+  idHabilidad ?: number;
   nombre : string;
   porcentaje : number;
   tipo : string;

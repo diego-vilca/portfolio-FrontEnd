@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-edit-education',
@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./edit-education.component.css']
 })
 export class EditEducationComponent {
-
+  @Input() idEditar ?: number;
 }

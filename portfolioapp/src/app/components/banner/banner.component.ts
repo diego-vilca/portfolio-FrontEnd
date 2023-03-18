@@ -15,6 +15,7 @@ export class BannerComponent implements OnInit{
   img_perfil : string = "";
   img_banner : string = "";
   redes : Social[] = [];
+  idRed ?: number;
 
   constructor(
     private datosP : PersonaService,
@@ -39,6 +40,10 @@ export class BannerComponent implements OnInit{
     this.datosR.verRedes().subscribe( data => {
       this.redes = data;
     })
+  }
+
+  pasarId(red : Social){
+    this.idRed= red.idRed;
   }
 
 }

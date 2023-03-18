@@ -32,10 +32,10 @@
           <div class="col-lg-1 col-md-1 col-sm-2 col-2">
             <p class="icon-container">
               <!-- icon -->
-              <button class="boton-icon p-0 m-1 btn btn-close-black" data-bs-toggle="modal" data-bs-target="#edit-education" title="Editar Formación"><i class="icono fas fa-pencil"></i></button>
-              <app-edit-education></app-edit-education>
-              <button class="boton-icon p-0 m-1 btn btn-close-black" data-bs-toggle="modal" data-bs-target="#delete-education" title="Eliminar Formación"><i class="icono fa-solid fa-trash"></i></button>
-              <app-delete-education></app-delete-education>
+              <button class="boton-icon p-0 m-1 btn btn-close-black" (click)="pasarId(estudio)" data-bs-toggle="modal" data-bs-target="#edit-education" title="Editar Formación"><i class="icono fas fa-pencil"></i></button>
+              <app-edit-education [idEditar]="idEducacion"></app-edit-education>
+              <button class="boton-icon p-0 m-1 btn btn-close-black" (click)="pasarId(estudio)" data-bs-toggle="modal" data-bs-target="#delete-education" title="Eliminar Formación"><i class="icono fa-solid fa-trash"></i></button>
+              <app-delete-education [idEliminar]="idEducacion"></app-delete-education>
             </p>
           </div>
         </div>

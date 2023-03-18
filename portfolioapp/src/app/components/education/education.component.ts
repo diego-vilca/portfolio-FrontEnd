@@ -10,6 +10,7 @@ import { EducacionService } from 'src/app/services/educacion.service';
 export class EducationComponent implements OnInit{
 
   educacion : Educacion[] = [];
+  idEducacion ?: number;
 
   constructor(
     private datos : EducacionService
@@ -25,5 +26,8 @@ export class EducationComponent implements OnInit{
     })
   }
 
+  pasarId(educacion : Educacion){
+    this.idEducacion = educacion.idEducacion;
+  }
 
 }

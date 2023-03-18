@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Experiencia } from 'src/app/entities/experiencia';
+import { DeleteJobComponent } from 'src/app/modals/experiencia/delete-job/delete-job.component';
 import { ExperienciaService } from 'src/app/services/experiencia.service';
 
 @Component({
@@ -10,6 +11,7 @@ import { ExperienciaService } from 'src/app/services/experiencia.service';
 export class WorkHistoryComponent implements OnInit {
 
   work_history : Experiencia[] = [];
+  idTrabajo ?: number;
 
   constructor(
     private datos : ExperienciaService
@@ -23,6 +25,11 @@ export class WorkHistoryComponent implements OnInit {
     this.datos.verExperiencias().subscribe( data => {
       this.work_history = data;
     })
+  }
+
+
+  pasarId(experiencia : Experiencia){
+    this.idTrabajo= experiencia.idExperiencia;
   }
 
 }

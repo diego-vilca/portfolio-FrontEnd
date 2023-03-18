@@ -10,6 +10,7 @@ import { HabilidadService } from 'src/app/services/habilidad.service';
 export class SkillComponent implements OnInit {
 
   habilidades : Habilidad[] = [];
+  idHabilidad ?: number;
 
   constructor(
     private datos : HabilidadService
@@ -26,9 +27,7 @@ export class SkillComponent implements OnInit {
     })
   }
 
-  // ngOnInit(): void {
-  //   this.datos.getDatos().subscribe( data => {
-  //     this.habilidades = data.habilidades_digitales;
-  //   })
-  // }
+  pasarId(habilidad : Habilidad){
+    this.idHabilidad = habilidad.idHabilidad;
+  }
 }

@@ -18,10 +18,10 @@
       <div *ngFor="let skill of habilidades">
         <div class="icon-container">
           <!-- icon -->
-          <button class="boton-icon p-0 m-1 btn btn-close-black" data-bs-toggle="modal" data-bs-target="#edit-skill" title="Editar Habilidad"><i class="icono fas fa-pencil"></i></button>
-          <app-edit-skill></app-edit-skill>
-          <button class="boton-icon p-0 m-1 btn btn-close-black" data-bs-toggle="modal" data-bs-target="#delete-skill" title="Eliminar Habilidad"><i class="icono fa-solid fa-trash"></i></button>
-          <app-delete-skill></app-delete-skill>
+          <button class="boton-icon p-0 m-1 btn btn-close-black" (click)="pasarId(skill)" data-bs-toggle="modal" data-bs-target="#edit-skill" title="Editar Habilidad"><i class="icono fas fa-pencil"></i></button>
+          <app-edit-skill [idEditar]="idHabilidad"></app-edit-skill>
+          <button class="boton-icon p-0 m-1 btn btn-close-black" (click)="pasarId(skill)" data-bs-toggle="modal" data-bs-target="#delete-skill" title="Eliminar Habilidad"><i class="icono fa-solid fa-trash"></i></button>
+          <app-delete-skill [idEliminar]="idHabilidad"></app-delete-skill>
         </div>
 
         <div class="card">
