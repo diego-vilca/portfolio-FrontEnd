@@ -38,7 +38,7 @@ export class EditNombreComponent implements OnInit{
       alert("Persona modificada exitosamente.");
       window.location.reload();
     } else {
-      alert("Error, la persona no pudo modificarse.");
+      alert("Error, la persona no pudo modificarse. Por favor, complete los campos correctamente.");
     }
   }
 
@@ -55,5 +55,13 @@ export class EditNombreComponent implements OnInit{
 
   reloadPage(){
     window.location.reload();
+  }
+
+  get Nombre(){
+    return this.formulario.get("nombre");
+  }
+
+  get Apellido(){
+    return this.formulario.get("apellido");
   }
 }

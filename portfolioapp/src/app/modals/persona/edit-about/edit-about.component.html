@@ -27,7 +27,17 @@
               [(ngModel)]="persona.acercaDe"
               rows="5"
               cols="61"
+              placeholder="Ingrese una descripción sobre ud (requerido)"
+              [ngClass]="{
+                'is-invalid': AcercaDe?.errors && AcercaDe?.touched,
+                'is-valid': !AcercaDe?.errors && AcercaDe?.touched
+              }"
             ></textarea>
+            <div *ngIf="AcercaDe?.errors && AcercaDe?.touched">
+              <p *ngIf="AcercaDe?.hasError('required')" class="text-danger">
+                La descripción es requerida.
+              </p>
+            </div>
           </div>
         </div>
         <div class="modal-footer">

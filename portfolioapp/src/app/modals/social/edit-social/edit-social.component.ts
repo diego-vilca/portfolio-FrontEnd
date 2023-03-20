@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Social } from 'src/app/entities/social';
 import { SocialService } from 'src/app/services/social.service';
@@ -21,9 +21,9 @@ export class EditSocialComponent {
               private route : ActivatedRoute ) {
 
     this.formulario = this.formBuilder.group({
-      iconoFA : [''],
-      color : [''],
-      urlRed : ['']
+      iconoFA : ['',[Validators.required]],
+      color : ['',[Validators.required]],
+      urlRed : ['',[Validators.required]]
     })
 
     this.red  = Object();
@@ -37,7 +37,7 @@ export class EditSocialComponent {
       alert("Red social modificada exitosamente.");
       window.location.reload();
     } else {
-      alert("Error, la red social no pudo modificarse.");
+      alert("Error, la red social no pudo modificarse. Por favor, complete los campos correctamente.");
     }
   }
 
@@ -53,5 +53,17 @@ export class EditSocialComponent {
     this.router.routeReuseStrategy.shouldReuseRoute = () => false;
     this.router.onSameUrlNavigation = 'reload';
     this.router.navigate(['./'], { relativeTo: this.route})
+  }
+
+  get IconoFA(){
+    return this.formulario.get("iconoFA");
+  }
+
+  get Color(){
+    return this.formulario.get("color");
+  }
+
+  get UrlRed(){
+    return this.formulario.get("urlRed");
   }
 }

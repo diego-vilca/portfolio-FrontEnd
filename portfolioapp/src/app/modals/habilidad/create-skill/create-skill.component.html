@@ -24,20 +24,59 @@
         <div class="modal-body">
           <div class="mb-3">
             <label for="nombre" class="form-label">Habilidad Digital:</label>
-            <input type="text" class="form-control" formControlName="nombre" />
+            <input
+              type="text"
+              class="form-control"
+              formControlName="nombre"
+              placeholder="Ingrese la habilidad digital (requerido)"
+              [ngClass]="{
+                'is-invalid': Nombre?.errors && Nombre?.touched,
+                'is-valid': !Nombre?.errors && Nombre?.touched
+              }"
+            />
+            <div *ngIf="Nombre?.errors && Nombre?.touched">
+              <p *ngIf="Nombre?.hasError('required')" class="text-danger">
+                La habilidad digital es requerida.
+              </p>
+            </div>
           </div>
           <br />
           <div class="mb-3">
             <label for="porcentaje" class="form-label">Conocimiento (%):</label>
-            <select formControlName="porcentaje" class="1-100"></select>
+            <select
+              formControlName="porcentaje"
+              class="1-100"
+              aria-placeholder="porcentaje"
+              [ngClass]="{
+                'is-invalid': Porcentaje?.errors && Porcentaje?.touched,
+                'is-valid': !Porcentaje?.errors && Porcentaje?.touched
+              }"
+            ></select>
+            <div *ngIf="Porcentaje?.errors && Porcentaje?.touched">
+              <p *ngIf="Porcentaje?.hasError('required')" class="text-danger">
+                El porcentaje de conocimiento es requerido.
+              </p>
+            </div>
           </div>
           <br />
           <div class="mb-3">
             <label for="tipo" class="form-label">Tipo de Habilidad:</label>
-            <select formControlName="tipo">
+            <select
+              formControlName="tipo"
+              aria-placeholder="tipo"
+              [ngClass]="{
+                'is-invalid': Tipo?.errors && Tipo?.touched,
+                'is-valid': !Tipo?.errors && Tipo?.touched
+              }"
+            >
               <option value="hard">hard</option>
               <option value="soft">soft</option>
             </select>
+            <div *ngIf="Tipo?.errors && Tipo?.touched">
+              <p *ngIf="Tipo?.hasError('required')" class="text-danger">
+                El tipo de habilidad es requerido.
+              </p>
+            </div>
           </div>
         </div>
         <div class="modal-footer">

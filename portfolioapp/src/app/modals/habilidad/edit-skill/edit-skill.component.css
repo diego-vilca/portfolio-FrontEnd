@@ -17,3 +17,15 @@ select {
   height: 1.5rem;
   margin-left: 10px;
 }
+
+input::placeholder {
+  font-size: smaller;
+  font-weight:lighter;
+  font-style: italic;
+  opacity: 0.4;
+  color: grey;
+}
+
+p {
+  font-size: smaller;
+}

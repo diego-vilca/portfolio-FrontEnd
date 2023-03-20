@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Educacion } from 'src/app/entities/educacion';
 import { EducacionService } from 'src/app/services/educacion.service';
@@ -21,13 +21,13 @@ export class EditEducationComponent {
               private route : ActivatedRoute ) {
 
     this.formulario = this.formBuilder.group({
-      institucion : [''],
-      titulo : [''],
+      institucion : ['',[Validators.required]],
+      titulo : ['',[Validators.required]],
       anioIngreso : [''],
       anioEgreso : [''],
       urlImg : [''],
       urlWeb : [''],
-      urlCertificado : ['']
+      urlCertificado : ['',[Validators.required]]
     })
 
     this.educacion  = Object();
@@ -41,7 +41,7 @@ export class EditEducationComponent {
       alert("Formación académica modificada exitosamente.");
       window.location.reload();
     } else {
-      alert("Error, la formación no pudo modificarse.");
+      alert("Error, la formación no pudo modificarse. Por favor, complete los campos correctamente.");
     }
   }
 
@@ -57,6 +57,18 @@ export class EditEducationComponent {
     this.router.routeReuseStrategy.shouldReuseRoute = () => false;
     this.router.onSameUrlNavigation = 'reload';
     this.router.navigate(['./'], { relativeTo: this.route})
+  }
+
+  get Institucion(){
+    return this.formulario.get("institucion");
+  }
+
+  get Titulo(){
+    return this.formulario.get("titulo");
+  }
+
+  get UrlCertificado(){
+    return this.formulario.get("urlCertificado");
   }
 
 }

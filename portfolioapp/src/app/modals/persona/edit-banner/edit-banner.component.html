@@ -31,7 +31,17 @@
               [(ngModel)]="persona.urlBannerImg"
               class="form-control"
               formControlName="urlBannerImg"
+              placeholder="Ingrese una imagen para el banner (requerido)"
+              [ngClass]="{
+                'is-invalid': UrlBannerImg?.errors && UrlBannerImg?.touched,
+                'is-valid': !UrlBannerImg?.errors && UrlBannerImg?.touched
+              }"
             />
+            <div *ngIf="UrlBannerImg?.errors && UrlBannerImg?.touched">
+              <p *ngIf="UrlBannerImg?.hasError('required')" class="text-danger">
+                La imagen del banner es requerida.
+              </p>
+            </div>
           </div>
         </div>
         <div class="modal-footer">

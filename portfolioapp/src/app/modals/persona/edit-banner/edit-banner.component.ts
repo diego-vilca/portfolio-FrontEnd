@@ -37,7 +37,7 @@ export class EditBannerComponent implements OnInit{
       alert("Persona modificada exitosamente.");
       window.location.reload();
     } else {
-      alert("Error, la persona no pudo modificarse.");
+      alert("Error, la persona no pudo modificarse. Por favor, complete los campos correctamente.");
     }
   }
 
@@ -54,5 +54,9 @@ export class EditBannerComponent implements OnInit{
 
   reloadPage(){
     window.location.reload();
+  }
+
+  get UrlBannerImg(){
+    return this.formulario.get("urlBannerImg");
   }
 }

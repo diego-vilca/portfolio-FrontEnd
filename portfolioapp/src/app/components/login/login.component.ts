@@ -47,6 +47,7 @@ export class LoginComponent implements OnInit{
     event.preventDefault;
 
     if(this.formulario.valid){
+
       this.loginUsuario = new LoginUsuario(this.nombreUsuario, this.password);
       this.authService.login(this.loginUsuario).subscribe(data => {
         this.isLogged = true;

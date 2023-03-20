@@ -31,7 +31,7 @@ export class CreateSkillComponent {
       alert("Habilidad digital agregada exitosamente.");
       window.location.reload();
     } else {
-      alert("Error, la habilidad no pudo agregarse.");
+      alert("Error, la habilidad no pudo agregarse. Por favor, complete los campos correctamente.");
     }
   }
 
@@ -43,5 +43,16 @@ export class CreateSkillComponent {
     this.formulario.reset();
   }
 
+  get Nombre(){
+    return this.formulario.get("nombre");
+  }
+
+  get Porcentaje(){
+    return this.formulario.get("porcentaje");
+  }
+
+  get Tipo(){
+    return this.formulario.get("tipo");
+  }
 
 }

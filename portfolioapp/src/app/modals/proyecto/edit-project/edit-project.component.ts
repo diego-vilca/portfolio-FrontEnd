@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Proyecto } from 'src/app/entities/proyecto';
 import { ProyectoService } from 'src/app/services/proyecto.service';
@@ -21,11 +21,11 @@ export class EditProjectComponent {
               private route : ActivatedRoute ) {
 
     this.formulario = this.formBuilder.group({
-      nombre : [''],
-      descripcion : [''],
+      nombre : ['',[Validators.required]],
+      descripcion : ['',[Validators.required]],
       urlImg : [''],
       urlVideo : [''],
-      urlRepositorio : [''],
+      urlRepositorio : ['',[Validators.required]],
     })
 
     this.project  = Object();
@@ -39,7 +39,7 @@ export class EditProjectComponent {
       alert("Proyecto modificado exitosamente.");
       window.location.reload();
     } else {
-      alert("Error, el proyecto no pudo modificarse.");
+      alert("Error, el proyecto no pudo modificarse. Por favor, complete los campos correctamente.");
     }
   }
 
@@ -55,5 +55,17 @@ export class EditProjectComponent {
     this.router.routeReuseStrategy.shouldReuseRoute = () => false;
     this.router.onSameUrlNavigation = 'reload';
     this.router.navigate(['./'], { relativeTo: this.route})
+  }
+
+  get Nombre(){
+    return this.formulario.get("nombre");
+  }
+
+  get Descripcion(){
+    return this.formulario.get("descripcion");
+  }
+
+  get UrlRepositorio(){
+    return this.formulario.get("urlRepositorio");
   }
 }

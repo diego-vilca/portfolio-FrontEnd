@@ -37,7 +37,7 @@ export class EditAboutComponent implements OnInit{
       alert("Persona modificada exitosamente.");
       window.location.reload();
     } else {
-      alert("Error, la persona no pudo modificarse.");
+      alert("Error, la persona no pudo modificarse. Por favor, complete los campos correctamente.");
     }
   }
 
@@ -56,5 +56,8 @@ export class EditAboutComponent implements OnInit{
     window.location.reload();
   }
 
+  get AcercaDe(){
+    return this.formulario.get("acercaDe");
+  }
 
 }

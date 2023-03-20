@@ -17,9 +17,9 @@ export class CreateJobComponent {
     this.formulario = this.formBuilder.group({
       empresa : ['',[Validators.required]],
       funcion : ['',[Validators.required]],
-      anioIngreso : ['',[Validators.required]],
+      anioIngreso : [''],
       anioEgreso : [''],
-      urlEmpresa : ['',[Validators.required]],
+      urlEmpresa : [''],
     })
 
   }
@@ -33,7 +33,7 @@ export class CreateJobComponent {
       alert("Experiencia laboral agregada exitosamente.");
       window.location.reload();
     } else {
-      alert("Error, la experiencia no pudo agregarse.");
+      alert("Error, la experiencia no pudo agregarse. Por favor, complete los campos correctamente.");
     }
   }
 
@@ -43,5 +43,13 @@ export class CreateJobComponent {
 
   resetForm() : void{
     this.formulario.reset();
+  }
+
+  get Empresa(){
+    return this.formulario.get("empresa");
+  }
+
+  get Funcion(){
+    return this.formulario.get("funcion");
   }
 }

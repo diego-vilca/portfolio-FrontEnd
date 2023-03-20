@@ -21,8 +21,8 @@ export class EditJobComponent{
               private route : ActivatedRoute ) {
 
     this.formulario = this.formBuilder.group({
-      empresa : [''],
-      funcion : [''],
+      empresa : ['',[Validators.required]],
+      funcion : ['',[Validators.required]],
       anioIngreso : [''],
       anioEgreso : [''],
       urlEmpresa : [''],
@@ -39,7 +39,7 @@ export class EditJobComponent{
       alert("Experiencia laboral modificada exitosamente.");
       window.location.reload();
     } else {
-      alert("Error, la experiencia no pudo modificarse.");
+      alert("Error, la experiencia no pudo modificarse. Por favor, complete los campos correctamente.");
     }
   }
 
@@ -55,6 +55,14 @@ export class EditJobComponent{
     this.router.routeReuseStrategy.shouldReuseRoute = () => false;
     this.router.onSameUrlNavigation = 'reload';
     this.router.navigate(['./'], { relativeTo: this.route})
+  }
+
+  get Empresa(){
+    return this.formulario.get("empresa");
+  }
+
+  get Funcion(){
+    return this.formulario.get("funcion");
   }
 
 }

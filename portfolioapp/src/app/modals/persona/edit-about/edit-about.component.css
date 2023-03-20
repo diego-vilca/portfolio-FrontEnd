@@ -11,3 +11,19 @@ input {
   height: 2rem;
   font-size: small;
 }
+
+input::placeholder {
+  font-size: smaller;
+  font-weight:lighter;
+  font-style: italic;
+  opacity: 0.4;
+  color: grey;
+}
+
+p {
+  font-size: smaller;
+}
+
+button {
+  font-size: small;
+}

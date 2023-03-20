@@ -16,8 +16,8 @@ export class CreateProjectComponent {
     this.formulario = this.formBuilder.group({
       nombre : ['',[Validators.required]],
       descripcion : ['',[Validators.required]],
-      urlImg : ['',[Validators.required]],
-      urlVideo : ['',[Validators.required]],
+      urlImg : [''],
+      urlVideo : [''],
       urlRepositorio : ['',[Validators.required]],
     })
 
@@ -32,7 +32,7 @@ export class CreateProjectComponent {
       alert("Proyecto agregada exitosamente.");
       window.location.reload();
     } else {
-      alert("Error, el proyecto no pudo agregarse.");
+      alert("Error, el proyecto no pudo agregarse. Por favor, complete los campos correctamente.");
     }
   }
 
@@ -42,5 +42,18 @@ export class CreateProjectComponent {
 
   limpiarForm() : void{
     this.formulario.reset();
+  }
+
+
+  get Nombre(){
+    return this.formulario.get("nombre");
+  }
+
+  get Descripcion(){
+    return this.formulario.get("descripcion");
+  }
+
+  get UrlRepositorio(){
+    return this.formulario.get("urlRepositorio");
   }
 }

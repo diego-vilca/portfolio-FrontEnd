@@ -4,6 +4,7 @@
   tabindex="-1"
   aria-labelledby="loginLabel"
   aria-hidden="true"
+  data-bs-backdrop="static"
 >
   <div class="modal-dialog">
     <div class="modal-content">
@@ -27,12 +28,36 @@
               type="text"
               class="form-control"
               formControlName="institucion"
+              placeholder="Ingrese la institución (requerido)"
+              [ngClass]="{
+                'is-invalid': Institucion?.errors && Institucion?.touched,
+                'is-valid': !Institucion?.errors && Institucion?.touched
+              }"
             />
+            <div *ngIf="Institucion?.errors && Institucion?.touched">
+              <p *ngIf="Institucion?.hasError('required')" class="text-danger">
+                La institución es requerida.
+              </p>
+            </div>
           </div>
           <br />
           <div class="mb-3">
             <label for="titulo" class="form-label">Título:</label>
-            <input type="text" class="form-control" formControlName="titulo" />
+            <input
+              type="text"
+              class="form-control"
+              formControlName="titulo"
+              placeholder="Ingrese el título (requerido)"
+              [ngClass]="{
+                'is-invalid': Titulo?.errors && Titulo?.touched,
+                'is-valid': !Titulo?.errors && Titulo?.touched
+              }"
+            />
+            <div *ngIf="Titulo?.errors && Titulo?.touched">
+              <p *ngIf="Titulo?.hasError('required')" class="text-danger">
+                El nombre del título es requerido.
+              </p>
+            </div>
           </div>
           <br />
           <div class="mb-3">
@@ -41,6 +66,7 @@
               type="text"
               class="form-control"
               formControlName="anioIngreso"
+              placeholder="Ingrese el año de ingreso"
             />
           </div>
           <br />
@@ -50,19 +76,30 @@
               type="text"
               class="form-control"
               formControlName="anioEgreso"
+              placeholder="Ingrese el año de egreso"
             />
           </div>
           <br />
           <div class="mb-3">
             <label for="urlImg" class="form-label">Url de la Imagen:</label>
-            <input type="text" class="form-control" formControlName="urlImg" />
+            <input
+              type="text"
+              class="form-control"
+              formControlName="urlImg"
+              placeholder="Ingrese la url de la imagen"
+            />
           </div>
           <br />
           <div class="mb-3">
             <label for="urlWeb" class="form-label"
               >Web de la Institución:</label
             >
-            <input type="text" class="form-control" formControlName="urlWeb" />
+            <input
+              type="text"
+              class="form-control"
+              formControlName="urlWeb"
+              placeholder="Ingrese la url de la institución"
+            />
           </div>
           <br />
           <div class="mb-3">
@@ -73,7 +110,20 @@
               type="text"
               class="form-control"
               formControlName="urlCertificado"
+              placeholder="Ingrese la url del certificado (requerido)"
+              [ngClass]="{
+                'is-invalid': UrlCertificado?.errors && UrlCertificado?.touched,
+                'is-valid': !UrlCertificado?.errors && UrlCertificado?.touched
+              }"
             />
+            <div *ngIf="UrlCertificado?.errors && UrlCertificado?.touched">
+              <p
+                *ngIf="UrlCertificado?.hasError('required')"
+                class="text-danger"
+              >
+                El certificado es requerido.
+              </p>
+            </div>
           </div>
         </div>
         <div class="modal-footer">

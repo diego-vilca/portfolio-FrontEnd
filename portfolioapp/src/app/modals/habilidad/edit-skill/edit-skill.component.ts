@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Habilidad } from 'src/app/entities/habilidad';
 import { HabilidadService } from 'src/app/services/habilidad.service';
@@ -21,9 +21,9 @@ export class EditSkillComponent {
               private route : ActivatedRoute ) {
 
     this.formulario = this.formBuilder.group({
-      nombre : [''],
-      porcentaje : [''],
-      tipo : ['']
+      nombre : ['',[Validators.required]],
+      porcentaje : ['',[Validators.required]],
+      tipo : ['',[Validators.required]]
     })
 
     this.habilidad  = Object();
@@ -37,7 +37,7 @@ export class EditSkillComponent {
       alert("Habilidad digital modificada exitosamente.");
       window.location.reload();
     } else {
-      alert("Error, la habilidad no pudo modificarse.");
+      alert("Error, la habilidad no pudo modificarse. Por favor, complete los campos correctamente.");
     }
   }
 
@@ -53,6 +53,18 @@ export class EditSkillComponent {
     this.router.routeReuseStrategy.shouldReuseRoute = () => false;
     this.router.onSameUrlNavigation = 'reload';
     this.router.navigate(['./'], { relativeTo: this.route})
+  }
+
+  get Nombre(){
+    return this.formulario.get("nombre");
+  }
+
+  get Porcentaje(){
+    return this.formulario.get("porcentaje");
+  }
+
+  get Tipo(){
+    return this.formulario.get("tipo");
   }
 
 }

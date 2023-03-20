@@ -27,7 +27,17 @@
               [(ngModel)]="project.nombre"
               class="form-control"
               formControlName="nombre"
+              placeholder="Ingrese el nombre del proyecto"
+              [ngClass]="{
+                'is-invalid': Nombre?.errors && Nombre?.touched,
+                'is-valid': !Nombre?.errors && Nombre?.touched
+              }"
             />
+            <div *ngIf="Nombre?.errors && Nombre?.touched">
+              <p *ngIf="Nombre?.hasError('required')" class="text-danger">
+                El nombre del proyecto es requerido.
+              </p>
+            </div>
           </div>
           <br />
           <div class="mb-3">
@@ -37,7 +47,17 @@
               [(ngModel)]="project.descripcion"
               rows="5"
               cols="61"
+              [ngClass]="{
+                'is-invalid': Descripcion?.errors && Descripcion?.touched,
+                'is-valid': !Descripcion?.errors && Descripcion?.touched
+              }"
+              placeholder="Ingrese una descripción sobre el proyecto"
             ></textarea>
+            <div *ngIf="Descripcion?.errors && Descripcion?.touched">
+              <p *ngIf="Descripcion?.hasError('required')" class="text-danger">
+                La descripción es requerida.
+              </p>
+            </div>
             <!-- <input type="text" [(ngModel)]="project.descripcion" class="form-control" formControlName="descripcion"> -->
           </div>
           <br />
@@ -48,6 +68,7 @@
               [(ngModel)]="project.urlImg"
               class="form-control"
               formControlName="urlImg"
+              placeholder="Ingrese url de la imagen"
             />
           </div>
           <br />
@@ -58,6 +79,7 @@
               [(ngModel)]="project.urlVideo"
               class="form-control"
               formControlName="urlVideo"
+              placeholder="Ingrese url de la imagen"
             />
           </div>
           <br />
@@ -70,7 +92,20 @@
               [(ngModel)]="project.urlRepositorio"
               class="form-control"
               formControlName="urlRepositorio"
+              [ngClass]="{
+                'is-invalid': UrlRepositorio?.errors && UrlRepositorio?.touched,
+                'is-valid': !UrlRepositorio?.errors && UrlRepositorio?.touched
+              }"
+              placeholder="Ingrese url del repositorio github"
             />
+            <div *ngIf="UrlRepositorio?.errors && UrlRepositorio?.touched">
+              <p
+                *ngIf="UrlRepositorio?.hasError('required')"
+                class="text-danger"
+              >
+                El repositorio es requerido.
+              </p>
+            </div>
           </div>
         </div>
         <div class="modal-footer">

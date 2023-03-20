@@ -12,6 +12,19 @@ input {
   font-size: small;
 }
 
+
+input::placeholder {
+  font-size: smaller;
+  font-weight:lighter;
+  font-style: italic;
+  opacity: 0.4;
+  color: grey;
+}
+
+p {
+  font-size: smaller;
+}
+
 select {
   padding: 0 1em;
   height: 1.5rem;

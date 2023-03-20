@@ -29,7 +29,17 @@
               [(ngModel)]="persona.urlPerfilImg"
               class="form-control"
               formControlName="urlPerfilImg"
+              placeholder="Ingrese una imagen de perfil (requerido)"
+              [ngClass]="{
+                'is-invalid': UrlPerfilImg?.errors && UrlPerfilImg?.touched,
+                'is-valid': !UrlPerfilImg?.errors && UrlPerfilImg?.touched
+              }"
             />
+            <div *ngIf="UrlPerfilImg?.errors && UrlPerfilImg?.touched">
+              <p *ngIf="UrlPerfilImg?.hasError('required')" class="text-danger">
+                La imagen de perfil es requerida.
+              </p>
+            </div>
           </div>
         </div>
         <div class="modal-footer">

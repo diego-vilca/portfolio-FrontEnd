@@ -36,7 +36,10 @@
               }"
             />
             <div *ngIf="NombreUsuario?.errors && NombreUsuario?.touched">
-              <p *ngIf="NombreUsuario?.hasError('required')" class="text-danger">
+              <p
+                *ngIf="NombreUsuario?.hasError('required')"
+                class="text-danger"
+              >
                 El usuario es requerido.
               </p>
               <!-- solo se pide 3 caracteres para el testeo -->

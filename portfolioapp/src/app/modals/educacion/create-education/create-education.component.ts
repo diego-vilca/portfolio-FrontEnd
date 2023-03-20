@@ -16,10 +16,10 @@ export class CreateEducationComponent {
     this.formulario = this.formBuilder.group({
       institucion : ['',[Validators.required]],
       titulo : ['',[Validators.required]],
-      anioIngreso : ['',[Validators.required]],
+      anioIngreso : [''],
       anioEgreso : [''],
-      urlImg : ['',[Validators.required]],
-      urlWeb : ['',[Validators.required]],
+      urlImg : [''],
+      urlWeb : [''],
       urlCertificado : ['',[Validators.required]]
     })
 
@@ -34,7 +34,7 @@ export class CreateEducationComponent {
       alert("Formación académica agregada exitosamente.");
       window.location.reload();
     } else {
-      alert("Error, la nueva formacíon no pudo agregarse.");
+      alert("Error, la nueva formación no pudo agregarse. Por favor, complete los campos correctamente.");
     }
   }
 
@@ -44,6 +44,18 @@ export class CreateEducationComponent {
 
   limpiarForm() : void{
     this.formulario.reset();
+  }
+
+  get Institucion(){
+    return this.formulario.get("institucion");
+  }
+
+  get Titulo(){
+    return this.formulario.get("titulo");
+  }
+
+  get UrlCertificado(){
+    return this.formulario.get("urlCertificado");
   }
 
 }

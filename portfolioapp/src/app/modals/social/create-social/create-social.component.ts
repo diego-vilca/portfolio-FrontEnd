@@ -30,7 +30,7 @@ export class CreateSocialComponent {
       alert("Red social agregada exitosamente.");
       window.location.reload();
     } else {
-      alert("Error, la red social no pudo agregarse.");
+      alert("Error, la red social no pudo agregarse. Por favor, complete los campos correctamente.");
     }
   }
 
@@ -41,4 +41,18 @@ export class CreateSocialComponent {
   limpiarForm() : void{
     this.formulario.reset();
   }
+
+  get IconoFA(){
+    return this.formulario.get("iconoFA");
+  }
+
+  get Color(){
+    return this.formulario.get("color");
+  }
+
+  get UrlRed(){
+    return this.formulario.get("urlRed");
+  }
+
+
 }

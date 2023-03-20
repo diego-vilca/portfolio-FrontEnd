@@ -29,7 +29,17 @@
               [(ngModel)]="trabajo.empresa"
               class="form-control"
               formControlName="empresa"
+              placeholder="Ingrese nombre de la empresa (requerido)"
+              [ngClass]="{
+                'is-invalid': Empresa?.errors && Empresa?.touched,
+                'is-valid': !Empresa?.errors && Empresa?.touched
+              }"
             />
+            <div *ngIf="Empresa?.errors && Empresa?.touched">
+              <p *ngIf="Empresa?.hasError('required')" class="text-danger">
+                El nombre de la empresa es requerido.
+              </p>
+            </div>
           </div>
           <br />
           <div class="mb-3">
@@ -39,7 +49,17 @@
               [(ngModel)]="trabajo.funcion"
               class="form-control"
               formControlName="funcion"
+              placeholder="Ingrese la tarea desempeñada (requerido)"
+              [ngClass]="{
+                'is-invalid': Funcion?.errors && Funcion?.touched,
+                'is-valid': !Funcion?.errors && Funcion?.touched
+              }"
             />
+            <div *ngIf="Funcion?.errors && Funcion?.touched">
+              <p *ngIf="Funcion?.hasError('required')" class="text-danger">
+                La funcion es requerida.
+              </p>
+            </div>
           </div>
           <br />
           <div class="mb-3">
@@ -49,6 +69,7 @@
               [(ngModel)]="trabajo.anioIngreso"
               class="form-control"
               formControlName="anioIngreso"
+              placeholder="Ingrese el año de ingreso"
             />
           </div>
           <br />
@@ -59,6 +80,7 @@
               [(ngModel)]="trabajo.anioEgreso"
               class="form-control"
               formControlName="anioEgreso"
+              placeholder="Ingrese el año de egreso"
             />
           </div>
           <br />
@@ -71,6 +93,7 @@
               [(ngModel)]="trabajo.urlEmpresa"
               class="form-control"
               formControlName="urlEmpresa"
+              placeholder="Ingrese la url de la empresa"
             />
           </div>
         </div>

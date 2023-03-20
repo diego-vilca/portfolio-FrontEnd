@@ -4,6 +4,7 @@
   tabindex="-1"
   aria-labelledby="loginLabel"
   aria-hidden="true"
+  data-bs-backdrop="static"
 >
   <div class="modal-dialog">
     <div class="modal-content">
@@ -21,17 +22,59 @@
         <div class="modal-body">
           <div class="mb-3">
             <label for="iconoFA" class="form-label">Icono Font Awesome:</label>
-            <input type="text" class="form-control" formControlName="iconoFA" />
+            <input
+              type="text"
+              class="form-control"
+              formControlName="iconoFA"
+              placeholder="Ingrese el ícono de Font Awesome"
+              [ngClass]="{
+                'is-invalid': IconoFA?.errors && IconoFA?.touched,
+                'is-valid': !IconoFA?.errors && IconoFA?.touched
+              }"
+            />
+            <div *ngIf="IconoFA?.errors && IconoFA?.touched">
+              <p *ngIf="IconoFA?.hasError('required')" class="text-danger">
+                El ícono de Font Awesome es requerido.
+              </p>
+            </div>
           </div>
           <br />
           <div class="mb-3">
             <label for="color" class="form-label">Color del Icono:</label>
-            <input type="text" class="form-control" formControlName="color" />
+            <input
+              type="text"
+              class="form-control"
+              formControlName="color"
+              placeholder="Ingrese el color del ícono"
+              [ngClass]="{
+                'is-invalid': Color?.errors && Color?.touched,
+                'is-valid': !Color?.errors && Color?.touched
+              }"
+            />
+            <div *ngIf="Color?.errors && Color?.touched">
+              <p *ngIf="Color?.hasError('required')" class="text-danger">
+                El color del ícono es requerido.
+              </p>
+            </div>
           </div>
           <br />
           <div class="mb-3">
             <label for="urlRed" class="form-label">Url Red Social:</label>
-            <input type="text" class="form-control" formControlName="urlRed" />
+            <input
+              type="text"
+              class="form-control"
+              formControlName="urlRed"
+              placeholder="Ingrese la url de la red social"
+              [ngClass]="{
+                'is-invalid': UrlRed?.errors && UrlRed?.touched,
+                'is-valid': !UrlRed?.errors && UrlRed?.touched
+              }"
+            />
+            <div *ngIf="UrlRed?.errors && UrlRed?.touched">
+              <p *ngIf="UrlRed?.hasError('required')" class="text-danger">
+                La url de la red social es requerida.
+              </p>
+            </div>
           </div>
         </div>
         <div class="modal-footer">

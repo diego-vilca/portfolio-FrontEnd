@@ -37,7 +37,7 @@ export class EditPerfilComponent implements OnInit {
       alert("Persona modificada exitosamente.");
       window.location.reload();
     } else {
-      alert("Error, la persona no pudo modificarse.");
+      alert("Error, la persona no pudo modificarse. Por favor, complete los campos correctamente.");
     }
   }
 
@@ -54,5 +54,9 @@ export class EditPerfilComponent implements OnInit {
 
   reloadPage(){
     window.location.reload();
+  }
+
+  get UrlPerfilImg(){
+    return this.formulario.get("urlPerfilImg");
   }
 }
