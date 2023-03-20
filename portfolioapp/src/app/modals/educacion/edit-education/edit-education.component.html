@@ -1,49 +1,101 @@
-<div class="modal fade" id="edit-education" data-bs-backdrop="static" tabindex="-1" aria-labelledby="loginLabel" aria-hidden="true">
+<div
+  class="modal fade"
+  id="edit-education"
+  data-bs-backdrop="static"
+  tabindex="-1"
+  aria-labelledby="loginLabel"
+  aria-hidden="true"
+>
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="loginLabel">Editar Formación Académica</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="reloadPage()"></button>
+        <h1 class="modal-title fs-5" id="loginLabel">
+          Editar Formación Académica
+        </h1>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+          (click)="reloadPage()"
+        ></button>
       </div>
       <form [formGroup]="formulario" (ngSubmit)="onEnviar($event)">
-          <div class="modal-body">
-              <div class="mb-3">
-                <label for="institucion" class="form-label">Institución:</label>
-                <input type="text" [(ngModel)]="educacion.institucion" class="form-control" formControlName="institucion">
-              </div>
-              <br>
-              <div class="mb-3">
-                <label for="titulo" class="form-label">Título:</label>
-                <input type="text" [(ngModel)]="educacion.titulo" class="form-control" formControlName="titulo">
-              </div>
-              <br>
-              <div class="mb-3">
-                <label for="anioIngreso" class="form-label">Año Ingreso:</label>
-                <input type="text" [(ngModel)]="educacion.anioIngreso" class="form-control" formControlName="anioIngreso">
-              </div>
-              <br>
-              <div class="mb-3">
-                <label for="anioEgreso" class="form-label">Año Egreso:</label>
-                <input type="text" [(ngModel)]="educacion.anioEgreso"  class="form-control" formControlName="anioEgreso">
-              </div>
-              <br>
-              <div class="mb-3">
-                <label for="urlImg" class="form-label">Url Imágen:</label>
-                <input type="text" [(ngModel)]="educacion.urlImg" class="form-control" formControlName="urlImg">
-              </div>
-              <div class="mb-3">
-                <label for="urlWeb" class="form-label">Dirección Web:</label>
-                <input type="text" [(ngModel)]="educacion.urlWeb"  class="form-control" formControlName="urlWeb">
-              </div>
-              <br>
-              <div class="mb-3">
-                <label for="urlCertificado" class="form-label">Url Certificado:</label>
-                <input type="text" [(ngModel)]="educacion.urlCertificado"  class="form-control" formControlName="urlCertificado">
-              </div>
+        <div class="modal-body">
+          <div class="mb-3">
+            <label for="institucion" class="form-label">Institución:</label>
+            <input
+              type="text"
+              [(ngModel)]="educacion.institucion"
+              class="form-control"
+              formControlName="institucion"
+            />
           </div>
-          <div class="modal-footer">
-            <button type="submit" class="btn btn-primary">Enviar</button>
+          <br />
+          <div class="mb-3">
+            <label for="titulo" class="form-label">Título:</label>
+            <input
+              type="text"
+              [(ngModel)]="educacion.titulo"
+              class="form-control"
+              formControlName="titulo"
+            />
           </div>
+          <br />
+          <div class="mb-3">
+            <label for="anioIngreso" class="form-label">Año Ingreso:</label>
+            <input
+              type="text"
+              [(ngModel)]="educacion.anioIngreso"
+              class="form-control"
+              formControlName="anioIngreso"
+            />
+          </div>
+          <br />
+          <div class="mb-3">
+            <label for="anioEgreso" class="form-label">Año Egreso:</label>
+            <input
+              type="text"
+              [(ngModel)]="educacion.anioEgreso"
+              class="form-control"
+              formControlName="anioEgreso"
+            />
+          </div>
+          <br />
+          <div class="mb-3">
+            <label for="urlImg" class="form-label">Url Imágen:</label>
+            <input
+              type="text"
+              [(ngModel)]="educacion.urlImg"
+              class="form-control"
+              formControlName="urlImg"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="urlWeb" class="form-label">Dirección Web:</label>
+            <input
+              type="text"
+              [(ngModel)]="educacion.urlWeb"
+              class="form-control"
+              formControlName="urlWeb"
+            />
+          </div>
+          <br />
+          <div class="mb-3">
+            <label for="urlCertificado" class="form-label"
+              >Url Certificado:</label
+            >
+            <input
+              type="text"
+              [(ngModel)]="educacion.urlCertificado"
+              class="form-control"
+              formControlName="urlCertificado"
+            />
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-primary">Enviar</button>
+        </div>
       </form>
     </div>
   </div>

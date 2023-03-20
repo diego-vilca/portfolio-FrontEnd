@@ -1,14 +1,21 @@
 <section id="experiencia" class="container">
   <div class="row">
-    <div class="section-titulo col-lg-11 col-md-11 col-sm-10 col-10">
-      <h2>Experiencia</h2>
+    <div class="section-titulo mb-2 col-lg-11 col-md-11 col-sm-10 col-10">
+      <h2>Experiencia Laboral</h2>
     </div>
     <div class="col-lg-1 col-md-1 col-sm-2 col-2">
       <p class="icon-container">
         <!-- icon -->
-        <button class="boton-icon p-0 m-1 btn btn-close-black" data-bs-toggle="modal" data-bs-target="#create-job" title="Agregar Trabajo"><i class="icono fa-solid fa-plus"></i></button>
+        <button
+          *ngIf="isLogged"
+          class="boton-icon p-0 m-1 btn btn-close-black"
+          data-bs-toggle="modal"
+          data-bs-target="#create-job"
+          title="Agregar Trabajo"
+        >
+          <i class="icono fa-solid fa-plus"></i>
+        </button>
         <app-create-job></app-create-job>
-
       </p>
     </div>
   </div>
@@ -17,21 +24,46 @@
       <div class="row">
         <div class="section-info col-lg-11 col-md-11 col-sm-9 col-9">
           <div class="info-job">
-            <a href="{{job.urlEmpresa}}" target="_blank" rel="noopener" title="web">
-              <h3>{{job.empresa}}</h3>
-              <p>{{job.funcion}}</p>
-              <p><time>{{job.anioIngreso}}</time>-<time>{{job.anioEgreso}}</time></p>
+            <a
+              href="{{ job.urlEmpresa }}"
+              target="_blank"
+              rel="noopener"
+              title="web"
+            >
+              <h3>{{ job.empresa }}</h3>
+              <p>{{ job.funcion }}</p>
+              <p>
+                <time>{{ job.anioIngreso }}</time
+                >-<time>{{ job.anioEgreso }}</time>
+              </p>
             </a>
           </div>
         </div>
         <div class="col-lg-1 col-md-1 col-sm-2 col-2">
           <p class="icon-container">
             <!-- icon -->
-            <button class="boton-icon p-0 m-1 btn btn-close-black" (click)="pasarTrabajo(job)" data-bs-toggle="modal" data-bs-target="#edit-job" title="Editar Trabajo"><i class="icono fas fa-pencil"></i></button>
+            <button
+              *ngIf="isLogged"
+              class="boton-icon p-0 m-1 btn btn-close-black"
+              (click)="pasarTrabajo(job)"
+              data-bs-toggle="modal"
+              data-bs-target="#edit-job"
+              title="Editar Trabajo"
+            >
+              <i class="icono fas fa-pencil"></i>
+            </button>
             <app-edit-job [trabajo]="experiencia"></app-edit-job>
-            <button class="boton-icon p-0 m-1 btn btn-close-black" (click)="pasarTrabajo(job)" data-bs-toggle="modal" data-bs-target="#delete-job" title="Eliminar Trabajo"><i class="icono fa-solid fa-trash"></i></button>
+            <button
+              *ngIf="isLogged"
+              class="boton-icon p-0 m-1 btn btn-close-black"
+              (click)="pasarTrabajo(job)"
+              data-bs-toggle="modal"
+              data-bs-target="#delete-job"
+              title="Eliminar Trabajo"
+            >
+              <i class="icono fa-solid fa-trash"></i>
+            </button>
             <app-delete-job [trabajo]="experiencia"></app-delete-job>
-
           </p>
         </div>
       </div>

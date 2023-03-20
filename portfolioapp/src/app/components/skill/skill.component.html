@@ -1,45 +1,71 @@
 <section id="skills" class="container">
   <div class="row">
     <div class="section-titulo ol-lg-11 col-md-11 col-sm-10 col-10">
-      <h2>Habilidades</h2>
+      <h2>Habilidades Digitales</h2>
     </div>
     <div class="col-lg-1 col-md-1 col-sm-2 col-2">
       <p class="icon-container">
         <!-- icon -->
-        <button class="boton-icon p-0 m-1 btn btn-close-black" data-bs-toggle="modal" data-bs-target="#create-skill" title="Agregar Habilidad"><i class="icono fa-solid fa-plus"></i></button>
+        <button
+          *ngIf="isLogged"
+          class="boton-icon p-0 m-1 btn btn-close-black"
+          data-bs-toggle="modal"
+          data-bs-target="#create-skill"
+          title="Agregar Habilidad"
+        >
+          <i class="icono fa-solid fa-plus"></i>
+        </button>
         <app-create-skill></app-create-skill>
-
       </p>
     </div>
   </div>
-  <div class="skills-container">
+  <div class="skills-container mb-2">
     <div class="progreso-container">
-
       <div *ngFor="let skill of habilidades">
         <div class="icon-container">
           <!-- icon -->
-          <button class="boton-icon p-0 m-1 btn btn-close-black" (click)="pasarHabilidad(skill)" data-bs-toggle="modal" data-bs-target="#edit-skill" title="Editar Habilidad"><i class="icono fas fa-pencil"></i></button>
+          <button
+            *ngIf="isLogged"
+            class="boton-icon p-0 m-1 btn btn-close-black"
+            (click)="pasarHabilidad(skill)"
+            data-bs-toggle="modal"
+            data-bs-target="#edit-skill"
+            title="Editar Habilidad"
+          >
+            <i class="icono fas fa-pencil"></i>
+          </button>
           <app-edit-skill [habilidad]="habilidad"></app-edit-skill>
-          <button class="boton-icon p-0 m-1 btn btn-close-black" (click)="pasarHabilidad(skill)" data-bs-toggle="modal" data-bs-target="#delete-skill" title="Eliminar Habilidad"><i class="icono fa-solid fa-trash"></i></button>
+          <button
+            *ngIf="isLogged"
+            class="boton-icon p-0 m-1 btn btn-close-black"
+            (click)="pasarHabilidad(skill)"
+            data-bs-toggle="modal"
+            data-bs-target="#delete-skill"
+            title="Eliminar Habilidad"
+          >
+            <i class="icono fa-solid fa-trash"></i>
+          </button>
           <app-delete-skill [habilidad]="habilidad"></app-delete-skill>
         </div>
 
         <div class="card">
-          <div class="progreso" [style.--num]="skill.porcentaje" [style.--clr]="skill.tipo == 'hard' ? '#ff00be' : '#6A94EC'">
+          <div
+            class="progreso"
+            [style.--num]="skill.porcentaje"
+            [style.--clr]="skill.tipo == 'hard' ? '#ff00be' : '#6A94EC'"
+          >
             <div class="puntito"></div>
             <svg>
               <circle class="circulo" cx="70" cy="70" r="70"></circle>
               <circle class="circulo" cx="70" cy="70" r="70"></circle>
             </svg>
             <div class="valor-porcentual">
-              <h3>{{skill.porcentaje}}<span>%</span></h3>
-              <p>{{skill.nombre}}</p>
+              <h3>{{ skill.porcentaje }}<span>%</span></h3>
+              <p>{{ skill.nombre }}</p>
             </div>
           </div>
         </div>
       </div>
-
-
     </div>
   </div>
 </section>

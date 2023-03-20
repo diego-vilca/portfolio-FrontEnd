@@ -1,0 +1,9 @@
+.modal-header {
+  padding-left: 3rem;
+  padding-bottom: 2rem;
+}
+
+.modal-body, .modal-footer {
+  padding: 1rem 3rem;
+  font-size: 14px;
+}

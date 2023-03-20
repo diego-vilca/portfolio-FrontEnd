@@ -1,22 +1,41 @@
-<div class="modal fade" id="edit-perfil" data-bs-backdrop="static" tabindex="-1" aria-labelledby="loginLabel" aria-hidden="true">
+<div
+  class="modal fade"
+  id="edit-perfil"
+  data-bs-backdrop="static"
+  tabindex="-1"
+  aria-labelledby="loginLabel"
+  aria-hidden="true"
+>
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
         <h1 class="modal-title fs-5" id="loginLabel">Cambiar Foto de Perfil</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="reloadPage()"></button>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+          (click)="reloadPage()"
+        ></button>
       </div>
       <form [formGroup]="formulario" (ngSubmit)="onEnviar($event)">
-          <div class="modal-body">
-              <div class="mb-3">
-                <label for="urlPerfilImg" class="form-label">Url de la Imagen:</label>
-                <input type="text" [(ngModel)]="persona.urlPerfilImg" class="form-control" formControlName="urlPerfilImg">
-              </div>
+        <div class="modal-body">
+          <div class="mb-3">
+            <label for="urlPerfilImg" class="form-label"
+              >Url de la Imagen:</label
+            >
+            <input
+              type="text"
+              [(ngModel)]="persona.urlPerfilImg"
+              class="form-control"
+              formControlName="urlPerfilImg"
+            />
           </div>
-          <div class="modal-footer">
-            <button type="submit" class="btn btn-primary">Enviar</button>
-          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-primary">Enviar</button>
+        </div>
       </form>
     </div>
   </div>
 </div>
-

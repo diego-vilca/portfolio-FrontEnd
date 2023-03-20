@@ -1,58 +1,110 @@
-<section id="banner" >
-    <!--banner-->
-    <div class="container container__banner" >
-      <div class="layer__banner"></div>
+<section id="banner">
+  <!--banner-->
 
-      <!-- redes -->
-      <!-- icon -->
-      <button class="boton-icon p-0 m-1 btn btn-close-black social-custom social-plus" data-bs-toggle="modal" data-bs-target="#create-social" title="Agregar Red Social" ><i class="icono-oscuro fa-solid fa-plus"></i></button>
-      <app-create-social></app-create-social>
-      <div class="social-bar">
-        <div class="row" *ngFor="let social of redes">
-          <!-- icon -->
-          <a class="p-0" href={{social.urlRed}} target="_blank"><span [ngClass]="'icon ' + social.iconoFA" [ngStyle]="{'background' : social.color}"></span></a>
-          <button class="boton-icon p-0 me-4 btn btn-close-black social-custom" (click)="pasarRed(social)" data-bs-toggle="modal" data-bs-target="#edit-social" title="Editar Red" ><i class="icono-oscuro fas fa-pencil"></i></button>
-          <app-edit-social [red]="red"></app-edit-social>
-          <button class="boton-icon p-0 btn btn-close-black social-custom" (click)="pasarRed(social)" data-bs-toggle="modal" data-bs-target="#delete-social" title="Eliminar Red" ><i class="icono-oscuro fa-solid fa-trash"></i></button>
-          <app-delete-social [red]="red"></app-delete-social>
+  <div
+    class="container container__banner"
+    [ngStyle]="{ overflow: +!isLogged ? 'hidden' : 'visible' }"
+  >
+    <div class="layer__banner"></div>
 
-        </div>
-      </div>
-
-
-      <!-- imagen banner -->
-      <img class="banner__img" [src]="img_banner" alt="banner">
-
-      <!-- imagen profile -->
-      <div class="container-profile">
-          <div class="container profile__img">
-            <img [src]="img_perfil" alt="img-profile">
-            <div id="img-perfil-edit">
-              <!-- icon -->
-              <button class="boton-icon p-0 m-0 btn btn-close-black" data-bs-toggle="modal" data-bs-target="#edit-perfil" title="Editar Imagen"><i class="icono-claro fas fa-pencil"></i></button>
-              <app-edit-perfil></app-edit-perfil>
-            </div>
-          </div>
-
-
-
-        <div class="profile__name">
-          <h1>{{nombre}} {{apellido}}</h1>
-          <p>
-            <!-- icon -->
-            <button class="boton-icon p-0 m-2 btn btn-close-black" data-bs-toggle="modal" data-bs-target="#edit-nombre" title="Editar Nombre"><i class="icono-claro fas fa-pencil"></i></button>
-            <app-edit-nombre></app-edit-nombre>
-          </p>
-        </div>
-
-      </div>
-
-      <div id="img-banner-edit">
+    <!-- redes -->
+    <!-- icon -->
+    <button
+      *ngIf="isLogged"
+      class="boton-icon p-0 m-1 btn btn-close-black social-custom social-plus"
+      data-bs-toggle="modal"
+      data-bs-target="#create-social"
+      title="Agregar Red Social"
+    >
+      <i class="icono-oscuro fa-solid fa-plus"></i>
+    </button>
+    <app-create-social></app-create-social>
+    <div class="social-bar">
+      <div class="row" *ngFor="let social of redes">
+        <a class="p-0" href="{{ social.urlRed }}" target="_blank"
+          ><span
+            [ngClass]="'icon ' + social.iconoFA"
+            [ngStyle]="{ background: social.color }"
+          ></span
+        ></a>
         <!-- icon -->
-        <button class="boton-icon p-0 me-2 btn btn-close-black" data-bs-toggle="modal" data-bs-target="#edit-banner" title="Editar Imagen"><i class="icono-oscuro fas fa-pencil"></i></button>
-        <app-edit-banner></app-edit-banner>
+        <button
+          *ngIf="isLogged"
+          class="boton-icon p-0 me-4 btn btn-close-black social-custom"
+          (click)="pasarRed(social)"
+          data-bs-toggle="modal"
+          data-bs-target="#edit-social"
+          title="Editar Red Social"
+        >
+          <i class="icono-oscuro fas fa-pencil"></i>
+        </button>
+        <app-edit-social [red]="red"></app-edit-social>
+        <button
+          *ngIf="isLogged"
+          class="boton-icon p-0 btn btn-close-black social-custom"
+          (click)="pasarRed(social)"
+          data-bs-toggle="modal"
+          data-bs-target="#delete-social"
+          title="Eliminar Red Social"
+        >
+          <i class="icono-oscuro fa-solid fa-trash"></i>
+        </button>
+        <app-delete-social [red]="red"></app-delete-social>
+      </div>
+    </div>
+
+    <!-- imagen banner -->
+    <img class="banner__img" [src]="img_banner" alt="banner" />
+
+    <!-- imagen profile -->
+    <div class="container-profile">
+      <div class="container profile__img">
+        <img [src]="img_perfil" alt="img-profile" />
+        <div id="img-perfil-edit">
+          <!-- icon -->
+          <button
+            *ngIf="isLogged"
+            class="boton-icon p-0 m-0 btn btn-close-black"
+            data-bs-toggle="modal"
+            data-bs-target="#edit-perfil"
+            title="Editar Imagen de Perfil"
+          >
+            <i class="icono-claro fas fa-pencil"></i>
+          </button>
+          <app-edit-perfil></app-edit-perfil>
+        </div>
       </div>
 
-
+      <div class="profile__name">
+        <h1>{{ nombre }} {{ apellido }}</h1>
+        <p>
+          <!-- icon -->
+          <button
+            *ngIf="isLogged"
+            class="boton-icon p-0 m-2 btn btn-close-black"
+            data-bs-toggle="modal"
+            data-bs-target="#edit-nombre"
+            title="Editar Nombre y Apellido"
+          >
+            <i class="icono-claro fas fa-pencil"></i>
+          </button>
+          <app-edit-nombre></app-edit-nombre>
+        </p>
+      </div>
     </div>
+
+    <div id="img-banner-edit">
+      <!-- icon -->
+      <button
+        *ngIf="isLogged"
+        class="boton-icon p-0 me-2 btn btn-close-black"
+        data-bs-toggle="modal"
+        data-bs-target="#edit-banner"
+        title="Editar Imagen del Banner"
+      >
+        <i class="icono-oscuro fas fa-pencil"></i>
+      </button>
+      <app-edit-banner></app-edit-banner>
+    </div>
+  </div>
 </section>

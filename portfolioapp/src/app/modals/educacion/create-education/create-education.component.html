@@ -1,50 +1,84 @@
-<div class="modal fade" id="create-education" tabindex="-1" aria-labelledby="loginLabel" aria-hidden="true">
+<div
+  class="modal fade"
+  id="create-education"
+  tabindex="-1"
+  aria-labelledby="loginLabel"
+  aria-hidden="true"
+>
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="loginLabel">Agregar Experiencia Laboral</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" (click)="limpiarForm()" aria-label="Close"></button>
+        <h1 class="modal-title fs-5" id="loginLabel">
+          Agregar Formación Académica
+        </h1>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          (click)="limpiarForm()"
+          aria-label="Close"
+        ></button>
       </div>
       <form [formGroup]="formulario" (ngSubmit)="onEnviar($event)">
-          <div class="modal-body">
-              <div class="mb-3">
-                <label for="institucion" class="form-label">Institución:</label>
-                <input type="text" class="form-control" formControlName="institucion" >
-              </div>
-              <br>
-              <div class="mb-3">
-                <label for="titulo" class="form-label">Título:</label>
-                <input type="text" class="form-control" formControlName="titulo" >
-              </div>
-              <br>
-              <div class="mb-3">
-                <label for="anioIngreso" class="form-label">Año Ingreso:</label>
-                <input type="text" class="form-control" formControlName="anioIngreso" >
-              </div>
-              <br>
-              <div class="mb-3">
-                <label for="anioEgreso" class="form-label">Año Egreso:</label>
-                <input type="text" class="form-control" formControlName="anioEgreso" >
-              </div>
-              <br>
-              <div class="mb-3">
-                <label for="urlImg" class="form-label">Url de la Imagen:</label>
-                <input type="text" class="form-control" formControlName="urlImg" >
-              </div>
-              <br>
-              <div class="mb-3">
-                <label for="urlWeb" class="form-label">Web de la Institución:</label>
-                <input type="text" class="form-control" formControlName="urlWeb" >
-              </div>
-              <br>
-              <div class="mb-3">
-                <label for="urlCertificado" class="form-label">Url del Certificado:</label>
-                <input type="text" class="form-control" formControlName="urlCertificado" >
-              </div>
+        <div class="modal-body">
+          <div class="mb-3">
+            <label for="institucion" class="form-label">Institución:</label>
+            <input
+              type="text"
+              class="form-control"
+              formControlName="institucion"
+            />
           </div>
-          <div class="modal-footer">
-            <button type="submit" class="btn btn-primary">Enviar</button>
+          <br />
+          <div class="mb-3">
+            <label for="titulo" class="form-label">Título:</label>
+            <input type="text" class="form-control" formControlName="titulo" />
           </div>
+          <br />
+          <div class="mb-3">
+            <label for="anioIngreso" class="form-label">Año Ingreso:</label>
+            <input
+              type="text"
+              class="form-control"
+              formControlName="anioIngreso"
+            />
+          </div>
+          <br />
+          <div class="mb-3">
+            <label for="anioEgreso" class="form-label">Año Egreso:</label>
+            <input
+              type="text"
+              class="form-control"
+              formControlName="anioEgreso"
+            />
+          </div>
+          <br />
+          <div class="mb-3">
+            <label for="urlImg" class="form-label">Url de la Imagen:</label>
+            <input type="text" class="form-control" formControlName="urlImg" />
+          </div>
+          <br />
+          <div class="mb-3">
+            <label for="urlWeb" class="form-label"
+              >Web de la Institución:</label
+            >
+            <input type="text" class="form-control" formControlName="urlWeb" />
+          </div>
+          <br />
+          <div class="mb-3">
+            <label for="urlCertificado" class="form-label"
+              >Url del Certificado:</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              formControlName="urlCertificado"
+            />
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-primary">Enviar</button>
+        </div>
       </form>
     </div>
   </div>

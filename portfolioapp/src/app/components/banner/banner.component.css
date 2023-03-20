@@ -17,6 +17,7 @@
     rgba(33, 37, 41, .7) 40%,
     rgba(33, 37, 41, .4) 70%,
     rgba(33, 37, 41, 0) 100%);
+    border-radius: 10px;
 }
 
 @media (max-width: 300px) {
@@ -119,17 +120,16 @@
 .social-custom {
   position: absolute;
   margin-top: 8px;
-  right: -20px;
+  right: -15px;
   font-size: .8rem;
   width: 30px;
 }
 
 
 .social-plus {
-  top: 14%;
-  right: -3.25%;
+  top: 12%;
+  right: -32px;
 }
-
 
 
 .icon {

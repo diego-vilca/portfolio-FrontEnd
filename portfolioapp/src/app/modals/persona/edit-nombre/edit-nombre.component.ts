@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Persona } from 'src/app/entities/persona';
 import { PersonaService } from 'src/app/services/persona.service';
@@ -8,7 +8,7 @@ import { PersonaService } from 'src/app/services/persona.service';
   templateUrl: './edit-nombre.component.html',
   styleUrls: ['./edit-nombre.component.css']
 })
-export class EditNombreComponent {
+export class EditNombreComponent implements OnInit{
 
   formulario : FormGroup;
   persona : Persona;

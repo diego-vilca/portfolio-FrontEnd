@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Persona } from 'src/app/entities/persona';
 import { PersonaService } from 'src/app/services/persona.service';
@@ -8,7 +8,7 @@ import { PersonaService } from 'src/app/services/persona.service';
   templateUrl: './edit-banner.component.html',
   styleUrls: ['./edit-banner.component.css']
 })
-export class EditBannerComponent {
+export class EditBannerComponent implements OnInit{
 
   formulario : FormGroup;
   persona : Persona;

@@ -6,45 +6,87 @@
     <div class="col-lg-1 col-md-1 col-sm-2 col-2">
       <p class="icon-container">
         <!-- icon -->
-        <button class="boton-icon p-0 m-1 btn btn-close-black" data-bs-toggle="modal" data-bs-target="#create-project" title="Agregar Proyecto"><i class="icono fa-solid fa-plus"></i></button>
+        <button
+          *ngIf="isLogged"
+          class="boton-icon p-0 m-1 btn btn-close-black"
+          data-bs-toggle="modal"
+          data-bs-target="#create-project"
+          title="Agregar Proyecto"
+        >
+          <i class="icono fa-solid fa-plus"></i>
+        </button>
         <app-create-project></app-create-project>
-
       </p>
     </div>
   </div>
-    <br>
-    <ul class="items-list" *ngFor="let project of proyectos">
-      <li>
-        <div class="row">
-          <div class="col-lg-1 col-md-1 col-sm-2 col-2 pe-0">
-            <a href="{{project.urlRepositorio}}" target="_blank" rel="noopener" title="Ir al Repositorio">
-              <img class="logo" src="{{project.urlImg}}" alt="java-logo">
+  <br />
+  <ul class="items-list" *ngFor="let project of proyectos">
+    <li>
+      <div class="row">
+        <div class="col-lg-1 col-md-1 col-sm-2 col-2 pe-0">
+          <a
+            href="{{ project.urlRepositorio }}"
+            target="_blank"
+            rel="noopener"
+            title="Ir al Repositorio"
+          >
+            <img class="logo" src="{{ project.urlImg }}" alt="java-logo" />
+          </a>
+        </div>
+        <div class="section-info col-lg-10 col-md-10 col-sm-8 col-8">
+          <div class="info-project">
+            <a
+              href="{{ project.urlRepositorio }}"
+              target="_blank"
+              rel="noopener"
+              title="Ir al Repositorio"
+            >
+              <h3>{{ project.nombre }}</h3>
+              <p>{{ project.descripcion }}</p>
             </a>
           </div>
-          <div class="section-info col-lg-10 col-md-10 col-sm-8 col-8">
-            <div class="info-project">
-              <a href="{{project.urlRepositorio}}" target="_blank" rel="noopener" title="Ir al Repositorio">
-                <h3>{{project.nombre}}</h3>
-                <p>{{project.descripcion}}</p>
-              </a>
+          <div class="responsive-iframe">
+            <div class="iframe-wrapper box-shadow">
+              <iframe
+                [src]="
+                  iFrameUrl.bypassSecurityTrustResourceUrl(project.urlVideo)
+                "
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
             </div>
-            <div class="responsive-iframe">
-              <div class="iframe-wrapper box-shadow">
-                <iframe [src]="iFrameUrl.bypassSecurityTrustResourceUrl(project.urlVideo)" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-1 col-md-1 col-sm-2 col-2">
-            <p class="icon-container">
-              <!-- icon -->
-              <button class="boton-icon p-0 m-1 btn btn-close-black" (click)="pasarProyecto(project)" data-bs-toggle="modal" data-bs-target="#edit-project" title="Editar Proyecto"><i class="icono fas fa-pencil"></i></button>
-              <app-edit-project [project]="proyecto"></app-edit-project>
-              <button class="boton-icon p-0 m-1 btn btn-close-black" (click)="pasarProyecto(project)" data-bs-toggle="modal" data-bs-target="#delete-project" title="Eliminar Proyecto"><i class="icono fa-solid fa-trash"></i></button>
-              <app-delete-project [project]="proyecto"></app-delete-project>
-
-            </p>
           </div>
         </div>
-      </li>
-    </ul>
-  </section>
+        <div class="col-lg-1 col-md-1 col-sm-2 col-2">
+          <p class="icon-container">
+            <!-- icon -->
+            <button
+              *ngIf="isLogged"
+              class="boton-icon p-0 m-1 btn btn-close-black"
+              (click)="pasarProyecto(project)"
+              data-bs-toggle="modal"
+              data-bs-target="#edit-project"
+              title="Editar Proyecto"
+            >
+              <i class="icono fas fa-pencil"></i>
+            </button>
+            <app-edit-project [project]="proyecto"></app-edit-project>
+            <button
+              *ngIf="isLogged"
+              class="boton-icon p-0 m-1 btn btn-close-black"
+              (click)="pasarProyecto(project)"
+              data-bs-toggle="modal"
+              data-bs-target="#delete-project"
+              title="Eliminar Proyecto"
+            >
+              <i class="icono fa-solid fa-trash"></i>
+            </button>
+            <app-delete-project [project]="proyecto"></app-delete-project>
+          </p>
+        </div>
+      </div>
+    </li>
+  </ul>
+</section>

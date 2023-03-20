@@ -2,128 +2,128 @@
   "nombre" : "Diego Vilca",
   "apellido" : "Vilca",
   "edad" : 35,
-  "url_perfil_img" : "../assets/images/profile.jpg",
-  "url_banner_img" : "../assets/images/banner.png",
-  "acerca_de" : "Mi nombre es Diego Victor Vilca, tengo 35 años y soy Desarrollador Fullstack Developer Junior. Actualmente resido en Bs As y me considero un entusiasta de las nuevas tecnologías, en constante búsqueda de nuevos conocimientos. Soy una persona responsable que sabe tomar la iniciativa como asi también trabajar en equipo. Busco participar en proyectos importantes determinado a lograr metas que contribuyan a mi crecimiento personal como al empresarial.",
+  "urlPerfilImg" : "../assets/images/profile.jpg",
+  "urlBannerImg" : "../assets/images/banner.png",
+  "acercaDe" : "Mi nombre es Diego Victor Vilca, tengo 35 años y soy Desarrollador Fullstack Developer Junior. Actualmente resido en Bs As y me considero un entusiasta de las nuevas tecnologías, en constante búsqueda de nuevos conocimientos. Soy una persona responsable que sabe tomar la iniciativa como asi también trabajar en equipo. Busco participar en proyectos importantes determinado a lograr metas que contribuyan a mi crecimiento personal como al empresarial.",
   "redes" : [
     {
       "id" : 1,
-      "url_social" : "",
-      "icon" : "fa-brands fa-facebook-f",
-      "icon_color" : "#2E406E"
+      "iconoFA" : "fa-brands fa-facebook-f",
+      "color" : "#2E406E",
+      "urlRed" : ""
     },
     {
       "id" : 2,
-      "url_social" : "",
-      "icon" : "fa-brands fa-github",
-      "icon_color" : "#24292f"
+      "iconoFA" : "fa-brands fa-github",
+      "color" : "#24292f",
+      "urlRed" : ""
     },
     {
       "id" : 3,
-      "url_social" : "",
-      "icon" : "fa-brands fa-twitter",
-      "icon_color" : "#339DC5"
+      "iconoFA" : "fa-brands fa-twitter",
+      "color" : "#339DC5",
+      "urlRed" : ""
     },
     {
       "id" : 4,
-      "url_social" : "",
-      "icon" : "fa-brands fa-instagram",
-      "icon_color" : "#C13584"
+      "iconoFA" : "fa-brands fa-instagram",
+      "color" : "#C13584",
+      "urlRed" : ""
     }
   ],
-  "educacion" : [
+  "estudios" : [
     {
       "id" : 1,
       "institucion" : "Instituto Mariano Moreno",
       "titulo" : "Bachiller en Ciencias Sociales",
-      "ingreso" : "1993",
-      "egreso" : "2005",
-      "url_img" : "../assets/images/logos/mim-logo.jpg",
-      "url_web" : "https://mim.edu.ar/",
-      "url_certificado" : ""
+      "anioIngreso" : "1993",
+      "anioEgreso" : "2005",
+      "urlImg" : "../assets/images/logos/mim-logo.jpg",
+      "urlWeb" : "https://mim.edu.ar/",
+      "urlCertificado" : ""
     },
     {
       "id" : 2,
       "institucion" : "Polotic",
       "titulo" : "Curso de Desarrollo Web FullStack con Python y JavaScript",
-      "ingreso" : "2020",
-      "egreso" : "2021",
-      "url_img" : "../assets/images/logos/polo-logo.png",
-      "url_web" : "https://polotic.misiones.gob.ar/",
-      "url_certificado" : "https://blockchainmisiones.aerobotsmisiones.com/certcheck/index.php?numero=1454"
+      "anioIngreso" : "2020",
+      "anioEgreso" : "2021",
+      "urlImg" : "../assets/images/logos/polo-logo.png",
+      "urlWeb" : "https://polotic.misiones.gob.ar/",
+      "urlCertificado" : "https://blockchainmisiones.aerobotsmisiones.com/certcheck/index.php?numero=1454"
     },
     {
       "id" : 3,
       "institucion" : "Polotic",
       "titulo" : "Curso de Programación Web PHP",
-      "ingreso" : "2020",
-      "egreso" : "2021",
-      "url_img" : "../assets/images/logos/polo-logo.png",
-      "url_web" : "https://polotic.misiones.gob.ar/",
-      "url_certificado" : "https://blockchainmisiones.aerobotsmisiones.com/certcheck/index.php?numero=289"
+      "anioIngreso" : "2020",
+      "anioEgreso" : "2021",
+      "urlImg" : "../assets/images/logos/polo-logo.png",
+      "urlWeb" : "https://polotic.misiones.gob.ar/",
+      "urlCertificado" : "https://blockchainmisiones.aerobotsmisiones.com/certcheck/index.php?numero=289"
     },
     {
       "id" : 4,
       "institucion" : "Polotic",
       "titulo" : "Curso de Inglés para Desarrollo de Software",
-      "ingreso" : "2020",
-      "egreso" : "2021",
-      "url_img" : "../assets/images/logos/polo-logo.png",
-      "url_web" : "ttps://polotic.misiones.gob.ar/",
-      "url_certificado" : "https://blockchainmisiones.aerobotsmisiones.com/certcheck/index.php?numero=1408"
+      "anioIngreso" : "2020",
+      "anioEgreso" : "2021",
+      "urlImg" : "../assets/images/logos/polo-logo.png",
+      "urlWeb" : "https://polotic.misiones.gob.ar/",
+      "urlCertificado" : "https://blockchainmisiones.aerobotsmisiones.com/certcheck/index.php?numero=1408"
     },
     {
       "id" : 5,
       "institucion" : "Silicon Misiones",
       "titulo" : "Curso de Desarrollo Web Fullstack con Java",
-      "ingreso" : "2021",
-      "egreso" : "2022",
-      "url_img" : "../assets/images/logos/silicon-logo.png",
-      "url_web" : "https://siliconmisiones.gob.ar/",
-      "url_certificado" : "https://blockchainmisiones.aerobotsmisiones.com/certcheck/index.php?numero=3658"
+      "anioIngreso" : "2021",
+      "anioEgreso" : "2022",
+      "urlImg" : "../assets/images/logos/silicon-logo.png",
+      "urlWeb" : "https://siliconmisiones.gob.ar/",
+      "urlCertificado" : "https://blockchainmisiones.aerobotsmisiones.com/certcheck/index.php?numero=3658"
     },
     {
       "id" : 6,
       "institucion" : "Universidad Nacional San Martin",
       "titulo" : "Curso de Programación en Python",
-      "ingreso" : "2020",
-      "egreso" : "2021",
-      "url_img" : "../assets/images/logos/unsam-logo.png",
-      "url_web" : "https://www.unsam.edu.ar/",
-      "url_certificado" : "https://drive.google.com/file/d/1YpBpye02sLPe7xGBps7OIqa37jel1OnR/view?usp=share_link"
+      "anioIngreso" : "2020",
+      "anioEgreso" : "2021",
+      "urlImg" : "../assets/images/logos/unsam-logo.png",
+      "urlWeb" : "https://www.unsam.edu.ar/",
+      "urlCertificado" : "https://drive.google.com/file/d/1YpBpye02sLPe7xGBps7OIqa37jel1OnR/view?usp=share_link"
     },
     {
       "id" : 7,
       "institucion" : "Instituto Tecnológico de Buenos Aires",
       "titulo" : "Curso de analisis de datos en Python",
-      "ingreso" : "2020",
-      "egreso" : "2021",
-      "url_img" : "../assets/images/logos/itba-logo.png",
-      "url_web" : "https://www.itba.edu.ar/",
-      "url_certificado" : "https://drive.google.com/file/d/1NPXe-HAF_hy580YFcP8ymBPyFROaMbdT/view?usp=share_link"
+      "anioIngreso" : "2020",
+      "anioEgreso" : "2021",
+      "urlImg" : "../assets/images/logos/itba-logo.png",
+      "urlWeb" : "https://www.itba.edu.ar/",
+      "urlCertificado" : "https://drive.google.com/file/d/1NPXe-HAF_hy580YFcP8ymBPyFROaMbdT/view?usp=share_link"
     },
     {
       "id" : 8,
       "institucion" : "Todo Code",
       "titulo" : "Curso de Desarrollo de APIs en Java con SpringBoot",
-      "ingreso" : "2021",
-      "egreso" : "2022",
-      "url_img" : "../assets/images/logos/todocode-logo.png",
-      "url_web" : "https://todocodeacademy.com/",
-      "url_certificado" : "https://drive.google.com/file/d/1tT3gFTCu1Ji7kVmg-YWa2LxjYkwXp1U2/view?usp=share_link"
+      "anioIngreso" : "2021",
+      "anioEgreso" : "2022",
+      "urlImg" : "../assets/images/logos/todocode-logo.png",
+      "urlWeb" : "https://todocodeacademy.com/",
+      "urlCertificado" : "https://drive.google.com/file/d/1tT3gFTCu1Ji7kVmg-YWa2LxjYkwXp1U2/view?usp=share_link"
     },
     {
       "id" : 9,
       "institucion" : "UTN",
       "titulo" : "Tecnicatura en Programación",
-      "ingreso" : "2019",
-      "egreso" : "actualidad",
-      "url_img" : "../assets/images/logos/utn-logo.png",
-      "url_web" : "https://www.fra.utn.edu.ar/",
-      "url_certificado" : "https://www.fra.utn.edu.ar/"
+      "anioIngreso" : "2019",
+      "anioEgreso" : "actualidad",
+      "urlImg" : "../assets/images/logos/utn-logo.png",
+      "urlWeb" : "https://www.fra.utn.edu.ar/",
+      "urlCertificado" : "https://www.fra.utn.edu.ar/"
     }
   ],
-  "habilidades_digitales" : [
+  "habilidades" : [
     { "id" : 1,
       "nombre" : "html",
       "porcentaje" : "90",
@@ -141,7 +141,7 @@
     },
     { "id" : 4,
       "nombre" : "typescript",
-      "porcentaje" : "65",
+      "porcentaje" : "60",
       "tipo" : "hard"
     },
     { "id" : 5,
@@ -195,46 +195,46 @@
       "tipo" : "soft"
     }
   ],
-  "experiencia_laboral" : [
+  "trabajos" : [
     {
       "id" : 1,
       "empresa" : "Parquista",
-      "tarea" : "Mantenimiento de plantas y jardines en la zona de Pilar.",
-      "ingreso" : "2018",
-      "egreso" : "2019",
-      "url_empresa" : ""
+      "funcion" : "Mantenimiento de plantas y jardines en la zona de Pilar.",
+      "anioIngreso" : "2018",
+      "anioEgreso" : "2019",
+      "urlEmpresa" : ""
     },
     {
       "id" : 2,
       "empresa" : "Reparador de PCs Freelance",
-      "tarea" : "Diagnóstico y reparación de equipos. Armado de pc, configuración de software, limpieza de virus y malware.",
-      "ingreso" : "2013",
-      "egreso" : "2016",
-      "url_empresa" : ""
+      "funcion" : "Diagnóstico y reparación de equipos. Armado de pc, configuración de software, limpieza de virus y malware.",
+      "anioIngreso" : "2013",
+      "anioEgreso" : "2016",
+      "urlEmpresa" : ""
     },
     {
       "id" : 3,
       "empresa" : "Frigorifico El Mataco SRL",
-      "tarea" : "Cadete multifuncional en sector de Expedición.",
-      "ingreso" : "2008",
-      "egreso" : "2012",
-      "url_empresa" : ""
+      "funcion" : "Cadete multifuncional en sector de Expedición.",
+      "anioIngreso" : "2008",
+      "anioEgreso" : "2012",
+      "urlEmpresa" : ""
     }
   ],
   "proyectos" : [
     {
       "nombre" : "Agencia de viajes con Java",
       "descripcion" : "Sitio web para la venta de paquetes y servicios turísticos de una agencia de viajes, mediante Java, utilizando JSP, Servlets y JPA.",
-      "url_video" : "https://www.youtube.com/embed/ovNFG_Npoz4?",
-      "url_repositorio" : "https://github.com/diego-vilca/TPFinal-java.git",
-      "url_img" : "../assets/images/logos/java-logo.png"
+      "urlVideo" : "https://www.youtube.com/embed/ovNFG_Npoz4?",
+      "urlRepositorio" : "https://github.com/diego-vilca/TPFinal-java.git",
+      "urlImg" : "../assets/images/logos/java-logo.png"
     },
     {
       "nombre" : "Cadena de electrodomésticos",
       "descripcion" : "Sitio web para exponer productos de una empresa de electrodomésticos, integrando Python en la web mediante Django.",
-      "url_video" : "https://www.youtube.com/embed/xb6UG_VsJME",
-      "url_repositorio" : "https://github.com/diego-vilca/JAGUARETE-KAA-S.A.git",
-      "url_img" : "../assets/images/logos/django-logo.png"
+      "urlVideo" : "https://www.youtube.com/embed/xb6UG_VsJME",
+      "urlRepositorio" : "https://github.com/diego-vilca/JAGUARETE-KAA-S.A.git",
+      "urlImg" : "../assets/images/logos/django-logo.png"
     }
   ]
 

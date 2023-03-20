@@ -35,6 +35,7 @@ import { CreateSocialComponent } from './modals/social/create-social/create-soci
 import { EditSocialComponent } from './modals/social/edit-social/edit-social.component';
 import { DeleteSocialComponent } from './modals/social/delete-social/delete-social.component';
 import { Page404Component } from './components/page404/page404.component';
+import { interceptorProvider } from './services/interceptor.service';
 
 @NgModule({
   declarations: [
@@ -77,7 +78,9 @@ import { Page404Component } from './components/page404/page404.component';
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [
+    interceptorProvider
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

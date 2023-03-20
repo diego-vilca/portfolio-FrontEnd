@@ -1,41 +1,81 @@
-<div class="modal fade" id="edit-project" data-bs-backdrop="static" tabindex="-1" aria-labelledby="loginLabel" aria-hidden="true">
+<div
+  class="modal fade"
+  id="edit-project"
+  data-bs-backdrop="static"
+  tabindex="-1"
+  aria-labelledby="loginLabel"
+  aria-hidden="true"
+>
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
         <h1 class="modal-title fs-5" id="loginLabel">Editar Proyecto</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="reloadPage()"></button>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+          (click)="reloadPage()"
+        ></button>
       </div>
       <form [formGroup]="formulario" (ngSubmit)="onEnviar($event)">
-          <div class="modal-body">
-              <div class="mb-3">
-                <label for="nombre" class="form-label">Nombre del Proyecto:</label>
-                <input type="text" [(ngModel)]="project.nombre" class="form-control" formControlName="nombre">
-              </div>
-              <br>
-              <div class="mb-3">
-                <label for="descripcion" class="form-label">Descripción:</label>
-                <textarea formControlName="descripcion" [(ngModel)]="project.descripcion" rows="5" cols="61"></textarea>
-                <!-- <input type="text" [(ngModel)]="project.descripcion" class="form-control" formControlName="descripcion"> -->
-              </div>
-              <br>
-              <div class="mb-3">
-                <label for="urlImg" class="form-label">Url Imagen:</label>
-                <input type="text" [(ngModel)]="project.urlImg" class="form-control" formControlName="urlImg">
-              </div>
-              <br>
-              <div class="mb-3">
-                <label for="urlVideo" class="form-label">Url Video:</label>
-                <input type="text" [(ngModel)]="project.urlVideo"  class="form-control" formControlName="urlVideo">
-              </div>
-              <br>
-              <div class="mb-3">
-                <label for="urlRepositorio" class="form-label">Url del Repositorio:</label>
-                <input type="text" [(ngModel)]="project.urlRepositorio" class="form-control" formControlName="urlRepositorio">
-              </div>
+        <div class="modal-body">
+          <div class="mb-3">
+            <label for="nombre" class="form-label">Nombre del Proyecto:</label>
+            <input
+              type="text"
+              [(ngModel)]="project.nombre"
+              class="form-control"
+              formControlName="nombre"
+            />
           </div>
-          <div class="modal-footer">
-            <button type="submit" class="btn btn-primary">Enviar</button>
+          <br />
+          <div class="mb-3">
+            <label for="descripcion" class="form-label">Descripción:</label>
+            <textarea
+              formControlName="descripcion"
+              [(ngModel)]="project.descripcion"
+              rows="5"
+              cols="61"
+            ></textarea>
+            <!-- <input type="text" [(ngModel)]="project.descripcion" class="form-control" formControlName="descripcion"> -->
           </div>
+          <br />
+          <div class="mb-3">
+            <label for="urlImg" class="form-label">Url Imagen:</label>
+            <input
+              type="text"
+              [(ngModel)]="project.urlImg"
+              class="form-control"
+              formControlName="urlImg"
+            />
+          </div>
+          <br />
+          <div class="mb-3">
+            <label for="urlVideo" class="form-label">Url Video:</label>
+            <input
+              type="text"
+              [(ngModel)]="project.urlVideo"
+              class="form-control"
+              formControlName="urlVideo"
+            />
+          </div>
+          <br />
+          <div class="mb-3">
+            <label for="urlRepositorio" class="form-label"
+              >Url del Repositorio:</label
+            >
+            <input
+              type="text"
+              [(ngModel)]="project.urlRepositorio"
+              class="form-control"
+              formControlName="urlRepositorio"
+            />
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-primary">Enviar</button>
+        </div>
       </form>
     </div>
   </div>

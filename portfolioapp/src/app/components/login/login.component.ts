@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { LoginUsuario } from 'src/app/entities/login-usuario';
+import { AuthService } from 'src/app/services/auth.service';
+import { TokenService } from 'src/app/services/token.service';
 
 @Component({
   selector: 'app-login',
@@ -7,60 +9,50 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit{
+  isLogged = false;
+  isLogginFail = false;
+  loginUsuario !: LoginUsuario;
+  nombreUsuario !: string;
+  password !: string;
+  roles: string[] = [];
+  errMsj !: string;
+  @Output() miEvento = new EventEmitter<boolean>();
 
-  formulario : FormGroup;
 
-  constructor( private formBuilder : FormBuilder ){
-    this.formulario = this.formBuilder.group({
-      email : ['',[Validators.required, Validators.email]],
-      password : ['',[Validators.required, Validators.minLength(8)]]
+  constructor(
+    private tokenService : TokenService,
+    private authService : AuthService){}
+
+
+  ngOnInit(): void {
+    if (this.tokenService.getToken()) {
+      this.isLogged = true;
+      this.isLogginFail = false;
+      this.roles = this.tokenService.getAuthorities();
+    }
+    this.logueado();
+  }
+
+  onLogin(): void{
+    this.loginUsuario = new LoginUsuario(this.nombreUsuario, this.password);
+    this.authService.login(this.loginUsuario).subscribe(data => {
+      this.isLogged = true;
+      this.isLogginFail = false;
+      this.tokenService.setToken(data.token);
+      this.tokenService.setUserName(data.nombreUsuario);
+      this.tokenService.setAuthorities(data.authorities);
+      this.roles = data.authorities;
+      window.location.reload();
+    }, err => {
+      this.isLogged = false;
+      this.isLogginFail = true;
+      this.errMsj = err.error.mensaje;
+      console.log(this.errMsj);
     })
   }
 
-  ngOnInit(): void {
-  }
-
-  //Getters
-  get email(){
-    return this.formulario.get("email");
-  }
-
-  get password(){
-    return this.formulario.get("password");
-  }
-
-
-  //Propiedades
-  get passwordInvalid(){
-    return this.password?.errors && this.password?.touched;
-  }
-
-  get passwordValid(){
-    return !this.password?.errors && this.password?.touched;
-  }
-
-  get emailInvalid(){
-    return this.email?.errors && this.email?.touched;
-  }
-
-  get emailValid(){
-    return !this.email?.errors && this.email?.touched;
-  }
-
-  limpiarForm() : void{
-    this.formulario.reset();
-  }
-
-  onEnviar(event: Event) {
-    // console.log("me mande");
-    event.preventDefault;
-
-    if(this.formulario.valid){
-      alert("TODO OK!");
-    }else {
-      this.formulario.markAllAsTouched();
-      alert("TODO MAAAAAAAAAAAL!");
-    }
+  logueado(){
+    return this.miEvento.emit(this.isLogged);
   }
 
 

@@ -1,19 +1,26 @@
 <section id="acerca_de" class="container">
-    <div class="row">
-      <div class="section-titulo col-lg-11 col-md-11 col-sm-10 col-10">
-        <h2>Acerca de...</h2>
-      </div>
-      <div class="col-lg-1 col-md-1 col-sm-2 col-2">
-        <p class="icon-container">
-          <!-- icon -->
-
-          <button class="boton-icon p-0 m-1 btn btn-close-black" data-bs-toggle="modal" data-bs-target="#edit-about" title="Editar Descripción"><i class="icono fas fa-pencil"></i></button>
-          <app-edit-about></app-edit-about>
-
-        </p>
-      </div>
+  <div class="row">
+    <div class="section-titulo col-lg-11 col-md-11 col-sm-10 col-10">
+      <h2>Acerca de...</h2>
     </div>
-    <p>
-      {{about_me}}
-    </p>
-  </section>
+    <div class="col-lg-1 col-md-1 col-sm-2 col-2">
+      <p class="icon-container">
+        <!-- icon -->
+
+        <button
+          *ngIf="isLogged"
+          class="boton-icon p-0 m-1 btn btn-close-black"
+          data-bs-toggle="modal"
+          data-bs-target="#edit-about"
+          title="Editar Descripción"
+        >
+          <i class="icono fas fa-pencil"></i>
+        </button>
+        <app-edit-about></app-edit-about>
+      </p>
+    </div>
+  </div>
+  <p>
+    {{ about_me }}
+  </p>
+</section>

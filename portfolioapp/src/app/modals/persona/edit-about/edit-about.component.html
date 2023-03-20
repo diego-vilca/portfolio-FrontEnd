@@ -1,22 +1,39 @@
-<div class="modal fade" id="edit-about" data-bs-backdrop="static" tabindex="-1" aria-labelledby="loginLabel" aria-hidden="true">
+<div
+  class="modal fade"
+  id="edit-about"
+  data-bs-backdrop="static"
+  tabindex="-1"
+  aria-labelledby="loginLabel"
+  aria-hidden="true"
+>
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
         <h1 class="modal-title fs-5" id="loginLabel">Editar AcercaDe</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="reloadPage()"></button>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+          (click)="reloadPage()"
+        ></button>
       </div>
       <form [formGroup]="formulario" (ngSubmit)="onEnviar($event)">
-          <div class="modal-body">
-              <div class="mb-3">
-                <label for="acercaDe" class="form-label">Descripción:</label>
-                <textarea formControlName="acercaDe" [(ngModel)]="persona.acercaDe" rows="5" cols="61"></textarea>
-              </div>
+        <div class="modal-body">
+          <div class="mb-3">
+            <label for="acercaDe" class="form-label">Descripción:</label>
+            <textarea
+              formControlName="acercaDe"
+              [(ngModel)]="persona.acercaDe"
+              rows="5"
+              cols="61"
+            ></textarea>
           </div>
-          <div class="modal-footer">
-            <button type="submit" class="btn btn-primary">Enviar</button>
-          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-primary">Enviar</button>
+        </div>
       </form>
     </div>
   </div>
 </div>
-

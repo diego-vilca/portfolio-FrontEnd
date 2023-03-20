@@ -1,12 +1,20 @@
 <section id="educacion" class="container">
   <div class="row">
     <div class="section-titulo ol-lg-11 col-md-11 col-sm-10 col-10">
-      <h2>Educación</h2>
+      <h2>Formación Académica</h2>
     </div>
     <div class="col-lg-1 col-md-1 col-sm-2 coabout l-2">
       <p class="icon-container">
         <!-- icon -->
-        <button class="boton-icon p-0 m-1 btn btn-close-black" data-bs-toggle="modal" data-bs-target="#create-education" title="Agregar Formación"><i class="icono fa-solid fa-plus"></i></button>
+        <button
+          *ngIf="isLogged"
+          class="boton-icon p-0 m-1 btn btn-close-black"
+          data-bs-toggle="modal"
+          data-bs-target="#create-education"
+          title="Agregar Formación"
+        >
+          <i class="icono fa-solid fa-plus"></i>
+        </button>
         <app-create-education></app-create-education>
       </p>
     </div>
@@ -16,31 +24,63 @@
       <li>
         <div class="row">
           <div class="col-lg-1 col-md-1 col-sm-2 col-2 pe-0">
-            <a href="{{estudio.urlWeb}}" target="_blank" rel="noopener" title="Ir a la web">
-              <img class="logo" [src]="estudio.urlImg" alt="mim-logo">
+            <a
+              href="{{ estudio.urlWeb }}"
+              target="_blank"
+              rel="noopener"
+              title="Ir a la web"
+            >
+              <img class="logo" [src]="estudio.urlImg" alt="mim-logo" />
             </a>
           </div>
           <div class="section-info col-lg-10 col-md-10 col-sm-8 col-8">
             <div class="info-education">
-              <a href="{{estudio.urlCertificado}}" target="_blank" rel="noopener" title="Ir al certificado">
-                <h3>{{estudio.institucion}}</h3>
-                <p>{{estudio.titulo}}</p>
-                <p><time>{{estudio.anioIngreso}}</time>-<time>{{estudio.anioEgreso}}</time></p>
+              <a
+                href="{{ estudio.urlCertificado }}"
+                target="_blank"
+                rel="noopener"
+                title="Ir al certificado"
+              >
+                <h3>{{ estudio.institucion }}</h3>
+                <p>{{ estudio.titulo }}</p>
+                <p>
+                  <time>{{ estudio.anioIngreso }}</time
+                  >-<time>{{ estudio.anioEgreso }}</time>
+                </p>
               </a>
             </div>
           </div>
           <div class="col-lg-1 col-md-1 col-sm-2 col-2">
             <p class="icon-container">
               <!-- icon -->
-              <button class="boton-icon p-0 m-1 btn btn-close-black" (click)="pasarEducacion(estudio)" data-bs-toggle="modal" data-bs-target="#edit-education" title="Editar Formación"><i class="icono fas fa-pencil"></i></button>
+              <button
+                *ngIf="isLogged"
+                class="boton-icon p-0 m-1 btn btn-close-black"
+                (click)="pasarEducacion(estudio)"
+                data-bs-toggle="modal"
+                data-bs-target="#edit-education"
+                title="Editar Formación"
+              >
+                <i class="icono fas fa-pencil"></i>
+              </button>
               <app-edit-education [educacion]="estudio"></app-edit-education>
-              <button class="boton-icon p-0 m-1 btn btn-close-black" (click)="pasarEducacion(estudio)" data-bs-toggle="modal" data-bs-target="#delete-education" title="Eliminar Formación"><i class="icono fa-solid fa-trash"></i></button>
-              <app-delete-education [educacion]="estudio"></app-delete-education>
+              <button
+                *ngIf="isLogged"
+                class="boton-icon p-0 m-1 btn btn-close-black"
+                (click)="pasarEducacion(estudio)"
+                data-bs-toggle="modal"
+                data-bs-target="#delete-education"
+                title="Eliminar Formación"
+              >
+                <i class="icono fa-solid fa-trash"></i>
+              </button>
+              <app-delete-education
+                [educacion]="estudio"
+              ></app-delete-education>
             </p>
           </div>
         </div>
       </li>
     </ul>
   </div>
-
 </section>
