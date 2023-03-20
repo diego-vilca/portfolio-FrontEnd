@@ -7,3 +7,15 @@
   padding: 1rem 3rem;
   font-size: 14px;
 }
+
+input::placeholder {
+  font-size: smaller;
+  font-weight:lighter;
+  font-style: italic;
+  opacity: 0.4;
+  color: grey;
+}
+
+p {
+  font-size: smaller;
+}
