@@ -15,7 +15,7 @@ constructor(
 ) {}
 
 eliminarProyecto() : void{
-  this.datos.borrarProyecto(this.project.idProyect).subscribe();
+  this.datos.borrarProyecto(this.project.idProyecto).subscribe();
   alert("Proyecto eliminado exitosamente.");
   window.location.reload();
 }

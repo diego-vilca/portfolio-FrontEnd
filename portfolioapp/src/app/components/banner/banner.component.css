@@ -3,63 +3,68 @@
 } */
 
 .container__banner {
-    padding: 0px;
-    position: relative;
-    height: 40vh;
-    min-height: 40vh;
-    overflow: visible;
+  padding: 0px;
+  position: relative;
+  height: 40vh;
+  min-height: 40vh;
+  overflow: visible;
 }
 
 .layer__banner {
-    position: absolute; left: 0; top: 0; width: 100%; height: 100%;
-    background-image: linear-gradient(to right,
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+    to right,
     rgba(33, 37, 41, 1) 10%,
-    rgba(33, 37, 41, .7) 40%,
-    rgba(33, 37, 41, .4) 70%,
-    rgba(33, 37, 41, 0) 100%);
-    border-radius: 10px;
+    rgba(33, 37, 41, 0.7) 40%,
+    rgba(33, 37, 41, 0.4) 70%,
+    rgba(33, 37, 41, 0) 100%
+  );
+  border-radius: 10px;
 }
 
 @media (max-width: 300px) {
-    .container__banner {
-        display: flex;
-        justify-content: center;
-    }
+  .container__banner {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .container-profile {
-    max-height: 75%;
-    position: absolute;
-    bottom: 0;
-    margin-left: 10px;
-    margin-bottom: 10px;
+  max-height: 75%;
+  position: absolute;
+  bottom: 0;
+  margin-left: 10px;
+  margin-bottom: 10px;
 }
 
-@media (max-width: 1000px){
-    .container-profile .profile__name h1{
-        font-size: 1.25rem;
-    }
+@media (max-width: 1000px) {
+  .container-profile .profile__name h1 {
+    font-size: 1.25rem;
+  }
 }
 
 @media (max-width: 300px) {
-    .container-profile {
-        margin-left: 0;
-        text-align: center;
-    }
+  .container-profile {
+    margin-left: 0;
+    text-align: center;
+  }
 
-    .container-profile .profile__name h1{
-        font-size: 1.125rem;
-    }
+  .container-profile .profile__name h1 {
+    font-size: 1.125rem;
+  }
 }
 
 .banner__img {
-    height: 100%;
-    width: 100%;
-    object-position: bottom right;
-    object-fit: cover;
-    border-radius: 10px;
+  height: 100%;
+  width: 100%;
+  object-position: bottom right;
+  object-fit: cover;
+  border-radius: 10px;
 }
-
 
 .profile__img {
   position: relative;
@@ -67,7 +72,7 @@
   min-height: 82px;
   width: 130px;
   padding: 4px;
-  border: 1px solid #7B7484;
+  border: 1px solid #7b7484;
   border-radius: 50%;
   background-color: #eaf5fa;
   margin: auto;
@@ -81,6 +86,7 @@
   border-radius: 50%;
   overflow: hidden;
   border: 1px solid gray;
+  display: block;
 }
 
 .circle img {
@@ -93,69 +99,70 @@
   margin: auto;
 }
 
-
-@media (max-width: 300px) {
-    .profile__img {
-        margin: 0 auto;
-    }
+.circle:hover {
+  color: #ffa502;
+  box-shadow: 0 0 30px #d35400;
+  filter: blur(4);
 }
 
+@media (max-width: 300px) {
+  .profile__img {
+    margin: 0 auto;
+  }
+}
 
 .profile__name {
   display: inline-flex;
   margin: auto;
 }
 
-.profile__name h1{
-    margin-top: 5px;
-    margin-bottom: 5px;
-    line-height:normal;
-    color: white;
-    font-size: 1.5rem;
-    font-weight: 700;
+.profile__name h1 {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  line-height: normal;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 700;
 }
-
 
 /* iconos redes */
 .social-bar {
-    position: absolute;
-    right: -36px;
-    top: 25%;
-    font-size: .8rem;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+  position: absolute;
+  right: -36px;
+  top: 25%;
+  font-size: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
 .social-custom {
   position: absolute;
   margin-top: 8px;
   right: -15px;
-  font-size: .8rem;
+  font-size: 0.8rem;
   width: 30px;
 }
-
 
 .social-plus {
   top: 12%;
   right: -32px;
 }
 
-
 .icon {
-    width: 30px;
-    color: white;
-    text-decoration: none;
-    padding: .5rem 0;
-    display: flex;
-    transition: all .5s;
+  width: 30px;
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 0;
+  display: flex;
+  transition: all 0.5s;
 }
 
 .icon:hover {
-    padding-right: 3rem;
-    border-radius: 1rem 0 0 1rem;
-    box-shadow: 0 0 .5rem rgba(0, 0, 0, 0.42);
-    color: white;
+  padding-right: 3rem;
+  border-radius: 1rem 0 0 1rem;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.42);
+  color: white;
 }
 
 .icono-claro {
@@ -163,10 +170,9 @@
   color: white;
 }
 
-
 .icono-oscuro {
   font-size: 14px;
-  color: #4B4453;
+  color: #4b4453;
 }
 
 #img-perfil-edit {
@@ -180,4 +186,3 @@
   top: 0;
   right: 0;
 }
-

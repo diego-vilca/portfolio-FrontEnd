@@ -26,3 +26,13 @@
 .container-fluid {
   padding-right: 60px;
 }
+
+#btnLogin:hover {
+  box-shadow: 0 0 20px #33ac66;
+  filter: blur(4);
+}
+
+#btnLogout:hover {
+  box-shadow: 0 0 20px #d35400;
+  filter: blur(4);
+}

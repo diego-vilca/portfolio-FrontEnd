@@ -29,6 +29,12 @@
       "iconoFA" : "fa-brands fa-instagram",
       "color" : "#C13584",
       "urlRed" : ""
+    },
+    {
+      "id" : 1,
+      "iconoFA" : "fa-regular fa-envelope",
+      "color" : "#1E88E5",
+      "urlRed" : ""
     }
   ],
   "estudios" : [
@@ -134,11 +140,6 @@
       "porcentaje" : "75",
       "tipo" : "hard"
     },
-    { "id" : 3,
-      "nombre" : "javascript",
-      "porcentaje" : "70",
-      "tipo" : "hard"
-    },
     { "id" : 4,
       "nombre" : "typescript",
       "porcentaje" : "60",
@@ -237,5 +238,4 @@
       "urlImg" : "../assets/images/logos/django-logo.png"
     }
   ]
-
 }

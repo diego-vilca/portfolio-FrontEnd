@@ -11,7 +11,7 @@ import { TokenService } from 'src/app/services/token.service';
 export class EducationComponent implements OnInit{
   isLogged : boolean = false;
   educacion : Educacion[] = [];
-  estudio : Educacion = Object();
+  formacion : Educacion = Object();
 
   constructor(
     private datos : EducacionService,
@@ -35,7 +35,7 @@ export class EducationComponent implements OnInit{
   }
 
   pasarEducacion(educacion : Educacion) : void{
-    this.estudio = educacion;
+    this.formacion = educacion;
   }
 
 
