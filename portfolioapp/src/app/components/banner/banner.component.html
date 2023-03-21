@@ -58,8 +58,10 @@
 
     <!-- imagen profile -->
     <div class="container-profile">
-      <div class="container profile__img">
-        <img [src]="img_perfil" alt="img-profile" />
+      <div class="profile__img">
+        <div class="circle">
+          <img [src]="img_perfil" alt="img-profile" />
+        </div>
         <div id="img-perfil-edit">
           <!-- icon -->
           <button
@@ -75,13 +77,15 @@
         </div>
       </div>
 
+
+
       <div class="profile__name">
         <h1>{{ nombre }} {{ apellido }}</h1>
         <p>
           <!-- icon -->
           <button
             *ngIf="isLogged"
-            class="boton-icon p-0 m-2 btn btn-close-black"
+            class="boton-icon p-0 m-2 me-0 btn btn-close-black"
             data-bs-toggle="modal"
             data-bs-target="#edit-nombre"
             title="Editar Nombre y Apellido"
