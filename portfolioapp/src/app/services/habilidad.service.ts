@@ -8,7 +8,7 @@ import { Habilidad } from '../entities/habilidad';
 })
 export class HabilidadService {
 
-  url : string = 'http://localhost:8080/skill/';
+  url : string = 'https://portfolio-backend-wo8y.onrender.com/skill/';
 
   constructor(
     private http : HttpClient

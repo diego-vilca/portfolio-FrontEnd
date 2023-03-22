@@ -8,7 +8,7 @@ import { Experiencia } from '../entities/experiencia';
 })
 export class ExperienciaService {
 
-  url : string = 'http://localhost:8080/job/';
+  url : string = 'https://portfolio-backend-wo8y.onrender.com/job/';
 
   constructor(
     private http : HttpClient

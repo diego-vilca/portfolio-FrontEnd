@@ -8,7 +8,7 @@ import { Educacion } from '../entities/educacion';
 })
 export class EducacionService {
 
-  url : string = 'http://localhost:8080/education/';
+  url : string = 'https://portfolio-backend-wo8y.onrender.com/education/';
 
   constructor(
     private http : HttpClient

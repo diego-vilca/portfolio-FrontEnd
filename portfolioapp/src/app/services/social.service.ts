@@ -8,7 +8,7 @@ import { Social } from '../entities/social';
 })
 export class SocialService {
 
-  url : string = 'http://localhost:8080/social/';
+  url : string = 'https://portfolio-backend-wo8y.onrender.com/social/';
 
   constructor(
     private http : HttpClient
