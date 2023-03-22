@@ -2,13 +2,14 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Habilidad } from '../entities/habilidad';
+import { environment } from 'src/environments/environment.development';
 
 @Injectable({
   providedIn: 'root'
 })
 export class HabilidadService {
 
-  url : string = 'https://portfolio-backend-wo8y.onrender.com/skill/';
+  url : string = environment.apiURL + 'skill/';
 
   constructor(
     private http : HttpClient

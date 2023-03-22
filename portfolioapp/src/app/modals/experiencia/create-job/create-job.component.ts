@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ExperienciaService } from 'src/app/services/experiencia.service';
+import { environment } from 'src/environments/environment.development';
 
 @Component({
   selector: 'app-create-job',
@@ -38,7 +39,7 @@ export class CreateJobComponent {
   }
 
   agregarExperiencia() : void{
-    this.datos.agregarExperiencia(this.formulario.value, 1).subscribe();
+    this.datos.agregarExperiencia(this.formulario.value, environment.idPersona).subscribe();
   }
 
   resetForm() : void{

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ProyectoService } from 'src/app/services/proyecto.service';
+import { environment } from 'src/environments/environment.development';
 
 @Component({
   selector: 'app-create-project',
@@ -37,7 +38,7 @@ export class CreateProjectComponent {
   }
 
   agregarProyecto() : void{
-    this.datos.agregarProyecto(this.formulario.value, 1).subscribe();
+    this.datos.agregarProyecto(this.formulario.value, environment.idPersona).subscribe();
   }
 
   limpiarForm() : void{

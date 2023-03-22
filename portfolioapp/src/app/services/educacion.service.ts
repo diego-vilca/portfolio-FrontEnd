@@ -2,13 +2,14 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Educacion } from '../entities/educacion';
+import { environment } from 'src/environments/environment.development';
 
 @Injectable({
   providedIn: 'root'
 })
 export class EducacionService {
 
-  url : string = 'https://portfolio-backend-wo8y.onrender.com/education/';
+  url : string = environment.apiURL + 'education/';
 
   constructor(
     private http : HttpClient

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { HabilidadService } from 'src/app/services/habilidad.service';
+import { environment } from 'src/environments/environment.development';
 
 
 @Component({
@@ -36,7 +37,7 @@ export class CreateSkillComponent {
   }
 
   agregarHabilidad() : void{
-    this.datos.agregarHabilidad(this.formulario.value, 1).subscribe();
+    this.datos.agregarHabilidad(this.formulario.value, environment.idPersona).subscribe();
   }
 
   limpiarForm() : void{

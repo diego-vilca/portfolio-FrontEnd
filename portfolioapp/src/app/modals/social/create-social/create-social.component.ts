@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { SocialService } from 'src/app/services/social.service';
+import { environment } from 'src/environments/environment.development';
 
 @Component({
   selector: 'app-create-social',
@@ -35,7 +36,7 @@ export class CreateSocialComponent {
   }
 
   agregarRed() : void{
-    this.datos.agregarRed(this.formulario.value, 1).subscribe();
+    this.datos.agregarRed(this.formulario.value, environment.idPersona).subscribe();
   }
 
   limpiarForm() : void{

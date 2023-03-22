@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment.development';
 import { JwtDto } from '../entities/jwt-dto';
 import { LoginUsuario } from '../entities/login-usuario';
 import { NuevoUsuario } from '../entities/nuevo-usuario';
@@ -9,7 +10,7 @@ import { NuevoUsuario } from '../entities/nuevo-usuario';
   providedIn: 'root'
 })
 export class AuthService {
-  authURL = 'https://portfolio-backend-wo8y.onrender.com/auth/'
+  authURL = environment.apiURL + 'auth/'
 
   constructor(
     private httpClient : HttpClient

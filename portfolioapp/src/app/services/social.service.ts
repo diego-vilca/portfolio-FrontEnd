@@ -2,13 +2,14 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Social } from '../entities/social';
+import { environment } from 'src/environments/environment.development';
 
 @Injectable({
   providedIn: 'root'
 })
 export class SocialService {
 
-  url : string = 'https://portfolio-backend-wo8y.onrender.com/social/';
+  url : string = environment.apiURL + 'social/';
 
   constructor(
     private http : HttpClient
