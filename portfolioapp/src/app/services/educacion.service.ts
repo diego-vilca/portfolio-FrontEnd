@@ -9,6 +9,7 @@ import { environment } from 'src/environments/environment.development';
 })
 export class EducacionService {
 
+  //url : string = 'http://localhost:8080/education/';
   url : string = environment.apiURL + 'education/';
 
   constructor(

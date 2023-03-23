@@ -20,6 +20,22 @@
     </div>
   </div>
   <div class="skills-container mb-2">
+    <div class="m-2">
+      <span>
+        <span class="Legend-colorBox">
+        </span>
+        <span class="Legend-label">
+          Hard Skills
+        </span>
+      </span>
+      <span>
+        <span class="Legend-colorBox" style="background-color:#6A94EC">
+        </span>
+        <span class="Legend-label">
+          Soft Skills
+        </span>
+      </span>
+    </div>
     <div class="progreso-container">
       <div *ngFor="let skill of habilidades">
         <div class="icon-container">
@@ -54,12 +70,12 @@
             [style.--num]="skill.porcentaje"
             [style.--clr]="skill.tipo == 'hard' ? '#ff00be' : '#6A94EC'"
           >
-            <div class="puntito"></div>
+            <div class="puntito" [class.animame]="animame"></div>
             <svg>
-              <circle class="circulo" cx="70" cy="70" r="70"></circle>
-              <circle class="circulo" cx="70" cy="70" r="70"></circle>
+              <circle [class.animame]="animame" class="circulo" cx="70" cy="70" r="70"></circle>
+              <circle [class.animame]="animame" class="circulo" cx="70" cy="70" r="70"></circle>
             </svg>
-            <div class="valor-porcentual">
+            <div [class.animame]="animame" class="valor-porcentual">
               <h3>{{ skill.porcentaje }}<span>%</span></h3>
               <p>{{ skill.nombre }}</p>
             </div>

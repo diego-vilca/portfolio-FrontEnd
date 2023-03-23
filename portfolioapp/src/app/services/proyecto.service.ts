@@ -9,6 +9,7 @@ import { environment } from 'src/environments/environment.development';
 })
 export class ProyectoService {
 
+  //url : string = 'http://localhost:8080/project/';
   url : string = environment.apiURL + 'project/';
 
   constructor(

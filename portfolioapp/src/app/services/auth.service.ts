@@ -10,7 +10,8 @@ import { NuevoUsuario } from '../entities/nuevo-usuario';
   providedIn: 'root'
 })
 export class AuthService {
-  authURL = environment.apiURL + 'auth/'
+  //authURL = 'http://localhost:8080/auth/';
+  authURL = environment.apiURL + 'auth/';
 
   constructor(
     private httpClient : HttpClient

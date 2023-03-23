@@ -9,6 +9,7 @@ import { environment } from 'src/environments/environment.development';
 })
 export class ExperienciaService {
 
+  //url : string = 'http://localhost:8080/job/';
   url : string = environment.apiURL + 'job/';
 
   constructor(

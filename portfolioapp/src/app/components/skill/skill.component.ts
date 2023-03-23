@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { Habilidad } from 'src/app/entities/habilidad';
 import { HabilidadService } from 'src/app/services/habilidad.service';
 import { TokenService } from 'src/app/services/token.service';
@@ -12,6 +12,7 @@ export class SkillComponent implements OnInit {
   isLogged : boolean = false;
   habilidades : Habilidad[] = [];
   habilidad : Habilidad = Object();
+  animame ?: boolean;
 
   constructor(
     private datos : HabilidadService,
@@ -37,6 +38,17 @@ export class SkillComponent implements OnInit {
 
   pasarHabilidad(habilidad : Habilidad) : void{
     this.habilidad = habilidad;
+  }
+
+
+  @HostListener("document:scroll")
+  scrollFunction(){
+    if (document.body.scrollTop >0 || document.documentElement.scrollTop >0) {//
+      this.animame = true;
+    } else {
+      this.animame = false;
+    }
+    //console.log(this.animame);
   }
 
 }

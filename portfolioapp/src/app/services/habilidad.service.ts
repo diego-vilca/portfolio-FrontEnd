@@ -9,6 +9,7 @@ import { environment } from 'src/environments/environment.development';
 })
 export class HabilidadService {
 
+  //url : string = 'http://localhost:8080/skill/';
   url : string = environment.apiURL + 'skill/';
 
   constructor(
